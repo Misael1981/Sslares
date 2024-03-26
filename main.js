@@ -1,15 +1,18 @@
-let menu = document.querySelector('#menu-btn');
-let navbar = document.querySelector('.header .navbar');
+let show = true;
+const menuContent = document.querySelector('.menu');
+const menuToggle = menuContent.querySelector('.menu-toggle');
 
-menu.onclick = () =>{
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-};
-window.onscroll = () =>{
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
-};
 
+menuToggle.addEventListener('click', () => {
+
+    document.body.style.overflow = show ? 'hidden' : 'initial'
+
+    menuContent.classList.toggle('on', show);
+    show = !show;
+})
+
+
+/* Slides */
 
 var swiper = new Swiper(".home-slider", {
     spaceBetween: 20,

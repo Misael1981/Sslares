@@ -14,11 +14,35 @@
     transition: all .2s linear;
 }
 
+  
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
     overflow-x: hidden;
+}
+/*
+body {
+    background: linear-gradient(to bottom, #f2f2f2d7, #d9d9d9b2);
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(220, 220, 220, 0.664), rgba(220, 220, 220, 0.014));
+}
+*/
+
+/*
+.header .about{
+    background: linear-gradient(to bottom, rgb(255, 200, 200), rgb(220, 220, 220));
+    width: 100%;
+    height: 100vh;
+}
+*/
+
+body {
+    background: rgb(201, 196, 196);
+    width: 100%;
+    height: 150vh; 
 }
 
 html::-webkit-scrollbar {
@@ -33,19 +57,6 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
     /*cor da barra*/
     background: red;
-}
-
-.header .about{
-    background: linear-gradient(to bottom, rgb(255, 200, 200), rgb(220, 220, 220));
-    width: 100%;
-    height: 100vh;
-}
-
-
-body {
-    background: linear-gradient(to bottom, rgb(255, 200, 200), rgb(220, 220, 220));
-    width: 100%;
-    height: 120vh;
 }
 
 /*formatação dos parâmetros da página*/
@@ -101,37 +112,38 @@ section {
 
 /*Cabeçalho*/
 
-.header {
-    
+header {
+    position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    z-index: 1000;
+    height: 20%;
+    width: 100vw;
+    height: 70px;
+    background-color: #1f1e1f;
+    position: fixed;
+    padding-left: 30rem;
+    margin: 0;
+}
+
+.ancora-menu {
+    color: white;
+}
+
+
+.navbar {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 9%;
-    z-index: 10000;
-    height: 10%;
+    gap: 2.5rem;
+    margin-right: 20rem;
+    color: #fff;
+    font-size: 1.6rem;
+    padding-top: 2rem;
 }
 
-.header .navbar a {
-    display: inline-block;
-    padding: 1.5rem 2rem;
-    font-size: 1.7rem;
-    color: black;
-}
-
-.header .navbar a:hover {
-    color: red;
-}
-
-/*menu-hamburguer*/
-
-#menu-btn {
-    font-size: 3rem;
-    color: black;
-    cursor: pointer;
-    display: none;
+.logo {
+    margin: 0 0 0 10%;
 }
 
 a {
@@ -154,6 +166,47 @@ a {
     color: black;
     padding: 1rem 0;
 }
+
+
+.home {
+    padding: 0;
+    margin-top: 7rem;
+}
+.home .slide {
+    min-height: 90vh;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+}
+
+.home .slide .content {
+    width: 60rem;
+}
+
+.home .slide .content span {
+    font-size: 2rem;
+    color: rgb(5, 238, 21);
+    display: block;
+}
+.home .slide .content h3 {
+    font-size: 5rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+/*class de swipwer para criar as bolinhas*/
+.swiper-pagination-bullet {
+    height: 2rem;
+    width: 2rem;
+    background: #fff;
+    border-radius: 0;  
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: red;
+}
+
 
 /*sobre nós*/
 
@@ -266,6 +319,7 @@ a {
 }
 
 /*Fim do Banner*/
+
 /*Produtos*/
 
 .blogs {
@@ -293,7 +347,7 @@ a {
 
 .blogs .slide .content .link {
     padding-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .blogs .slide .content .link a {
@@ -332,6 +386,82 @@ a {
     font-size: 40px; /* Ajuste o tamanho do ícone conforme necessário */
 }
 
+/*Rodapé*/
+.footer {
+    margin-top: 8rem;
+    background: #1f1e1f;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.2rem;
+    color: #fff;
+    padding: 1rem 1rem;
+}
+
+.footer .box-container .box .links {
+    font-size: 1.5rem;
+    display: block;
+    color: #fff;
+    padding: 1rem 3rem;
+}
+
+.footer .box-container .box .links:hover {
+    color: #fff;
+}
+
+.footer .box-container .box p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 3rem;
+}
+
+.footer .box-container .box p i {
+    padding-right: .5rem;
+    color: #fff;
+}
+
+.footer .box-container .box .share {
+    padding: 1rem 3rem;
+}
+
+.footer .box-container .box .share a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: #111;
+    border-radius: 50%;
+    margin-right: .5rem;
+    text-align: center;
+}
+
+.footer .box-container .box .share a:hover {
+    background:#fff;
+}
+
+.footer .box-container .box form {
+    margin-left: 2rem;
+}
+
+.footer .box-container .box form .email {
+    margin-bottom: 1rem;
+    width: 100%;
+    background: #111;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: none;
+}
+
+/*Rodapé*/
+
 
 /*fim do teste */
 /*Responsividade*/
@@ -362,6 +492,86 @@ a {
 }
 
 @media (max-width: 768px) {
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 0px 40px;
+    }
+
+    .menu .navbar {
+        display: none;
+    }
+
+    .one, .two, .three {
+        width: 100%;
+        height: 4px;
+        background-color: white;
+        margin: 1rem auto;
+        transition-duration: 0.5s
+    }
+
+    .menu-toggle {
+        
+       
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1f1e1f;
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+
+    .menu.on .menu-toggle {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+
+    .menu.on .navbar {
+        display: block;
+        
+    }
+    
+    .menu .navbar a {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 4rem;
+        display: block;
+        padding: 2rem 0;
+    }
+
+    .menu.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu.on .menu-toggle .one {
+        transform: rotate(45deg) translate(8px, -1px);
+    }
+
+    .menu.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(20px, -12px);
+    }
+
+    .links-menu a {
+        color: white; /* ou qualquer outra cor desejada */
+        text-decoration: none; /* para remover o sublinhado padrão */
+      }
+      
+}
+
     #menu-btn {
         display: inline-block;
     }
@@ -407,7 +617,7 @@ a {
     .features .box-container .box.second {
         flex-flow: column;
     }
-}
+
 @media (max-width: 450px) {
     html {
         font-size: 50%;
