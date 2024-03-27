@@ -112,6 +112,10 @@ section {
 
 /*Cabeçalho*/
 
+.links-menu {
+    display: none;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -151,13 +155,17 @@ a {
     color: black;
 }
 
+.responsivo {
+    display: none;
+}
+
 
 .home .slide .content {
     width: 60rem;
 }
 
 .home .slide .content span {
-    font-size: 2rem;
+    font-size: 3rem;
     color: red;
     display: block;
 }
@@ -187,7 +195,7 @@ a {
 
 .home .slide .content span {
     font-size: 2rem;
-    color: rgb(5, 238, 21);
+    color: red;
     display: block;
 }
 .home .slide .content h3 {
@@ -226,7 +234,7 @@ a {
     content: '';
     position: absolute;
     z-index: -1;
-    background: red;
+    background: #1f1e1f;
     height: 15rem;
     width: 15rem;
 }
@@ -300,7 +308,7 @@ a {
 
 .banner span {
     font-size: 2rem;
-    color: rgb(5, 238, 21);
+    color: red;
 }
 
 .banner h3 {
@@ -493,6 +501,35 @@ a {
 
 @media (max-width: 768px) {
 
+    .responsivo {
+        display: block;
+    }
+
+    .home .slide .content span {
+        font-size: 5rem;
+        color: red;
+        display: block;
+    }
+    .home .slide .content h3 {
+        font-size: 4rem;
+        color: black;
+        padding: 1rem 0;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .home-slider .slide {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .links-menu {
+        display: block;
+    }
+      
+
     .menu {
         display: flex;
         flex-direction: row;
@@ -514,7 +551,7 @@ a {
 
     .menu-toggle {
         
-       
+        margin: 16px 0;
         width: 30px;
         height: 30px;
     }
@@ -558,19 +595,32 @@ a {
     }
 
     .menu.on .menu-toggle .one {
-        transform: rotate(45deg) translate(8px, -1px);
+        transform: rotate(45deg) translate(6px, -2px);
     }
 
     .menu.on .menu-toggle .three {
         transform: rotate(-45deg) translate(20px, -12px);
     }
 
+    .home .slide {
+        padding: 2rem 5%;
+    }
+
+    .home .slide .content {
+        width: 50rem;
+    }
+
+    .home .slide .content h3 {
+        font-size: 4rem;
+    }
+}
+
     .links-menu a {
         color: white; /* ou qualquer outra cor desejada */
         text-decoration: none; /* para remover o sublinhado padrão */
       }
       
-}
+
 
     #menu-btn {
         display: inline-block;
@@ -618,6 +668,85 @@ a {
         flex-flow: column;
     }
 
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+        scroll-padding: 7rem;
+    }
+    .header {
+        padding: 0 2rem;
+    }
+
+    section {
+        padding: 3rem 2rem;
+    }
+
+    .home .slide {
+        padding: 2rem 5%;
+    }
+
+    .home .slide .content {
+        width: 50rem;
+    }
+
+    .home .slide .content h3 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #000;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .about {
+        gap: 3rem;
+    }
+
+    .about .image {
+        margin-top: 5rem;
+    }
+
+    .about .content .title {
+        font-size: 3rem;
+    }
+
+    .features .box-container .box.second {
+        flex-flow: column;
+    }
+}
 @media (max-width: 450px) {
     html {
         font-size: 50%;
