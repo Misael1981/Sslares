@@ -95,11 +95,11 @@ header {
 .selecao-imagens {
     width: 50rem;
     height: 50rem;
-    border: 1px solid black;
+    
     margin: 10px;
     display: flex;
     flex-direction: row;
-    background: #1f1e1f;
+    
     border-radius: 2rem;
     margin: 0 5rem 0 0rem;
 }
@@ -117,8 +117,8 @@ header {
 }
 
 .imagem {
-    width: 12rem;
-    height: 12rem;
+    width: 10rem;
+    height: 10rem;
     border: 1px solid black;
     margin: 10px;
     border-radius: 50%;
@@ -228,8 +228,8 @@ header {
     margin: 0 5rem 0 0;
     box-shadow: 5px 5px 5px #57555549;
     object-fit: contain;
-    height: 30rem;
-    width: 40rem;
+    height: 25rem;
+    width: 38rem;
     max-width: 45rem;
     background-size: cover;
     background-position: center;
@@ -586,6 +586,43 @@ header {
         text-decoration: none; /* para remover o sublinhado padrão */
       }
       
+}
+
+@media (max-width: 600px) {
+    .selecao-imagens {
+        margin: 20rem 0 0 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .imagens-para-selecionar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 3rem;
+    }
+
+    .quatro {
+        display: none;
+    }
+
+    .descricao__imagem .mostruario {
+        width: 30rem;
+        height: 25rem;
+        margin: 0;
+    }
+
+    .descricao__texto__imagem {
+        margin: 0;
+    }
+
+    .imagens-decriçao {
+        margin: 0;
+    }
+
+    .descricao {
+        margin: 0;
+    }
 }
 
 

@@ -160,6 +160,8 @@ a {
 }
 
 
+/*Home*/
+
 .home .slide .content {
     width: 60rem;
 }
@@ -644,6 +646,19 @@ a {
 
 @media (max-width: 768px) {
 
+    .home .slide {
+        min-height: 90vh;
+        background-size: contain !important;
+        background-position: center !important;
+        padding: 2rem 9%;
+        display: flex;
+        align-items: center;
+    }
+
+    .home {
+        background: #e90736;
+    }
+
     .responsivo {
         display: block;
     }
@@ -895,3 +910,19 @@ a {
         font-size: 50%;
     }
 }
+
+@media (min-width: 1300px) {
+    .home .slide {
+        min-height: 90vh;
+        background-size: contain !important;
+        background-position: center !important;
+        padding: 2rem 9%;
+        display: flex;
+        align-items: center;
+    }
+
+    .home {
+        background: #e90736;
+    }
+}
+
