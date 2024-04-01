@@ -8,7 +8,6 @@
     text-decoration: none;
     outline: none;
     border: none;
-    text-transform: capitalize;
     transition: all .2s linear;
 }
 
@@ -38,9 +37,7 @@ body {
 
 body {
     background: rgb(201, 196, 196);
-    width: 100%;
-    height: 160vh; 
-    
+    height: auto;
 }
 
 .btn {
@@ -85,6 +82,10 @@ header {
     padding-top: 2rem;
 }
 
+.links-menu {
+    display: none;
+}
+
 .logo {
     margin: 6% 0 0 10%;
 }
@@ -92,16 +93,27 @@ header {
 /*Fim do Menu*/
 /*seletor de Imagem*/
 
-.selecao-imagens {
-    width: 50rem;
-    height: 50rem;
-    
-    margin: 10px;
+.imagens-decriçao {
     display: flex;
     flex-direction: row;
-    
-    border-radius: 2rem;
-    margin: 0 5rem 0 0rem;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.selecao-imagens,
+.descricao {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.selecao-imagens {
+    display: flex;
+    flex-direction: row;
+    gap: 3.5rem;
 }
 
 .imagens-para-selecionar {
@@ -147,32 +159,12 @@ header {
 .imagem-selecionada:hover {
     transform: scale(1.3); 
     transition: 1s;
-}    
-
-
-
-
-
+} 
 
 /*Fim do Seletor de Imagem*/
 
-
-.imagens-decriçao {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-
-    margin: 0 8rem 0 5rem;
-}
-
-
 /*Descrição do Produto*/
 
-.descricao {
-    width: 50rem;
-    height: 50rem;
-    margin: 0rem 0 0rem 5rem;
-}
 
 .descricao-titulo {
     text-align: center;
@@ -183,12 +175,10 @@ header {
 
 .descricao-subtitulo {
     font-size: 2.5rem;
-    padding: 1.5rem 0 1.5rem 0;
 }
 
 .descricao-texto {
     font-size: 1.5rem;
-    padding: 1.5rem 0 1.5rem 0;
 }
 
 
@@ -199,7 +189,7 @@ header {
 /*Calculadora*/
 
 .calculadora__descricao__titulo {
-    background: #1f1e1f;
+    background: #e90736;
     color: #fff;
     font-size: 3rem;
     text-align: center;
@@ -215,9 +205,10 @@ header {
     width: 90vw;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20rem;
-    margin: 5rem 5rem;
+    gap: 5rem;
+    margin: 0rem 0rem;
 }
 
 .descricao__calculadora {
@@ -263,7 +254,7 @@ header {
     font-size: 16px; /* Define o tamanho da fonte dentro do seletor */
     border: 2px solid red;
     border-radius: 2rem;
-    margin: 2rem 0 0 8rem;
+    margin: 2rem auto;
 }
 
 
@@ -281,16 +272,30 @@ header {
 .calculadora__dados {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     border-radius: 2rem;
-    background: #1f1e1f;
-    width: 30rem;
-    height: 25rem;
+    background: #e90736;
+    width: 35rem;
+    height: 30rem;
+    text-align: center;
+}
+
+.calculadora__input {
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.calculadora__input:hover {
+    border: 1px solid black;
+    padding: 0.9rem;
 }
 
 .caluladora__item {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 1rem 0 1rem;
 }
 
@@ -474,36 +479,11 @@ header {
 }
 
 @media (max-width: 1024px) {
-    .selecao-imagens {
-        margin: 8rem 0;
-       
-    }
-
-    .imagens-decriçao {
-       justify-content: center;
-    }
-
-    .descricao__texto__imagem {
-        justify-content: center;
-    }
-
-    .descricao__calculadora {
-        width: 80%;
-    }
     
-    .descricao-texto {
-        width: 70vw;
-        
-    }
-
-    .descricao__imagem {
-        height: 30rem;
-        width: 40rem
-    }
-
-    .descricao__texto__imagem {
-        gap: 5rem;
-    }
+   .descricao {
+    width: 30%;
+    gap: 5rem;
+   }
 
     
 }
@@ -584,15 +564,39 @@ header {
     .links-menu a {
         color: white; /* ou qualquer outra cor desejada */
         text-decoration: none; /* para remover o sublinhado padrão */
-      }
-      
+    }
+    
+    .imagens-decriçao {
+        flex-wrap: wrap-reverse;
+    }
+
+    .descricao__calculadora {
+        width: 100vw;
+    }
 }
 
 @media (max-width: 600px) {
+    
+    .descricao {
+        width: 80%;
+        max-width: 400px;
+        gap: 2rem;
+    }
+
     .selecao-imagens {
-        margin: 20rem 0 0 0;
+        width: 80%;
+        max-width: 400px;
         display: flex;
         flex-direction: column-reverse;
+        gap: 7rem;
+    }
+
+    .imagens-decriçao {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        margin: 0 0rem;
     }
 
     .imagens-para-selecionar {
@@ -602,26 +606,42 @@ header {
         margin-left: 3rem;
     }
 
+    .imagem {
+        width: 8rem;
+        height: 8rem;
+        border: 1px solid black;
+        margin: 10px;
+        border-radius: 50%;
+    }
+
     .quatro {
         display: none;
     }
 
-    .descricao__imagem .mostruario {
-        width: 30rem;
-        height: 25rem;
-        margin: 0;
+    .imagem-selecionada {
+        width: 80%;
+        max-width: 400px;
     }
 
     .descricao__texto__imagem {
-        margin: 0;
+        justify-content: center;
     }
 
-    .imagens-decriçao {
-        margin: 0;
+    .descricao__imagem {
+        display: flex;
+        justify-content: center;
+        margin: 0 2rem 5rem 5rem;
+    
     }
 
-    .descricao {
-        margin: 0;
+    .descricao__imagem .mostruario {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    .opcao {
+        margin: 3rem 0 0 5rem;
     }
 }
 
