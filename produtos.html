@@ -17,7 +17,7 @@
                     <a class="ancora-menu" href="index.html" rel="prev">Home</a>
                     <a class="ancora-menu" href="#about">About us</a>
                     <a class="ancora-menu" href="produtos.html">Produtos</a>
-                    <a class="ancora-menu" href="#depoimentos">Depoimentos</a>
+                    <a id="open-modal" class="ancora-menu" href="#depoimentos">Calculadora</a>
                     <a class="ancora-menu" href="#contato">Contato</a>
                     <div class="links-menu">
                         <a href="https://wa.me/5535997071448" target="_blank" class="fab fa-whatsapp"></a>
@@ -75,6 +75,59 @@
 
         
         <section>
+
+                <div id="fade" class="hide"></div>
+                <div id="modal" class="hide">
+
+                    <div class="modal-header">
+                        <h2 class="calculadora__descricao__titulo">Calculadora</h2>
+                    </div>
+
+                    <div class="modal-body">
+                        <h3 class="calculadora__descricao__subtitulo">Calcule de forma rápido e fácil</h3>
+                        <p class="calculadora__descricao__texto">
+                            Com nossa calculadora de materiais, você descobre de forma rápida e fácil a quantidade recomendada de materiais para fazer a separação e nivelamento de cada piso.
+                        </p>
+                        <p class="calculadora__descricao__texto">
+                            Você só precisa escolher o tipo de medida (cm ou in), nos informar o comprimento do piso e sua largura. Com essas informações nossa calculadora irá te dizer o recomendado para cada lado do piso e a somatória final, levando em considerações todos os lados.
+                        </p>
+                        <h3 class="calculadora__descricao__subtitulo">Qual o tipo de medida?</h3>
+                    </div>
+
+                    <div class="opcao">
+                        <select class="seletor__calculadora">
+                            <option value="opcao1">Centímetro (cm)</option>
+                            <option value="opcao2">Polegadas (in)</option>
+                        </select>
+                    </div>
+
+                    <div class="calculadora">
+                        <div class="calculadora__dados">
+                            <label class="caluladora__item" for="comprx">Comprimento X</label>
+                            <label class="caluladora__item" for="txtescolhax"></label>
+                            <input class="calculadora__input" type="number" id="txtcomprx" placeholder="your number">
+                            <label class="caluladora__item" for="txtcalc">Recomendado:</label>
+                            <label class="caluladora__item" for="txtcalcx"><!--a resposta da quantidade de espaçadores no comprimento X--></label>
+                        </div>
+                        <div class="calculadora__dados">
+                            <label class="caluladora__item" for="txtcalc">Largura Y</label>
+                            <label class="caluladora__item" for="txtescolhay"></label>
+                            <input class="calculadora__input" type="number" id="txtlargy">
+                            <label class="caluladora__item" for="txtcalc">Recomendado:</label>
+                            <label class="caluladora__item" for="txtcalcy"><!--a resposta da quantidade de espaçadores no largura Y--></label>
+                        </div>
+                        <div class="calculadora__dados">
+                            <label class="caluladora__item" for="txtcalc">Área Total de Assentamento</label>
+                            <label class="caluladora__item" for="txtcalc">(m²)</label>
+                            <input class="calculadora__input" type="number" id="txtmq">
+                            <label class="caluladora__item" for="txtcalc">Quantidade de espaçadores: <!--a resposta da quantidade total de espaçadores--></label>
+                            <label class="caluladora__item" for="txtvtotal"></label>
+                        </div>
+                    </div>
+
+                </div>
+
+        
                 <div>
                     <h2 class="calculadora__descricao__titulo">Calculadora</h2>
                     <div class="descricao__texto__imagem">
@@ -86,15 +139,14 @@
                             </div>
                             <div>
                                 <h2 class="subtitulo__tipo">Qual o tipo de medida?</h2>
-
-                                
+                
                                 <div class="opcao">
-                                  
+                
                                     <select class="seletor__calculadora">
                                         <option value="opcao1">Centímetro (cm)</option>
                                         <option value="opcao2">Polegadas (in)</option>
                                     </select>
-                                      
+                
                                 </div>
                             </div>
                         </div>
@@ -102,32 +154,33 @@
                             <img class="mostruario"  src="img/mostruario.jpg" alt="Mostruário para o uso da calculadora">
                         </div>
                     </div>
-                    
+                
                 </div>
-            
-            <div class="calculadora">
-                <div class="calculadora__dados">
-                    <label class="caluladora__item" for="comprx">Comprimento X</label>
-                    <label class="caluladora__item" for="txtescolhax"></label>
-                    <input class="calculadora__input" type="number" id="txtcomprx" placeholder="your number">
-                    <label class="caluladora__item" for="txtcalc">Recomendado:</label>
-                    <label class="caluladora__item" for="txtcalcx"><!--a resposta da quantidade de espaçadores no comprimento X--></label>
+                                
+                <div class="calculadora">
+                    <div class="calculadora__dados">
+                        <label class="caluladora__item" for="comprx">Comprimento X</label>
+                        <label class="caluladora__item" for="txtescolhax"></label>
+                        <input class="calculadora__input" type="number" id="txtcomprx" placeholder="your number">
+                        <label class="caluladora__item" for="txtcalc">Recomendado:</label>
+                        <label class="caluladora__item" for="txtcalcx"><!--a resposta da quantidade de espaçadores no comprimento X--></label>
+                    </div>
+                    <div class="calculadora__dados">
+                        <label class="caluladora__item" for="txtcalc">Largura Y</label>
+                        <label class="caluladora__item" for="txtescolhay"></label>
+                        <input class="calculadora__input" type="number" id="txtlargy">
+                        <label class="caluladora__item" for="txtcalc">Recomendado:</label>
+                        <label class="caluladora__item" for="txtcalcy"><!--a resposta da quantidade de espaçadores no largura Y--></label>
+                    </div>
+                    <div class="calculadora__dados">
+                        <label class="caluladora__item" for="txtcalc">Área Total de Assentamento</label>
+                        <label class="caluladora__item" for="txtcalc">(m²)</label>
+                        <input class="calculadora__input" type="number" id="txtmq">
+                        <label class="caluladora__item" for="txtcalc">Quantidade de espaçadores: <!--a resposta da quantidade total de espaçadores--></label>
+                        <label class="caluladora__item" for="txtvtotal"></label>
+                    </div>
                 </div>
-                <div class="calculadora__dados">
-                    <label class="caluladora__item" for="txtcalc">Largura Y</label>
-                    <label class="caluladora__item" for="txtescolhay"></label>
-                    <input class="calculadora__input" type="number" id="txtlargy">
-                    <label class="caluladora__item" for="txtcalc">Recomendado:</label>
-                    <label class="caluladora__item" for="txtcalcy"><!--a resposta da quantidade de espaçadores no largura Y--></label>
-                </div>
-                <div class="calculadora__dados">
-                    <label class="caluladora__item" for="txtcalc">Área Total de Assentamento</label>
-                    <label class="caluladora__item" for="txtcalc">(m²)</label>
-                    <input class="calculadora__input" type="number" id="txtmq">
-                    <label class="caluladora__item" for="txtcalc">Quantidade de espaçadores: <!--a resposta da quantidade total de espaçadores--></label>
-                    <label class="caluladora__item" for="txtvtotal"></label>
-                </div>
-            </div>
+                
         </section>
 
         <!--Carrossel-->
