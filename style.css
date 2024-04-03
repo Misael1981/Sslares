@@ -262,7 +262,9 @@ a {
     padding: 20px;
     border-radius: 1rem;
     font-size: 1.5rem;
-    background: #fff;
+    background: #1f1e1f;
+    color: #fff;
+    border: 2px solid #e90736;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -286,13 +288,15 @@ a {
     width: 100%;
     padding: 15px 30px;
     position: relative;
-    background: #fff;
+    background: #1f1e1f;
+    color: #fff;
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 .task:hover .abstract, .task:hover, .details {
-    background: #fff;
+    background: #e90736;
+    color: #000;
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
@@ -596,7 +600,8 @@ a {
     flex-direction: column;
     justify-content: space-around;
     background: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #e90736;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     border-radius: 2rem;
 }
 
