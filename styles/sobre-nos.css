@@ -1,0 +1,177 @@
+/*sobre nós*/
+
+
+
+.card__titulo {
+    background: #1f1e1f;
+    color: red;
+    font-size: 3rem;
+    text-align: center;
+    max-width: 150rem;
+    height: 12rem;
+    margin: -5rem 0 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abstract h3 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.sobre-nos {
+    display: flex;
+    flex-direction: row;
+}
+
+.content__sobre-nos {
+    width: 50%;
+    height: 145vh;
+    padding: 20px;
+    border-radius: 1rem;
+    font-size: 1.9rem;
+    background: #1f1e1f;
+    color: #fff;
+    border: 2px solid #e90736;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.content__sobre-nos p {
+    padding: 1rem 0 1rem 0;
+}
+
+.mini-banner {
+    background: url(../img/mini-banner\(2\).jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.card-one, .card-there {
+    align-self: flex-start;
+}
+
+.card-two, .card-four {
+    display: flex;
+    align-self: flex-end;
+}
+
+.magic__card {
+    border-radius: 2rem;
+    width: 10%; /* Altere a largura dos cards conforme necessário */
+    min-width: 300px;
+    height: 16vw; /*altura do card*/
+    margin: 5vh 0 5vh 2%; /* Adicione margem entre os cards */
+}
+
+.task {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+    transform-style: preserve-3d;
+}
+
+.abstract, .details {
+    width: 100%;
+    padding: 15px 30px;
+    position: relative;
+    background: #1f1e1f;
+    color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.task:hover .abstract, .task:hover, .details {
+    background: #e90736;
+    color: #000;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.abstract {
+    transition: 0.3s ease all;
+    font-size: 1.5rem;
+}
+
+.details {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transform: translateX(-180deg);
+    transform-origin: top center;
+    backface-visibility: hidden;
+    transition: 0.3s transform ease;
+}
+
+.detais:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: grey;
+}
+
+.task:hover .details {
+    max-height: none;
+    overflow: visible;
+    visibility: visible;
+    transform: rotateX('0deg');
+}
+
+.details__inner {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-top: 1px solid black;
+}
+
+@media (max-width: 768px) {
+    .sobre-nos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .content__sobre-nos {
+        width: 800%;
+        height: 268vw;
+        padding: 20px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens horizontalmente */
+        justify-content: center; /* Centraliza os itens verticalmente */
+        width: 100%;
+    }
+    
+    .card-one, .card-two, .card-there, .card-four {
+        align-self: center;
+    }
+
+    .card-two, .card-four {
+        height: 100%;
+    }
+
+    .magic__card:hover {
+        margin-bottom: 10rem;
+    }
+
+    .card__titulo {
+        margin: 0 0 5rem 0;
+    }
+
+    
+}

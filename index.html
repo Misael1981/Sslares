@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/beneficios.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/sobre-nos.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -16,7 +20,7 @@
                     <a class="ancora-menu" href="index.html">Home</a>
                     <a class="ancora-menu" href="#about">Sobre nós</a>
                     <a class="ancora-menu" href="produtos.html" rel="next">Produtos</a>
-                    <a id="open-modal" class="ancora-menu" href="#">Calculadora</a>
+                    <a id="open-modal-home" class="ancora-menu" href="#depoimentos">Calculadora</a>
                     <a class="ancora-menu" href="#contato">Contato</a>
                     <div class="links-menu">
                         <a href="https://wa.me/5535991972424" target="_blank" class="fab fa-whatsapp"></a>
@@ -103,66 +107,84 @@
                 <div class="card__titulo">
                     <h2>Sobre Nós</h2>
                 </div>
-                
-                    <div class="card-one">
-                        <div class="magic__card">
-                                <div class="task">
-                                    <div class="abstract">
-                                        <h3>Missão</h3>
-                                        <p>Nossa missão é a ser uma empresa de maior credibilidade em nosso ramo...</p>
+
+                        <div class="sobre-nos">
+                            <div class="content__sobre-nos">
+                                <div class="mini-banner">
+                                    <img src="img/logo-background(2).png" alt="">
+                                </div>
+                                <p id="txtone">A SSLares é uma empresa familiar, com sede em Minas Gerais. É uma linha de produtos especializada para atender o público da construção civil. Oferecemos soluções de alta qualidade que ajudam a reduzir custos e prazos.
+                                    Nosso primeiro produto, o Espaçador/Nivelador de Piso, foi criado para atender a demanda do mercado de revestimentos e pisos , sendo utilizado juntamente com a cunha. Desde então, expandimos nossa linha de produtos, agora com 2 opções: Smart Padrão e Smart Premium.</p>
+                                    <p>Na SSLares, utilizamos apenas a melhor matéria-prima e tecnologia de ponta em nossos produtos.   Nossa    empresa está comprometida em fornecer soluções eficientes e de qualidade para nossos clientes.
+                                        Em 2022, lançamos novos produtos para complementar nosso portfólio, incluindo Desempenadeiras Lisa, Corrugada e com Espuma; e Espaçadores para Ferragens. Continuamos a expandir nossa linha de produtos em 2023, a linha de Espaçadores Slim foi lançado oferecendo aos consumidores uma opção de menor custo.
+                                    </p>
+                                    <p>Na SSLares, nosso objetivo é fornecer soluções inovadoras e de qualidade que ajudem nossos clientes a economizar tempo e dinheiro em seus projetos de construção. Estamos comprometidos em oferecer o melhor atendimento e serviço, e estamos prontos para atender as necessidades provenientes do ramo da construção civil.
+                                    </p>
+                                    <div class="mini-banner">
+                                        <img src="img/logo-background(2).png" alt="">
                                     </div>
-                                    <div class="details">
-                                        <div class="details__inner">
-                                            <p>Fazer a comercialização de produtos adequados às necessidades dos clientes, estabelecendo parcerias que promovam o crescimento contínuo e rentável.</p>
+                            </div>
+                    
+                        
+                            <div class="cards">
+                            
+                                <div class="magic__card card-one">
+                                    <div class="task">
+                                        <div class="abstract">
+                                            <h3>Missão</h3>
+                                            <p>Nossa missão é a ser uma empresa de maior credibilidade em nosso ramo...</p>
+                                        </div>
+                                        <div class="details">
+                                            <div class="details__inner">
+                                                <p>Fazer a comercialização de produtos adequados às necessidades dos clientes, estabelecendo parcerias que promovam o crescimento contínuo e rentável.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                        </div>
-                        <div class="content__sobre-nos">
-                            <p id="txtone">A SSLares é uma empresa familiar, com sede em Minas Gerais. É uma linha de produtos especializada para atender o público da construção civil. Oferecemos soluções de alta qualidade que ajudam a reduzir custos e prazos.
-                                Nosso primeiro produto, o Espaçador/Nivelador de Piso, foi criado para atender a demanda do mercado de revestimentos e pisos , sendo utilizado juntamente com a cunha. Desde então, expandimos nossa linha de produtos, agora com 2 opções: Smart Padrão e Smart Premium.</p>
-                        </div>
-                    </div>
-
-                    <div class="card-two">
-                        <div class="magic__card">
-                                <div class="task">
-                                    <div class="abstract">
-                                        <h3>Visão</h3>
-                                        <p>Ser um dos melhores fabricantes em peças plásticas...</p>
-                                    </div>
-                                    <div class="details">
-                                        <div class="details__inner">
-                                            <p>Para que possamos atender às expectativas dos nossos clientes, satisfazendo suas necessidades. Ser reconhecida como uma empresa sólida e confiável.</p>
+                                <div class="magic__card card-two">
+                                        <div class="task">
+                                            <div class="abstract">
+                                                <h3>Visão</h3>
+                                                <p>Ser um dos melhores fabricantes em peças plásticas...</p>
+                                            </div>
+                                            <div class="details">
+                                                <div class="details__inner">
+                                                    <p>Para que possamos atender às expectativas dos nossos clientes, satisfazendo suas necessidades. Ser reconhecida como uma empresa sólida e confiável.</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
                                 </div>
-                        </div>
-                        <div class="content__sobre-nos">
-                            <p> Na SSLares, utilizamos apenas a melhor matéria-prima e tecnologia de ponta em nossos produtos.   Nossa    empresa está comprometida em fornecer soluções eficientes e de qualidade para nossos clientes.
-                                Em 2022, lançamos novos produtos para complementar nosso portfólio, incluindo Desempenadeiras Lisa, Corrugada e com Espuma; e Espaçadores para Ferragens. Continuamos a expandir nossa linha de produtos em 2023, a linha de Espaçadores Slim foi lançado oferecendo aos consumidores uma opção de menor custo.</p>
-                        </div>
-                    </div>
-
-                    <div class="card-there">
-                        <div class="magic__card">
-                                <div class="task">
-                                    <div class="abstract">
-                                        <h3>Valores</h3>
-                                        <p>Atuar de maneira ética com integridade:</p>
-                                    </div>
-                                    <div class="details">
-                                        <div class="details__inner">
-                                            <p>Respeitar normas da empresa e regras e leis dos mercados; Aprimorar a qualidade dos produtos, para que tenhamos uma melhoria contínua, e possamos superar nossos resultados;
+                                <div class="magic__card card-three">
+                                        <div class="task">
+                                            <div class="abstract">
+                                                <h3>Valores</h3>
+                                                <p>Atuar de maneira ética com integridade:</p>
+                                            </div>
+                                            <div class="details">
+                                                <div class="details__inner">
+                                                    <p>Respeitar normas da empresa e regras e leis dos mercados; Aprimorar a qualidade dos produtos, para que tenhamos uma melhoria contínua, e possamos superar nossos resultados;
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="magic__card card-four">
+                                    <div class="task">
+                                        <div class="abstract">
+                                            <h3>GARANTIA</h3>
+                                            <p>Valorizar parcerias com nossos clientes;
                                             </p>
                                         </div>
+                                        <div class="details">
+                                            <div class="details__inner">
+                                                <p>Todo produto possui obrigatoriamente um prazo de garantia legal de 30 (trinta) dias para defeitos em produtos...
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
                         </div>
-                        <div class="content__sobre-nos">
-                            <p>Na SSLares, nosso objetivo é fornecer soluções inovadoras e de qualidade que ajudem nossos clientes a economizar tempo e dinheiro em seus projetos de construção. Estamos comprometidos em oferecer o melhor atendimento e serviço, e estamos prontos para atender as necessidades provenientes do ramo da construção civil.</p>
-                        </div>
-                    </div>
               
             </section>
 
@@ -173,13 +195,6 @@
             <p>Economize sem perder qualidade.</p>
             <p>Conheça nossos produtos.</p>
             <a href="#" class="btn">Quero</a>
-        </section>
-
-        <section>
-            <div class="whatsapp-icon">
-                <a href="https://wa.me/5535991972424&" target="_blank" class="fab fa-whatsapp"></a>
-            </div>
-            
         </section>
 
         <section id="blogs" class="blogs">
@@ -551,8 +566,61 @@
                 </form>
             </div>
         </div>
+
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/5535991972424&" target="_blank" class="fab fa-whatsapp"></a>
+        </div>
        
     </footer>
+
+    <div>
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+            <div class="modal-header">
+                <h2 class="calculadora__descricao__titulo">Calculadora</h2>
+            </div>
+            <div class="modal-body">
+                <h3 class="calculadora__descricao__subtitulo">Calcule de forma rápido e fácil</h3>
+                <p class="calculadora__descricao__texto">
+                    Com nossa calculadora de materiais, você descobre de forma rápida e fácil a quantidade recomendada de materiais para fazer a separação e nivelamento de cada piso.
+                </p>
+                <p class="calculadora__descricao__texto">
+                    Você só precisa escolher o tipo de medida (cm ou in), nos informar o comprimento do piso e sua largura. Com essas informações nossa calculadora irá te dizer o recomendado para cada lado do piso e a somatória final, levando em considerações todos os lados.
+                </p>
+                <h3 class="calculadora__descricao__subtitulo">Qual o tipo de medida?</h3>
+            </div>
+            <div class="opcao">
+                <select class="seletor__calculadora">
+                    <option value="opcao1">Centímetro (cm)</option>
+                    <option value="opcao2">Polegadas (in)</option>
+                </select>
+            </div>
+            <div class="calculadora">
+                <div class="calculadora__dados">
+                    <label class="caluladora__item" for="comprx">Comprimento X</label>
+                    <label class="caluladora__item" for="txtescolhax"></label>
+                    <input class="calculadora__input" type="number" id="txtcomprx" placeholder="your number">
+                    <label class="caluladora__item" for="txtcalc">Recomendado:</label>
+                    <label class="caluladora__item" for="txtcalcx"><!--a resposta da quantidade de espaçadores no comprimento X--></label>
+                </div>
+                <div class="calculadora__dados">
+                    <label class="caluladora__item" for="txtcalc">Largura Y</label>
+                    <label class="caluladora__item" for="txtescolhay"></label>
+                    <input class="calculadora__input" type="number" id="txtlargy">
+                    <label class="caluladora__item" for="txtcalc">Recomendado:</label>
+                    <label class="caluladora__item" for="txtcalcy"><!--a resposta da quantidade de espaçadores no largura Y--></label>
+                </div>
+                <div class="calculadora__dados">
+                    <label class="caluladora__item" for="txtcalc">Área Total de Assentamento</label>
+                    <label class="caluladora__item" for="txtcalc">(m²)</label>
+                    <input class="calculadora__input" type="number" id="txtmq">
+                    <label class="caluladora__item" for="txtcalc">Quantidade de espaçadores: <!--a resposta da quantidade total de espaçadores--></label>
+                    <label class="caluladora__item" for="txtvtotal"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
