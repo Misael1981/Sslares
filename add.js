@@ -34,7 +34,7 @@ imagens.forEach(imagem => {
 var swiper = new Swiper(".blogs-slider", {
   spaceBetween: 20,
   grabCursor: true,
-  loop:true,
+  loop: true,
   autoplay: {
       delay: 7500,
       disableOnInteraction: false,
@@ -43,15 +43,15 @@ var swiper = new Swiper(".blogs-slider", {
       el: ".swiper-pagination",
       clickable: true,
   },
-  breakpoints:{
-      0:{
-          slidesPerView:1,
+  breakpoints: {
+      0: {
+          slidesPerView: 1,
       },
-      768:{
-          slidesPerView:2,
+      768: {
+          slidesPerView: 2,
       },
-      991:{
-          slidesPerView:3,
+      991: {
+          slidesPerView: 3,
       },
   },
 });
@@ -290,6 +290,9 @@ const toggleModal = () => {
 [openModalButton, closeModalButton, fade].forEach((el) => {
   el.addEventListener("click", () => toggleModal());
 });
+
+
+
 
 
 
