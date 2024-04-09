@@ -50,7 +50,7 @@
 }
 
 .menu {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     height: 10%;
     width: 100vw;

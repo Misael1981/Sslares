@@ -1,5 +1,5 @@
 .calculadora-story {
-    padding: 8rem;
+    padding: 2rem 8rem 8rem 8rem;
 }
 
 .calculadora__descricao__titulo {
@@ -9,7 +9,7 @@
     text-align: center;
     max-width: 150rem;
     height: 12rem;
-    margin: 7rem 0 2rem 0;
+    margin: 0rem 0 2rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,16 +86,17 @@
     align-items: center;
     border-radius: 2rem;
     background: #1f1e1f;
-    width: 35rem;
-    height: 30rem;
+    width: 32rem;
+    height: 27rem;
     text-align: center;
 }
 
 .calculadora__input {
-    padding: .8rem;
+    padding: .5rem;
     border-radius: 4px;
     font-weight: 600;
     font-size: 2rem;
+    width: 70%;
 }
 
 .calculadora__input:hover {

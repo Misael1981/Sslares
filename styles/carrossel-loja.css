@@ -159,7 +159,7 @@ body {
     color: #e90736;
 }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-    top: 730px;
+    top: 750px;
 }
 
 @media (max-width: 600px) {

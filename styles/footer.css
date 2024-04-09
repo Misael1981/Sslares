@@ -1,4 +1,8 @@
 /*Rodapé*/
+section {
+    padding: 10rem 9%;
+}
+
 .footer {
     margin-top: 0rem;
     background: #1f1e1f;
@@ -71,4 +75,11 @@
     color: #fff;
     text-transform: none;
 }
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
 

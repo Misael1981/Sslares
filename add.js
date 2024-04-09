@@ -160,7 +160,7 @@ document.getElementById("txtmq").addEventListener("change", calcularTotalEspacad
 
 
 // Polegadas
-/*
+
 
 // Adicionando evento de mudança ao seletor de unidades
 document.querySelector(".seletor__calculadora").addEventListener("change", function() {
@@ -272,7 +272,7 @@ function calcularTotalEspacadores() {
   }
 
 }
-*/
+
 
 
 // Modal
