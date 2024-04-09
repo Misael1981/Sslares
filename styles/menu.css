@@ -1,7 +1,33 @@
-.ancora-menu {
-    color: white;
+
+/*Imagem do Menu*/
+
+.imagem-menu {
+    position: absolute;
+    width: 100vw;
+    height: 40vh;
+    margin-top: 20px;
 }
 
+.imagem-menu img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagem-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/logos/logo-g-cabecalho.png');
+    object-fit: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*Menu*/
 
 .navbar {
     display: flex;
@@ -15,16 +41,98 @@
     padding-top: 2rem;
 }
 
+.navbar a {
+    color: #fff;
+}
+
 .links-menu {
     display: none;
 }
 
+.menu {
+    z-index: 1;
+    position: fixed;
+    height: 10%;
+    width: 100vw;
+    height: 70px;
+    background-color: #1f1e1f;
+    position: fixed;
+}
+
+.borda-delimitadora {
+    border-top: 1px solid black;
+    padding-top: 340px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border: 2px solid #1f1e1f;
+    background-color: #f6f6f6;
+    width: 40vw;
+    height: 3em;
+    margin: 20px auto;
+    border-radius: 28px;
+    padding: 5px 10px;
+    color: #1f1e1f;
+    font-size: 18px;
+}
+
+.search ::placeholder {
+    font-size: 18px;
+    color: #1f1e1f;
+}
+
+#searchInput {
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+}
+
+.label-falsa {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f6f6f6;
+    width: 40vw;
+    height: 3em;
+    margin: 20px auto;
+    border-radius: 28px;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.label-falsa a {
+    text-decoration: none;
+    color: #1f1e1f;
+}
+
+.campos {
+    position: relative;
+    z-index: 1;
+}
+
+.campos-pesquisa {
+    display: flex;
+    justify-content:space-around;
+}
+
+.search, .label-falsa {
+    flex: 1; /* Isso fará com que os elementos ocupem todo o espaço disponível */
+    margin: 0 3em;
+}
+
 @media (max-width: 768px) {
+
     .menu {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         padding: 5px 35px;
+        z-index: 1000;
     }
 
     .menu .navbar {
@@ -92,13 +200,38 @@
         transform: rotate(-45deg) translate(20px, -12px);
     }
 
-    .links-menu a {
-        color: white; /* ou qualquer outra cor desejada */
-        text-decoration: none; /* para remover o sublinhado padrão */
+    .label-falsa {
+        display: none;
     }
-    
 
-    .descricao__calculadora {
-        width: 100vw;
+    .borda-delimitadora {
+        padding-top: 360px;
+    }
+
+    .campo-desktop {
+        display: block;
     }
 }
+
+@media (max-width: 1100px){
+    .campo-desktop {
+        display: none;
+    }
+
+    .borda-delimitadora {
+        padding-top: 360px;
+    }
+}
+
+@media (max-width: 1800px) {
+    .campo-tablet {
+        display: none;
+    }
+    .borda-delimitadora {
+        padding-top: 360px;
+    }
+}
+
+
+
+

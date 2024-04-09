@@ -1,0 +1,229 @@
+.ancora-menu {
+    color: white;
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.5rem;
+    margin-right: 12rem;
+    color: #fff;
+    font-size: 1.6rem;
+    padding-top: 2rem;
+}
+
+.links-menu {
+    display: none;
+}
+
+.logo-pricipal {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 5px 35px;
+    }
+
+    .menu .navbar {
+        display: none;
+    }
+
+    .one, .two, .three {
+        width: 100%;
+        height: 4px;
+        background-color: white;
+        margin: 1rem auto;
+        transition-duration: 0.5s
+    }
+
+    .menu-toggle {
+        
+       
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1f1e1f;
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+
+    .menu.on .menu-toggle {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+
+    .menu.on .navbar {
+        display: block;
+        
+    }
+    
+    .menu .navbar a {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 4rem;
+        display: block;
+        padding: 2rem 0;
+    }
+
+    .menu.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu.on .menu-toggle .one {
+        transform: rotate(45deg) translate(8px, -1px);
+    }
+
+    .menu.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(20px, -12px);
+    }
+
+    .links-menu a {
+        color: white; /* ou qualquer outra cor desejada */
+        text-decoration: none; /* para remover o sublinhado padrão */
+    }
+    
+
+    .descricao__calculadora {
+        width: 100vw;
+    }
+}
+
+
+
+.imagem-cabecalho img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ancora-menu {
+    color: white;
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.5rem;
+    margin-right: 12rem;
+    color: #fff;
+    font-size: 1.6rem;
+    padding-top: 2rem;
+}
+
+.links-menu {
+    display: none;
+}
+
+.logo-pricipal {
+    width: 100%;
+}
+
+.menu {
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 5px 35px;
+        z-index: 1000;
+    }
+
+    .menu .navbar {
+        display: none;
+    }
+
+    .one, .two, .three {
+        width: 100%;
+        height: 4px;
+        background-color: white;
+        margin: 1rem auto;
+        transition-duration: 0.5s
+    }
+
+    .menu-toggle {
+        
+       
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1f1e1f;
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+
+    .menu.on .menu-toggle {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+
+    .menu.on .navbar {
+        display: block;
+        
+    }
+    
+    .menu .navbar a {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 4rem;
+        display: block;
+        padding: 2rem 0;
+    }
+
+    .menu.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu.on .menu-toggle .one {
+        transform: rotate(45deg) translate(8px, -1px);
+    }
+
+    .menu.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(20px, -12px);
+    }
+
+    .links-menu a {
+        color: white; /* ou qualquer outra cor desejada */
+        text-decoration: none; /* para remover o sublinhado padrão */
+    }
+    
+
+    .descricao__calculadora {
+        width: 100vw;
+    }
+}

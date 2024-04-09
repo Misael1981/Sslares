@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
 
 * {
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
     text-decoration: none;
     outline: none;
     border: none;
@@ -17,27 +17,18 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    text-decoration: none; /* para remover o sublinhado padrão */
     overflow-x: hidden;
 }
 
-ul, li {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-}
 /*
 body {
-    background: linear-gradient(to bottom, rgb(201, 196, 196), rgba(94, 92, 92, 0.014));
-    width: 100%;
-    height: 160vh; 
+    background: rgb(201, 196, 196);
 }
 */
 
 body {
-    background: rgb(201, 196, 196);
-    height: auto;
+    background: #e90736;
 }
 
 .btn {
@@ -52,165 +43,44 @@ body {
     font-size: 1.7rem;
 }
 
-/*Menu*/
-
-header {
-    position: fixed;
-    z-index: 10000;
-    height: 10%;
-    width: 100vw;
-    height: 70px;
-    background-color: #1f1e1f;
-    position: fixed;
-    padding-left: 30rem;
+html::-webkit-scrollbar {
+    width: 1rem;
 }
 
-.ancora-menu {
-    color: white;
+html::-webkit-scrollbar-track {
+    /*o que fica abaixo da barra*/
+    background: #000;
 }
 
+html::-webkit-scrollbar-thumb {
+    /*cor da barra*/
+    background: red;
+}
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2.5rem;
-    margin-right: 12rem;
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    padding-right: 3rem;
+    background: linear-gradient(130deg, red 93%, 
+    transparent 90%);
     color: #fff;
-    font-size: 1.6rem;
-    padding-top: 2rem;
-}
-
-.links-menu {
-    display: none;
-}
-
-.logo {
-    margin: 6% 0 0 10%;
-}
-
-/*Fim do Menu*/
-
-.heading {
-    background: #1f1e1f;
-    color: #fff;
-    font-size: 3rem;
-    text-align: center;
-    max-width: 150rem;
-    height: 12rem;
-    margin: 7rem 0 2rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-/*Rodapé*/
-
-.footer {
-    margin-top: 8rem;
-    background: #1f1e1f;
-}
-
-.footer .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 1.5rem;
-}
-
-.footer .box-container .box h3 {
-    font-size: 2.2rem;
-    color: #fff;
-    padding: 1rem 1rem;
-}
-
-.footer .box-container .box .links {
-    font-size: 1.5rem;
-    display: block;
-    color: #fff;
-    padding: 1rem 3rem;
-}
-
-.footer .box-container .box .links:hover {
-    color: #fff;
-}
-
-.footer .box-container .box p {
-    font-size: 1.5rem;
-    color: #fff;
-    padding: 1rem 3rem;
-}
-
-.footer .box-container .box p i {
-    padding-right: .5rem;
-    color: #fff;
-}
-
-.footer .box-container .box .share {
-    padding: 1rem 3rem;
-}
-
-.footer .box-container .box .share a {
-    height: 4.5rem;
-    width: 4.5rem;
-    line-height: 4.5rem;
+    cursor: pointer;
     font-size: 1.7rem;
-    color: #fff;
-    background: #111;
-    border-radius: 50%;
-    margin-right: .5rem;
-    text-align: center;
 }
 
-.footer .box-container .box .share a:hover {
-    background:#fff;
+.btn:hover {
+    transform: scale(1.1); /*Animação no botão*/
 }
 
-.footer .box-container .box form {
-    margin-left: 2rem;
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: red;
 }
 
-.footer .box-container .box form .email {
-    margin-bottom: 1rem;
-    width: 100%;
-    background: #111;
-    padding: 1.2rem;
-    font-size: 1.5rem;
-    color: #fff;
-    text-transform: none;
-}
 
-.icon {
-    position: fixed;
-    bottom: 60px;
-    right: 30px;
-    font-size: 30px;
-    background-color: #01e675;
-    color: #ffffff;
-    border-radius: 50%;
-    padding: 3px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    text-decoration: none;
-    z-index: 100;
-    box-shadow: 2px 2px 2px #c0bdbd;
-    border: 1px solid white;
-}
+
   
-.icon .fab{
-    padding-top: 9px;
-}
-  
-.icon:hover{
-    background-color: #fff;
-    color: #029e3b;
-    font-weight: 900;
-    box-shadow: 2px 2px 20px #5fe690;
-  
-}
+
 
 
 
