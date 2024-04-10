@@ -27,7 +27,7 @@
 
 .content__sobre-nos {
     width: 50%;
-    height: 145vh;
+    min-height: 100vh; /* Defina uma altura mínima que acomode todo o conteúdo */
     padding: 20px;
     border-radius: 1rem;
     font-size: 1.9rem;
@@ -38,7 +38,7 @@
 }
 
 .content__sobre-nos p {
-    padding: 1rem 0 1rem 0;
+    padding: 1rem 0;
 }
 
 .mini-banner {
@@ -145,7 +145,7 @@
 
     .content__sobre-nos {
         width: 800%;
-        height: 268vw;
+        min-height: 50vh;
         padding: 20px;
     }
 
