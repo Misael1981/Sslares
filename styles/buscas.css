@@ -1,0 +1,8 @@
+#listaProdutos {
+    display: none;
+    list-style-type: none;
+}
+
+#listaProdutos a img {
+    width: 50px;
+}

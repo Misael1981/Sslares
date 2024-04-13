@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="produtos.css">
     <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/buscas.css">
     <link rel="stylesheet" href="styles/carrossel-loja.css">
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -50,7 +51,7 @@
                     <label for="searchInput">
                         <span><i class="bi bi-search"></i></span>
                     </label>
-                    <input type="text" id="searchInput" placeholder="Pesquisar produtos">
+                    <input type="text" onkeyup="filtrar()" id="searchInput" placeholder="Pesquisar produtos">
                 </div>
                 <nav class="label-falsa">
                     <a class="campo-desktop" href="#">Orçamento Personalizado</a>
@@ -67,7 +68,90 @@
 
     <main>
 
-        <section class="resultado__pesquisa"></section>
+        <section class="resultado__pesquisa">
+            <div class="busca">
+                <ul id="listaProdutos">
+                    <li>
+                        <a href="#">
+                            <img class="imagem-busca" width="50" src="img/carrossel-loja/cunha-niveladora.jpg" alt="#">
+                            <span class="item-name">Cunha</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/cunhaslim-story.png" alt="#">
+                            <span class="item-name">Cunha Slim</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/desempenadeira-espuma-story.png" alt="#">
+                            <span class="item-name">Desempenadeira Espuma</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/desempenadeira-lisa-story.png" alt="#">
+                            <span class="item-name">Desempenadeira Lisa</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/desempenadeira-corrugada-story.png" alt="#">
+                            <span class="item-name">Desempenadeira Corrugada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/espacador-slim-padrao-story.png" alt="#">
+                            <span class="item-name">Espaçador Slim Padrão</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/espacador-slim-story.png" alt="#">
+                            <span class="item-name">Espaçador Slim PREMIUM</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/espacador-smart-padrao-story.png" alt="#">
+                            <span class="item-name">Espaçador Smart PADRÃO</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/espacador-smart-premium-story.png" alt="#">
+                            <span class="item-name">Espaçador Smart PREMIUM</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/bloco-espuma-story.png" alt="#">
+                            <span class="item-name">Bloco de Espuma</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/ralo-oculto-story.png" alt="#">
+                            <span class="item-name">Ralo oculto</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/ralo-oculto-cores-story.png" alt="#">
+                            <span class="item-name">Ralo oculto "cores</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/carrossel-loja/paflon.png" alt="#">
+                            <span class="item-name">Paflon</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
         <!--Carrossel-->
     
@@ -81,19 +165,19 @@
                  <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="box">
-                            <div class="slide-img">
-                                <img src="img/carrossel-loja/cunha-niveladora.jpg" alt="Cunha niveladora">
-                                <div class="overlay">
-                                    <a href="#" class="buy-btn">Buy Now</a>
+                                <div class="slide-img">
+                                    <img src="img/carrossel-loja/cunha-niveladora.jpg" alt="Cunha niveladora">
+                                    <div class="overlay">
+                                        <a href="#" class="buy-btn">Buy Now</a>
+                                    </div>
+                                </div>
+                                <div class="detail-box">
+                                    <div class="type">
+                                        <a class="produto" href="#">Cunha</a>
+                                        <span> <br> <br> Cunha para nivelamento de pisos e revestimentos 50un <br> <br> </span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="detail-box">
-                                <div class="type">
-                                    <a href="#">Cunha</a>
-                                    <span> <br> <br> Cunha para nivelamento de pisos e revestimentos 50un <br> <br> </span>
-                                </div>
-                            </div>
-                        </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="box">
@@ -105,7 +189,7 @@
                             </div>
                             <div class="detail-box">
                                 <div class="type">
-                                    <a href="#">Cunha Slim</a>
+                                    <a class="produto" href="#">Cunha Slim</a>
                                     <span><br> <br> Cunha para nivelamento de pisos e revestimentos 50un <br> <br> </span>
                                 </div>
                             </div>
@@ -121,7 +205,7 @@
                                 </div>
                                 <div class="detail-box">
                                     <div class="type">
-                                        <a href="#">Desempenadeira Espuma</a>
+                                        <a class="produto" href="#">Desempenadeira Espuma</a>
                                         <span> <br>  <br>Desempenadeira com espuma 18X30 <br> <br> </span>
                                     </div>
                                 </div>
@@ -137,7 +221,7 @@
                                 </div>
                                 <div class="detail-box">
                                     <div class="type">
-                                        <a href="#">Desempenadeira Lisa</a>
+                                        <a class="produto" href="#">Desempenadeira Lisa</a>
                                         <span><br> <br> Desempenadeira com lisa 18X30 <br> <br> </span>
                                     </div>
                                 </div>
@@ -153,7 +237,7 @@
                                 </div>
                                 <div class="detail-box">
                                     <div class="type">
-                                        <a href="#">Desempenadeira Corrugada</a>
+                                        <a class="produto" href="#">Desempenadeira Corrugada</a>
                                         <span> <br> <br> Desempenadeira com corrugada 18X30 <br> <br></span>
                                     </div>
                                 </div>
@@ -169,7 +253,7 @@
                                 </div>
                                 <div class="detail-box">
                                     <div class="type">
-                                        <a href="#">Espaçador Slim Padrão</a>
+                                        <a class="produto" href="#">Espaçador Slim Padrão</a>
                                         <span> <br>Espaçador / Nivelador SLIM 3mm, 2mm, 1,5mm e 1mm PADRÃO</span>
                                     </div>
                                 </div>
@@ -185,7 +269,7 @@
                                 </div>
                                 <div class="detail-box">
                                     <div class="type">
-                                        <a href="#">Espaçador Slim PREMIUM</a>
+                                        <a class="produto" href="#">Espaçador Slim PREMIUM</a>
                                         <span> <br>Espaçador / Nivelador SLIM 3mm, 2mm, 1,5mm e 1mm PREMIUM</span>
                                     </div>
                                 </div>
@@ -201,7 +285,7 @@
                                 </div>
                                 <div class="detail-box">
                                     <div class="type">
-                                        <a href="#">Espaçador Smart PADRÃO</a>
+                                        <a class="produto" href="#">Espaçador Smart PADRÃO</a>
                                         <span>Espaçador / Nivelador SMART 3mm, 2mm, 1,5mm e 1mm PADRÂO</span>
                                     </div>
                                 </div>
@@ -217,7 +301,7 @@
                                 </div>
                                 <div class="detail-box">
                                     <div class="type">
-                                        <a href="#">Espaçador Smart PREMIUM</a>
+                                        <a class="produto" href="#">Espaçador Smart PREMIUM</a>
                                         <span>Espaçador / Nivelador SMART 3mm, 2mm, 1,5mm e 1mm PREMIUM</span>
                                     </div>
                                 </div>
@@ -233,7 +317,7 @@
                                 </div>
                                 <div class="detail-box">
                                     <div class="type">
-                                        <a href="#">Bloco de Espuma</a>
+                                        <a class="produto" href="#">Bloco de Espuma</a>
                                         <span> <br><br> Bloco de espuma 20x12 <br> <br> </span>
                                     </div>
                                 </div>
@@ -249,7 +333,7 @@
                                 </div>
                                 <div class="detail-box">
                                     <div class="type">
-                                        <a href="#">Ralo oculto</a>
+                                        <a class="produto" href="#">Ralo oculto</a>
                                         <span> <br><br> <br>Ralo oculto 10X10 E 15X15, disponível em diversas cores</span>
                                     </div>
                                 </div>
@@ -265,7 +349,7 @@
                                 </div>
                                 <div class="detail-box">
                                     <div class="type">
-                                        <a href="#">Ralo oculto "cores"</a>
+                                        <a class="produto" href="#">Ralo oculto "cores"</a>
                                         <span><br> <br>Ralo oculto 10X10 E 15X15, disponível em diversas cores</span>
                                     </div>
                                 </div>
@@ -281,7 +365,7 @@
                                 </div>
                                 <div class="detail-box">
                                     <div class="type">
-                                        <a href="#">Paflon</a>
+                                        <a class="produto" href="#">Paflon</a>
                                         <span><br>Luminária versátil, capaz de oferecer iluminação direta, indireta ou uma combinação de ambas.</span>
                                     </div>
                                 </div>

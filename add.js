@@ -26,134 +26,59 @@ imagens.forEach(imagem => {
 
 //Seletor de Produtos 
 
-const data = [
-  {
-    title: 'Cunha',
-    description: 'Cunha para nivelamento de pisos e revestimentos 50un',
-    image: 'img/carrossel-loja/cunha-niveladora.jpg'
-  },
-  {
-    title: 'Cunha Slim',
-    description: 'Cunha para nivelamento de pisos e revestimentos 50un',
-    image: 'img/carrossel-loja/cunhaslim-story.png'
-  },
-  {
-    title: 'Desempenadeira Espuma',
-    description: 'Desempenadeira com espuma 18X30',
-    image: 'img/carrossel-loja/desempenadeira-espuma-story.png'
-  },
-  {
-    title: 'Desempenadeira Lisa',
-    description: 'Desempenadeira com lisa 18X30',
-    image: 'img/carrossel-loja/desempenadeira-lisa-story.png'
-  },
-  {
-    title: 'Desempenadeira Corrugada',
-    description: 'Desempenadeira com corrugada 18X30',
-    image: 'img/carrossel-loja/desempenadeira-corrugada-story.png'
-  },
-  {
-    title: 'Espaçador Slim Padrão',
-    description: 'Espaçador / Nivelador SLIM 3mm, 2mm, 1,5mm e 1mm PADRÃO',
-    image: 'img/carrossel-loja/espacador-slim-padrao-story.png'
-  },
-  {
-    title: 'Espaçador Slim PREMIUM',
-    description: 'Espaçador / Nivelador SLIM 3mm, 2mm, 1,5mm e 1mm PREMIUM',
-    image: 'img/carrossel-loja/espacador-slim-story.png'
-  },
-  {
-    title: 'Espaçador Smart PADRÃO',
-    description: 'Espaçador / Nivelador SMART 3mm, 2mm, 1,5mm e 1mm PADRÂO',
-    image: 'img/carrossel-loja/espacador-smart-padrao-story.png'
-  },
-  {
-    title: 'Espaçador Smart PREMIUM',
-    description: 'Espaçador / Nivelador SMART 3mm, 2mm, 1,5mm e 1mm PREMIUM',
-    image: 'img/carrossel-loja/espacador-smart-premium-story.png'
-  },
-  {
-    title: 'Bloco de Espuma',
-    description: 'Bloco de espuma 20x12',
-    image: 'img/carrossel-loja/bloco-espuma-story.png'
-  },
-  {
-    title: 'Ralo oculto',
-    description: 'Ralo oculto 10X10 E 15X15, disponível em diversas cores',
-    image: 'img/carrossel-loja/ralo-oculto-story.png'
-  },
-  {
-    title: 'Ralo oculto "cores"',
-    description: 'Ralo oculto 10X10 E 15X15, disponível em diversas cores',
-    image: 'img/carrossel-loja/ralo-oculto-cores-story.png'
-  },
-  {
-    title: 'Paflon',
-    description: 'Luminária versátil, capaz de oferecer iluminação direta, indireta ou uma combinação de ambas.',
-    image: 'img/carrossel-loja/paflon.png'
+function filtrar() {
+  let input,
+  filter,
+  ul,
+  li,
+  a,
+  i,
+  span,
+  txtValue,
+  count = 0;
+
+  //Pegar os elementos HTML
+  input = document.getElementById('searchInput');
+  ul = document.getElementById('listaProdutos');
+
+  // filtro
+  filter = input.value.toUpperCase();
+  // Pegar as <li> da lista 
+  li = ul.getElementsByTagName('li');
+
+  // Percorrrer todos os <li>
+  for(i = 0; i < li.length; i++) {
+    // Pegar a tag <a> do elemento percorrido
+    a = li[i].getElementsByTagName('a')[0];
+    // Pegar o texto dentro link
+    txtValue = a.textContent || a.innerText;
+    //Verificar se texto que o usuário digitou bate como texto da tag <a>
+    if (txtValue.toLocaleUpperCase().indexOf(filter) > -1) {
+        //Valor bateu
+        li[1].style.display = '';
+        count++;
+        // Pra deixar o texto em negrito
+        span = li[i].querySelector('.item-name');
+        //Se existir 
+        if (span) {
+          span.innerHTML = txtValue.replace(new RegExp(filter, 'gi'), (match) => {
+            return "<strong>" + match + "</strong>";
+          })
+        }
+    } else {
+      // Não mostra o item da lista 
+      li[i].style.display = 'none';
+    }
   }
-];
 
-const resultadoPesquisa = document.querySelector('.resultado__pesquisa');
-const searchInput = document.querySelector('#searchInput');
-
-const displayData = data => {
-  resultadoPesquisa.innerHTML = '';
-  data.forEach(e => {
-    resultadoPesquisa.innerHTML += `
-      <div>
-        <a>${e.title}</a>
-        <span>${e.description}</span>
-      </div>
-    `;
-  });
-}
-
-searchInput.addEventListener("keyup", (e) =>{
-  const search = data.filter(i => i.title.toLowerCase().includes(e.target.value.toLowerCase()));
-  displayData(search);
-});
-
-window.addEventListener("load", displayData.bind(null, data));
+  if (count === 0) {
+    ul.style.display ='none';
+  } else {
+    ul.style.display = 'block';
+  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-const slide = document.querySelectorAll('.swiper-slide');
-const searchInput = document.querySelector('#searchInput');
-
-const displayData = data => {
-  slide.innerHTML = '';
-  data.forEach(e => {
-    slide.innerHTML += `
-    <div class= "swiper-slide">
-      <a>${e.title}</a>
-      <span>${e.description}</span>
-    `
-  })
-}
-
-searchInput.addEventListener("keyup", (e) =>{
-  const search = data.filter(i => i.title.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()));
-  displayData(search);
-})
-
-window.addEventListener("load", displayData.bind(null, data));
-*/
+  }
 
 
 
