@@ -28,16 +28,16 @@ imagens.forEach(imagem => {
 
 function filtrar() {
   let input,
-  filter,
-  ul,
-  li,
-  a,
-  i,
-  span,
-  txtValue,
-  count = 0;
+    filter,
+    ul,
+    li,
+    a,
+    i,
+    span,
+    txtValue,
+    count = 0;
 
-  //Pegar os elementos HTML
+  // Pegar os elementos HTML
   input = document.getElementById('searchInput');
   ul = document.getElementById('listaProdutos');
 
@@ -46,40 +46,40 @@ function filtrar() {
   // Pegar as <li> da lista 
   li = ul.getElementsByTagName('li');
 
-  // Percorrrer todos os <li>
-  for(i = 0; i < li.length; i++) {
+  // Percorrer todos os <li>
+  for (i = 0; i < li.length; i++) {
     // Pegar a tag <a> do elemento percorrido
     a = li[i].getElementsByTagName('a')[0];
-    // Pegar o texto dentro link
+    // Pegar o texto dentro do link
     txtValue = a.textContent || a.innerText;
-    //Verificar se texto que o usuário digitou bate como texto da tag <a>
-    if (txtValue.toLocaleUpperCase().indexOf(filter) > -1) {
-        //Valor bateu
-        li[1].style.display = '';
-        count++;
-        // Pra deixar o texto em negrito
-        span = li[i].querySelector('.item-name');
-        //Se existir 
-        if (span) {
-          span.innerHTML = txtValue.replace(new RegExp(filter, 'gi'), (match) => {
-            return "<strong>" + match + "</strong>";
-          })
-        }
+    // Verificar se o texto que o usuário digitou bate com o texto da tag <a>
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      // Valor bateu
+      li[i].style.display = '';
+      count++;
+      // Pegar a tag span com a classe .item-name
+      span = li[i].querySelector('.item-name');
+      // Se existir 
+      if (span) {
+        // Pegar o texto dentro da tag span
+        let itemName = span.textContent || span.innerText;
+        // Substituir apenas o texto correspondente pela tag <strong>
+        span.innerHTML = itemName.replace(new RegExp(filter, 'gi'), (match) => {
+          return "<strong>" + match + "</strong>";
+        });
+      }
     } else {
-      // Não mostra o item da lista 
+      // Não mostrar o item da lista 
       li[i].style.display = 'none';
     }
   }
 
   if (count === 0) {
-    ul.style.display ='none';
+    ul.style.display = 'none';
   } else {
     ul.style.display = 'block';
   }
-
-
-  }
-
+}
 
 
 
