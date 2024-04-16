@@ -136,21 +136,24 @@ document.getElementById('descricaoProduto1').addEventListener('click', function(
 
   // Atualizar as propriedades da seção de descrição do produto
   document.querySelector('.story-iamgem').innerHTML = `<img src="${produto.imagem}" alt="Imagem do Produto">`;
-  document.querySelector('.story-descricao h2').textContent = produto.titulo;
-  document.querySelector('.story-descricao h3:nth-of-type(1)').textContent = produto.subtitulo;
+  document.querySelector('.story-descricao h1').textContent = produto.titulo;
   document.querySelector('.story-descricao p:nth-of-type(1)').textContent = produto.descricao1;
-  document.querySelector('.story-descricao h3:nth-of-type(2)').textContent = produto.descricao2;
-
-  console.log(document.querySelector('.story-descricao h2'));
-console.log(document.querySelector('.story-descricao h3:nth-of-type(1)'));
-console.log(document.querySelector('.story-descricao p:nth-of-type(1)'));
+  document.querySelector('.story-descricao p:nth-of-type(2)').textContent = produto.descricao2;
+  document.querySelector('.story-descricao h2:nth-of-type(1)').textContent = produto.subtitulo;
   document.querySelector('.story-descricao p:nth-of-type(2)').textContent = produto.descricao3;
-  document.querySelector('.story-descricao h3:nth-of-type(3)').textContent = produto.subtitulo2;
+  document.querySelector('.story-descricao h2:nth-of-type(2)').textContent = produto.subtitulo2;
+
+/*
+  console.log(document.querySelector('.story-descricao h1'));
+console.log(document.querySelector('.story-descricao p:nth-of-type(2)'));
+console.log(document.querySelector('.story-descricao p:nth-of-type(1)'));
+   */
+  
   document.querySelector('.story-descricao p:nth-of-type(3)').textContent = produto.descricao4;
   document.querySelector('.story-descricao p:nth-of-type(4)').textContent = produto.descricao5;
   document.querySelector('.story-descricao p:nth-of-type(5)').textContent = produto.descricao6;
 
-
+/* 
    
   document.addEventListener('DOMContentLoaded', function() {
     // Seu código aqui
@@ -161,11 +164,14 @@ console.log(document.querySelector('.story-descricao p:nth-of-type(1)'));
     } else {
       alert('Elemento não encontrado');
     }
+    
   
-    // Exibir a seção de descrição do produto
-    document.querySelector('.story').style.display = 'block';
-    console.log(document.querySelector('.story').style.display);
+    
   });
+*/
+// Exibir a seção de descrição do produto
+document.querySelector('.story').style.display = 'block';
+console.log(document.querySelector('.story').style.display);
 
 });
 
