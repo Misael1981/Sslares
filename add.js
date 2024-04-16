@@ -81,6 +81,98 @@ function filtrar() {
   }
 }
 
+// Direcionando Produtos à loja 
+/* 
+document.getElementById('descricaoProduto').addEventListener('click', function() {
+  // Encontrar a seção de destino
+  let storyBSection = document.querySelector('.story');
+
+   // Alterar o estilo da seção para exibi-la
+   storyBSection.style.display = 'block';
+
+  // Rolar a página até a seção de destino
+  storyBSection.scrollIntoView({ behavior: 'smooth' });
+});
+*/
+
+const produtos = {
+  produto1: {
+      imagem: "img/carrossel-loja/cunha-niveladora.jpg",
+      titulo: "Cunha",
+      descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+      descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+      subtitulo: "Embalagem Cunha:",
+      descricao3: '50 peças',
+      subtitulo2: 'Dimensões',
+      descricao4: 'Altura: 20mm',
+      descricao5: 'Largura: 24mm',
+      descricao6: 'Comprimento: 95mm',
+      
+      // Adicione outras propriedades conforme necessário
+  },
+  produto2: {
+      imagem: "caminho/para/imagem2.jpg",
+      titulo: "Título do Produto 2",
+      subtitulo: "Subtítulo do Produto 2",
+      descricao1: "Descrição detalhada do Produto 2 - Parte 1",
+      descricao2: "Descrição detalhada do Produto 2 - Parte 2",
+      // Adicione outras propriedades conforme necessário
+  },
+  // Adicione mais produtos conforme necessário
+};
+
+
+// Novo código
+
+
+
+// Event listener para o clique no botão "Ver Mais"
+document.getElementById('descricaoProduto1').addEventListener('click', function() {
+  // Obter o ID do produto clicado
+  const produtoId = this.dataset.produtoId;
+
+  // Obter o objeto do produto correspondente
+  const produto = produtos[produtoId];
+
+  // Atualizar as propriedades da seção de descrição do produto
+  document.querySelector('.story-iamgem').innerHTML = `<img src="${produto.imagem}" alt="Imagem do Produto">`;
+  document.querySelector('.story-descricao h2').textContent = produto.titulo;
+  document.querySelector('.story-descricao h3:nth-of-type(1)').textContent = produto.subtitulo;
+  document.querySelector('.story-descricao p:nth-of-type(1)').textContent = produto.descricao1;
+  document.querySelector('.story-descricao h3:nth-of-type(2)').textContent = produto.descricao2;
+
+  console.log(document.querySelector('.story-descricao h2'));
+console.log(document.querySelector('.story-descricao h3:nth-of-type(1)'));
+console.log(document.querySelector('.story-descricao p:nth-of-type(1)'));
+  document.querySelector('.story-descricao p:nth-of-type(2)').textContent = produto.descricao3;
+  document.querySelector('.story-descricao h3:nth-of-type(3)').textContent = produto.subtitulo2;
+  document.querySelector('.story-descricao p:nth-of-type(3)').textContent = produto.descricao4;
+  document.querySelector('.story-descricao p:nth-of-type(4)').textContent = produto.descricao5;
+  document.querySelector('.story-descricao p:nth-of-type(5)').textContent = produto.descricao6;
+
+
+   
+  document.addEventListener('DOMContentLoaded', function() {
+    // Seu código aqui
+    const storyElement = document.querySelector('.story');
+    if (storyElement) {
+      storyElement.style.display = 'block';
+      console.log(storyElement.style.display);
+    } else {
+      alert('Elemento não encontrado');
+    }
+  
+    // Exibir a seção de descrição do produto
+    document.querySelector('.story').style.display = 'block';
+    console.log(document.querySelector('.story').style.display);
+  });
+
+});
+
+
+
+
+
 
 
 
