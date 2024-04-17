@@ -1,22 +1,30 @@
 .story {
-    border: 1px solid black;
     background: white;
     margin: 8rem 8rem 0 8rem;
-    display: flex;
-    flex-direction: row;
     padding: 0;
 }
 
+.story-campo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .story-iamgem {
-    border: 1px solid black;
     width: 30vw;
     height: 50vh;
 }
 
+.story-iamgem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
 .story-descricao {
-    width: 60vw;
+    width: 50vw;
     height: auto;
-    border: 1px solid black;
     padding: 3rem;
 }
 
@@ -33,4 +41,21 @@
     display: none;
 }
 
+
+@media (max-width: 768px) {
+    .story-campo {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .story-descricao {
+        width: 95vw;
+        height: auto;
+    }
+
+    .story-iamgem {
+        width: 80vw;
+        height: 50vh;
+    }
+}
 

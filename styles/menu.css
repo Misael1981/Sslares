@@ -211,6 +211,10 @@
     .campo-desktop {
         display: block;
     }
+
+    .campos-pesquisa {
+        margin-top: 270px;
+    }
 }
 
 @media (max-width: 1100px){

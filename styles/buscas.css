@@ -8,11 +8,19 @@
     list-style-type: none;
 }
 
+.lista-produtos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .card-buscas {
     width: 234px;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
+    margin: 3rem 0;
 }
 
 .card-imagem {
@@ -57,7 +65,7 @@
     text-align: center;
 }
 
-.card-botao {
+.card-btn {
     position: absolute;
     left: 50%;
     top: 50%;

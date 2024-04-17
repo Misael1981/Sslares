@@ -81,19 +81,7 @@ function filtrar() {
   }
 }
 
-// Direcionando Produtos à loja 
-/* 
-document.getElementById('descricaoProduto').addEventListener('click', function() {
-  // Encontrar a seção de destino
-  let storyBSection = document.querySelector('.story');
-
-   // Alterar o estilo da seção para exibi-la
-   storyBSection.style.display = 'block';
-
-  // Rolar a página até a seção de destino
-  storyBSection.scrollIntoView({ behavior: 'smooth' });
-});
-*/
+//Seletor de produtos 
 
 const produtos = {
   produto1: {
@@ -107,73 +95,374 @@ const produtos = {
       descricao4: 'Altura: 20mm',
       descricao5: 'Largura: 24mm',
       descricao6: 'Comprimento: 95mm',
-      
-      // Adicione outras propriedades conforme necessário
   },
   produto2: {
-      imagem: "caminho/para/imagem2.jpg",
-      titulo: "Título do Produto 2",
-      subtitulo: "Subtítulo do Produto 2",
-      descricao1: "Descrição detalhada do Produto 2 - Parte 1",
-      descricao2: "Descrição detalhada do Produto 2 - Parte 2",
-      // Adicione outras propriedades conforme necessário
+    imagem: "img/carrossel-loja/cunhaslim-story.png",
+    titulo: "Cunha Slim",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
   },
-  // Adicione mais produtos conforme necessário
+  produto3: {
+    imagem: "img/carrossel-loja/desempenadeira-espuma-story.png",
+    titulo: "Desempenadeira Espuma",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto4: {
+    imagem: "img/carrossel-loja/desempenadeira-lisa-story.png",
+    titulo: "Desempenadeira Lisa",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto5: {
+    imagem: "img/carrossel-loja/desempenadeira-corrugada-story.png",
+    titulo: "Desempenadeira Corrugada",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto6: {
+    imagem: "img/carrossel-loja/espacador-slim-padrao-story.png",
+    titulo: "Espaçador Slim PADRÃO",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto7: {
+    imagem: "img/carrossel-loja/espacador-slim-story.png",
+    titulo: "Espaçador Slim PREMIUM",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto8: {
+    imagem: "img/carrossel-loja/espacador-smart-padrao-story.png",
+    titulo: "Espaçador Smart PADRÃO",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto9: {
+    imagem: "img/carrossel-loja/espacador-smart-premium-story.png",
+    titulo: "Espaçador Smart PREMIUM",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto10: {
+    imagem: "img/carrossel-loja/bloco-espuma-story.png",
+    titulo: "Bloco de Espuma",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto11: {
+    imagem: "img/carrossel-loja/ralo-oculto-story.png",
+    titulo: "Ralo oculto",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto12: {
+    imagem: "img/carrossel-loja/ralo-oculto-cores-story.png",
+    titulo: "Ralo oculto",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto13: {
+    imagem: "img/carrossel-loja/paflon.png",
+    titulo: "Paflon",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto14: {
+    imagem: "img/carrossel-loja/cunha-niveladora.jpg",
+    titulo: "Cunha",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+},
+  produto15: {
+    imagem: "img/carrossel-loja/cunhaslim-story.png",
+    titulo: "Cunha Slim",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto16: {
+    imagem: "img/carrossel-loja/desempenadeira-espuma-story.png",
+    titulo: "Desempenadeira Espuma",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto17: {
+    imagem: "img/carrossel-loja/desempenadeira-lisa-story.png",
+    titulo: "Desempenadeira Lisa",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto18: {
+    imagem: "img/carrossel-loja/desempenadeira-corrugada-story.png",
+    titulo: "Desempenadeira Corrugada",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto19: {
+    imagem: "img/carrossel-loja/espacador-slim-padrao-story.png",
+    titulo: "Espaçador Slim PADRÃO",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto20: {
+    imagem: "img/carrossel-loja/espacador-slim-story.png",
+    titulo: "Espaçador Slim PREMIUM",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto21: {
+    imagem: "img/carrossel-loja/espacador-smart-padrao-story.png",
+    titulo: "Espaçador Smart PADRÃO",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto22: {
+    imagem: "img/carrossel-loja/espacador-smart-premium-story.png",
+    titulo: "Espaçador Smart PREMIUM",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto23: {
+    imagem: "img/carrossel-loja/bloco-espuma-story.png",
+    titulo: "Bloco de Espuma",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto24: {
+    imagem: "img/carrossel-loja/ralo-oculto-story.png",
+    titulo: "Ralo oculto",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto25: {
+    imagem: "img/carrossel-loja/ralo-oculto-cores-story.png",
+    titulo: "Ralo oculto",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
+  produto26: {
+    imagem: "img/carrossel-loja/paflon.png",
+    titulo: "Paflon",
+    descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
+    descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
+    subtitulo: "Embalagem Cunha:",
+    descricao3: '50 peças',
+    subtitulo2: 'Dimensões',
+    descricao4: 'Altura: 20mm',
+    descricao5: 'Largura: 24mm',
+    descricao6: 'Comprimento: 95mm',
+  },
 };
 
+// Selecionar todos os botões "Ver Mais"
+const botoesVerMais = document.querySelectorAll('.buy-btn');
 
-// Novo código
+// Adicionar um evento de clique para cada botão "Ver Mais"
+botoesVerMais.forEach(botao => {
+    botao.addEventListener('click', function() {
+        // Obter o ID do produto associado a este botão
+        const produtoId = this.dataset.produtoId;
 
+        // Obter o objeto do produto correspondente
+        const produto = produtos[produtoId];
 
+        // Atualizar as propriedades da seção de descrição do produto
+        document.querySelector('.story-iamgem').innerHTML = `<img src="${produto.imagem}" alt="Imagem do Produto">`;
+        document.querySelector('.story-descricao h1').textContent = produto.titulo;
+        document.querySelector('.story-descricao p:nth-of-type(1)').textContent = produto.descricao1;
+        document.querySelector('.story-descricao p:nth-of-type(2)').textContent = produto.descricao2;
+        document.querySelector('.story-descricao h2:nth-of-type(1)').textContent = produto.subtitulo;
+        document.querySelector('.story-descricao p:nth-of-type(2)').textContent = produto.descricao3;
+        document.querySelector('.story-descricao h2:nth-of-type(2)').textContent = produto.subtitulo2;
+        document.querySelector('.story-descricao p:nth-of-type(3)').textContent = produto.descricao4;
+        document.querySelector('.story-descricao p:nth-of-type(4)').textContent = produto.descricao5;
+        document.querySelector('.story-descricao p:nth-of-type(5)').textContent = produto.descricao6;
 
-// Event listener para o clique no botão "Ver Mais"
-document.getElementById('descricaoProduto1').addEventListener('click', function() {
-  // Obter o ID do produto clicado
-  const produtoId = this.dataset.produtoId;
-
-  // Obter o objeto do produto correspondente
-  const produto = produtos[produtoId];
-
-  // Atualizar as propriedades da seção de descrição do produto
-  document.querySelector('.story-iamgem').innerHTML = `<img src="${produto.imagem}" alt="Imagem do Produto">`;
-  document.querySelector('.story-descricao h1').textContent = produto.titulo;
-  document.querySelector('.story-descricao p:nth-of-type(1)').textContent = produto.descricao1;
-  document.querySelector('.story-descricao p:nth-of-type(2)').textContent = produto.descricao2;
-  document.querySelector('.story-descricao h2:nth-of-type(1)').textContent = produto.subtitulo;
-  document.querySelector('.story-descricao p:nth-of-type(2)').textContent = produto.descricao3;
-  document.querySelector('.story-descricao h2:nth-of-type(2)').textContent = produto.subtitulo2;
-
-/*
-  console.log(document.querySelector('.story-descricao h1'));
-console.log(document.querySelector('.story-descricao p:nth-of-type(2)'));
-console.log(document.querySelector('.story-descricao p:nth-of-type(1)'));
-   */
-  
-  document.querySelector('.story-descricao p:nth-of-type(3)').textContent = produto.descricao4;
-  document.querySelector('.story-descricao p:nth-of-type(4)').textContent = produto.descricao5;
-  document.querySelector('.story-descricao p:nth-of-type(5)').textContent = produto.descricao6;
-
-/* 
-   
-  document.addEventListener('DOMContentLoaded', function() {
-    // Seu código aqui
-    const storyElement = document.querySelector('.story');
-    if (storyElement) {
-      storyElement.style.display = 'block';
-      console.log(storyElement.style.display);
-    } else {
-      alert('Elemento não encontrado');
-    }
-    
-  
-    
-  });
-*/
-// Exibir a seção de descrição do produto
-document.querySelector('.story').style.display = 'block';
-console.log(document.querySelector('.story').style.display);
-
+        // Exibir a seção de descrição do produto
+        document.querySelector('.story').style.display = 'block';
+    });
 });
+
+// seletor 
+
+const botoesVerMaisSeletor = document.querySelectorAll('.card-btn');
+
+// Adicionar um evento de clique para cada botão "Ver Mais"
+botoesVerMaisSeletor.forEach(botao => {
+    botao.addEventListener('click', function() {
+        // Obter o ID do produto associado a este botão
+        const produtoId = this.dataset.produtoId;
+
+        // Obter o objeto do produto correspondente
+        const produto = produtos[produtoId];
+
+        // Atualizar as propriedades da seção de descrição do produto
+        document.querySelector('.story-iamgem').innerHTML = `<img src="${produto.imagem}" alt="Imagem do Produto">`;
+        document.querySelector('.story-descricao h1').textContent = produto.titulo;
+        document.querySelector('.story-descricao p:nth-of-type(1)').textContent = produto.descricao1;
+        document.querySelector('.story-descricao p:nth-of-type(2)').textContent = produto.descricao2;
+        document.querySelector('.story-descricao h2:nth-of-type(1)').textContent = produto.subtitulo;
+        document.querySelector('.story-descricao p:nth-of-type(2)').textContent = produto.descricao3;
+        document.querySelector('.story-descricao h2:nth-of-type(2)').textContent = produto.subtitulo2;
+        document.querySelector('.story-descricao p:nth-of-type(3)').textContent = produto.descricao4;
+        document.querySelector('.story-descricao p:nth-of-type(4)').textContent = produto.descricao5;
+        document.querySelector('.story-descricao p:nth-of-type(5)').textContent = produto.descricao6;
+
+        // Exibir a seção de descrição do produto
+        document.querySelector('.story').style.display = 'block';
+    });
+});
+
+
+
+
+
+
+
 
 
 
