@@ -177,6 +177,7 @@ document.getElementById("txtmq").addEventListener("change", calcularTotalEspacad
 
 const openModalButtonHome = document.querySelector("#open-modal-home"); // Abrir Modal na página principal
 const closeModalButton = document.querySelector("#close-modal"); // Fechar Modal 
+
 const modal = document.querySelector("#modal");
 const fade = document.querySelector("#fade");
 
@@ -186,3 +187,8 @@ const toggleModal = () => {
 };
 
 openModalButtonHome.addEventListener("click", () => toggleModal()); // Adiciona evento de clique para abrir o modal na página principal
+
+closeModalButton.addEventListener("click", () => {
+    toggleModal();
+  });
+  

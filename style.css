@@ -129,7 +129,7 @@ header {
 }
 
 .ancora-menu {
-    color: white;
+    color: #fff;
 }
 
 
@@ -322,12 +322,13 @@ a {
 /*Teste*/
 .whatsapp-icon {
     position: fixed;
-    bottom: 20px; /* Ajuste a distância do ícone em relação ao fundo da página conforme necessário */
-    right: 20px; /* Ajuste a distância do ícone em relação à borda direita da página conforme necessário */
+    bottom: 20px; 
+    right: 20px; 
 }
 
 .fab.fa-whatsapp {
-    font-size: 40px; /* Ajuste o tamanho do ícone conforme necessário */
+    font-size: 40px; 
+    color: #25D366;
 }
 
 /*Responsividade*/

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/beneficios.css">
     <link rel="stylesheet" href="styles/modal.css">
@@ -19,9 +20,9 @@
             
             <nav class="navbar">
                     <a class="ancora-menu" href="index.html">Home</a>
-                    <a class="ancora-menu" href="#about">Sobre nós</a>
-                    <a class="ancora-menu" href="ss-story.html" rel="next">Produtos</a>
-                    <a id="open-modal-home" class="ancora-menu" href="#depoimentos">Calculadora</a>
+                    <a class="ancora-menu" href="ss-story.html" rel="next">Ss-Story</a>
+                    <a id="open-modal-home" class="ancora-menu" href="#">Calculadora</a>
+                    <a class="ancora-menu" href="#seja-parceiro">Seja parceiro</a>
                     <a class="ancora-menu" href="#contato">Contato</a>
                     <div class="links-menu">
                         <a href="https://wa.me/5535991972424" target="_blank" class="fab fa-whatsapp"></a>
@@ -200,7 +201,7 @@
             <a href="#" class="btn">Quero</a>
         </section>
 
-        <section class="seja-parceiro">
+        <section class="seja-parceiro" id="seja-parceiro">
 
             <div class="seja-parceiro__banner">
                 <div class="balao-de-fala">
@@ -647,9 +648,9 @@
         </div>
 
         <div class="whatsapp-icon">
-            <a href="https://wa.me/5535991972424&" target="_blank" class="fab fa-whatsapp"></a>
+            <a href="https://api.whatsapp.com/send?phone=5535991972424&text=Olá! Sou um construtor interessado em mais informações." target="_blank" class="fab fa-whatsapp"></a>
         </div>
-       
+        
     </footer>
 
     <div>
@@ -657,6 +658,9 @@
         <div id="modal" class="hide">
             <div class="modal-header">
                 <h2 class="calculadora__descricao__titulo">Calculadora</h2>
+                <div>
+                    <span id="close-modal"><i class="bi bi-x-circle"></i></span>
+                </div>
             </div>
             <div class="modal-body">
                 <h3 class="calculadora__descricao__subtitulo">Calcule de forma rápido e fácil</h3>
