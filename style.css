@@ -582,8 +582,10 @@ a {
 
 @media (min-width: 1300px) {
     .home .slide {
+        width: 100%;
         min-height: 90vh;
-        background-size: contain !important;
+        overflow: hidden;
+        background-size: cover !important;
         background-position: center !important;
         padding: 2rem 9%;
         display: flex;
