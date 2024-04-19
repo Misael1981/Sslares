@@ -162,18 +162,7 @@ a {
 /*Home*/
 
 .home .slide .content {
-    width: 60rem;
-}
-
-.home .slide .content span {
-    font-size: 3rem;
-    color: red;
-    display: block;
-}
-.home .slide .content h3 {
-    font-size: 5rem;
-    color: black;
-    padding: 1rem 0;
+    width: 100%;
 }
 
 
@@ -182,7 +171,9 @@ a {
     margin-top: 7rem;
 }
 .home .slide {
+    width: 100%;
     min-height: 90vh;
+    overflow: hidden;
     background-size: cover !important;
     background-position: center !important;
     padding: 2rem 9%;
@@ -190,21 +181,6 @@ a {
     align-items: center;
 }
 
-.home .slide .content {
-    width: 60rem;
-}
-
-.home .slide .content span {
-    font-size: 2rem;
-    color: red;
-    display: block;
-}
-.home .slide .content h3 {
-    font-size: 5rem;
-    color: #fff;
-    padding: 1rem 0;
-}
-/*class de swipwer para criar as bolinhas*/
 .swiper-pagination-bullet {
     height: 2rem;
     width: 2rem;
@@ -215,6 +191,8 @@ a {
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: red;
 }
+
+/*class de swipwer para criar as bolinhas*/
 
 
 /*Banner*/
