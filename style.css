@@ -168,7 +168,6 @@ a {
 
 .home {
     padding: 0;
-    margin-top: 7rem;
 }
 .home .slide {
     width: 100%;
@@ -182,10 +181,10 @@ a {
 }
 
 .swiper-pagination-bullet {
-    height: 2rem;
-    width: 2rem;
+    height: 1rem;
+    width: 1rem;
     background: #fff;
-    border-radius: 0;  
+    border-radius: 50%;  
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -230,73 +229,7 @@ a {
 
 /*Produtos*/
 
-.blogs {
-    background: black;
-}
 
-.blogs .slide:hover .image img {
-    transform: scale(1.1);
-}
-
-.blogs .slide .image {
-    height: 25rem;
-    width: 100%;
-    overflow: hidden;
-}
-.blogs .slide .image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.blogs .slide .content {
-    padding: 2rem;
-}
-
-.blogs .slide .content .link {
-    padding-bottom: 1.5rem;
-    font-size: 2.5rem;
-}
-
-.blogs .slide .content .link a {
-    color: red;
-}
-
-.blogs .slide .content .link a:hover {
-    color: #fff;
-}
-
-.blogs .slide .content .link span {
-    color: #fff;
-    padding: 0 1rem;
-}
-
-.blogs .slide .content h3 {
-    font-size: 2rem;
-    color: #fff;
-    line-height: 1.5;
-}
-
-.blogs .slide .content p {
-    font-size: 1.5rem;
-    color: #aaa;
-    line-height: 2;
-    padding: 1rem 0;
-}
-
-.blogs .slide .content {
-    padding: 2rem;
-    height: 220px; /* Defina a altura desejada para o conteúdo */
-    overflow: auto; /* Adicione rolagem se o conteúdo for maior que a altura definida */
-    color: #fff; /* Cor do texto */
-    font-size: 1.6rem; /* Tamanho da fonte */
-}
-
-.blogs .swiper-pagination {
-    position: relative;
-    bottom: 50px; /* ou qualquer valor desejado */
-    /* Adicione outros estilos conforme necessário */
-}
 /*Teste*/
 .whatsapp-icon {
     position: fixed;

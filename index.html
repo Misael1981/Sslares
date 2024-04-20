@@ -2,16 +2,18 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/beneficios.css">
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/sobre-nos.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/seja-parceiro.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/carrossel-produtos.css">
+
     <title>SsLares</title>
 </head>
 <body>
@@ -93,123 +95,131 @@
             </section>
         </div>
 
-        <section id="blogs" class="blogs">
-            <h1 class="heading"> <span>Nossos Produtos</span> </h1>
-            <div class="swiper blogs-slider">
-                <div class="swiper-wrapper">
+        <!-- Swiper -->
+            <section>
 
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="img/cunhaslim.jpg" alt="Foto da emblagem da cunha">
-                        </div>
-                        <div class="content">
-                            <div class="link"> <a href="#">Cunha Slim</a> <span>|</span> <a href="#">SsLares</a>
-                            </div>
-                            <p>CUNHA SLIM</p>
-                        </div>
-                        <a href="#" class="btn">Ler Mais</a>
-                    </div>
+                <div class="carrossel">
 
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="img/espacador-slim.png" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="link"> <a href="#">Espaçador Slim Padrão</a> <span>|</span> <a href="#">SsLares</a>
-                            </div>
-                            <p>ESPAÇADOR / NIVELADOR SLIM 3 MM, 2MM, 1,5 MM E 1MM PADRÃO</p>
-                        </div>
-                        <a href="#" class="btn">Ler Mais</a>
+                 <div class="swiper mySwiper">
+                         <div>
+                            <h2>Nossos Produtos</h2>
+                         </div>
+                    
+                        <div class="swiper-wrapper">
+                            
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/cunhaslim.jpg" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Cunha Slim</h3>
+                                        <span>Cunha para nivelamento de pisos e revestimentos 50un </span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/cunhas.png" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Cunha</h3>
+                                        <span>Cunha para nivelamento de pisos e revestimentos 50un </span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/desempenadeira-lisa.jpg" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Desempenadeira Lisa</h3>
+                                        <span>Desempenadeira lisa 18X30</span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/desesmpenadeira-corrugada.jpg" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Desempenadeira Corrugada</h3>
+                                        <span>Desempenadeira com corrugada 18X30 </span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/desempenadeira-espuma.png" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Desempenadeira Espuma</h3>
+                                        <span>Desempenadeira com espuma 18X30 </span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/espacador-smart-padrao1.png" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Espaçador Smart Padrão</h3>
+                                        <span>Espaçador / Nivelador Smart 3mm, 2mm, 1,5mm e 1mm PADRÃO</span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/espacador-smart-premium.jpg.png" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Espaçador Smart Premium</h3>
+                                        <span>Espaçador / Nivelador Smart 3mm, 2mm, 1,5mm e 1mm PREMIUM</span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/espacador-slim-padrao.jpg" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Espaçador Slim Padrão</h3>
+                                        <span>Espaçador / Nivelador SLIM 3mm, 2mm, 1,5mm e 1mm PADRÃO</span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/espacador-slim-premium.png" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Espaçador Slim Premium</h3>
+                                        <span>Espaçador / Nivelador SLIM 3mm, 2mm, 1,5mm e 1mm PREMIUM</span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/bloco-espuma.png" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Bloco de Espuma</h3>
+                                        <span>Bloco de espuma 20x12</span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/paflon.png" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Plafon</h3>
+                                        <span>Luminária versátil, capaz de oferecer iluminação direta, indireta ou uma combinação de ambas.</span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/ralo-oculto.png" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Ralo Oculto</h3>
+                                        <span>Ralo oculto 10X10 E 15X15, disponível em diversas cores</span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/carrossel-produtos/ralo-oculto-cores.png" />
+                                    <div class="descricao-produtos__carrossel">
+                                        <h3>Ralo Oculto "Várias Cores"</h3>
+                                        <span>Ralo oculto 10X10 E 15X15, disponível em diversas cores</span>
+                                        <a href="ss-story.html" class="btn">Ver mais</a>
+                                    </div>
+                                </div>
+                            </div>  
+        
+                        
                     </div>
-
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="img/espacador-slim-padrao.jpg" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="link"> <a href="#">Espaçador Slim Padrão</a> <span>|</span> <a href="#">SsLares</a>
-                            </div>
-                            <p>ESPAÇADOR / NIVELADOR SLIM 3 MM, 2MM, 1,5 MM E 1MM PADRÃO</p>
-                        </div>
-                        <a href="#" class="btn">Ler Mais</a>
-                    </div>
-
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="img/espacador-smart-padrao1.png" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="link"> <a href="#">Espaçador Smart</a> <span>|</span> <a href="#">SsLares</a>
-                            </div>
-                            <p>ESPAÇADOR / NIVELADOR SMART 3 MM, 2MM, 1,5 MM E 1MM PADRÃO</p>
-                        </div>
-                        <a href="#" class="btn">Ler Mais</a>
-                    </div>
-
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="img/espacador-smart-premium.jpg" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="link"> <a href="#">Espaçador Smart Premium</a> <span>|</span> <a href="#">Sslares</a>
-                            </div>
-                            <p>ESPAÇADOR / NIVELADOR SMART 3 MM, 2MM, 1,5 MM E 1 MM PREMIUM</p>
-                        </div>
-                        <a href="#" class="btn">Ler Mais</a>
-                    </div>
-
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="img/desempenadeira-lisa.jpg" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="link"> <a href="#">Desempenadeira Lisa</a> <span>|</span> <a href="#">Sslares</a>
-                            </div>
-                            <p>DESEMPENADEIRA LISA 18X30</p>
-                        </div>
-                        <a href="#" class="btn">Ler Mais</a>
-                    </div>
-
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="img/desesmpenadeira-corrugada.jpg" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="link"> <a href="#">Desempenadeira Corrugada</a> <span>|</span> <a href="#">Sslares</a>
-                            </div>
-                            <p>DESEMPENADEIRA CORRUGADA 18X30</p>
-                        </div>
-                        <a href="#" class="btn">Ler Mais</a>
-                    </div>
-
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="img/desempenadeira-espuma.jpg" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="link"> <a href="#">Desempenadeira Espuma</a> <span>|</span> <a href="#">Sslares</a>
-                            </div>
-                            <p>DESEMPENADEIRA COM ESPUMA 18X30</p>
-                        </div>
-                        <a href="#" class="btn">Ler Mais</a>
-                    </div>
-
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="img/paflon.jpg" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="link"> <a href="#">Paflon</a> <span>|</span> <a href="#">Sslares</a>
-                            </div>
-                            <p></p>
-                        </div>
-                        <a href="#" class="btn">Ler Mais</a>
-                    </div>
+                    
                 </div>
-                <div class="swiper-pagination pagination__carrossel__produtos"></div>
-            </div>
-            
-        </section>
+
+       </section>
+        
 
             <section class="teste">
 
@@ -695,7 +705,32 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          },
+          autoplay: {
+                delay: 7500,
+                disableOnInteraction: false,
+            },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
+    
 </body>
 </html>
