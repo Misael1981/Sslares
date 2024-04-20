@@ -16,7 +16,9 @@
   width: 80vw;
   height: 100%;
   margin: 0 auto;
+  margin-top: -8rem;
 }
+
 
 .swiper {
   width: 100%;
@@ -59,4 +61,56 @@
 
 .descricao-produtos__carrossel span {
   font-size: 1.5rem;
+}
+
+.banner-produtos {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  width: 100%;
+  height: auto;
+}
+
+.banner-produtos-titulo h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 2rem 0;
+}
+
+.banner-produtos-descricao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.icone-banner {
+  color: red;
+  font-size: 3rem;
+}
+
+.banner-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.banner-card span {
+  color: red;
+  font-size: 1.5rem;
+}
+
+.banner-card p {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 450px) {
+  .banner-produtos-descricao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
