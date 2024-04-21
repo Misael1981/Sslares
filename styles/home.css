@@ -1,0 +1,120 @@
+.home .slide .content {
+    width: 100%;
+}
+
+
+.home {
+    padding: 0;
+}
+.home .slide {
+    width: 100%;
+    min-height: 90vh;
+    overflow: hidden;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+}
+
+.mobile {
+    display: none;
+}
+
+.tablet {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+
+    .mobile {
+        display: block;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+
+    .desktop {
+        display: none;
+    }
+
+    .home .slide {
+        min-height: 90vh;
+        background-size: contain !important;
+        background-position: center !important;
+        padding: 2rem 9%;
+        display: flex;
+        align-items: center;
+    }
+
+    .home {
+        background: #e90736;
+    }
+
+    .home .slide .content span {
+        font-size: 5rem;
+        color: red;
+        display: block;
+    }
+    .home .slide .content h3 {
+        font-size: 4rem;
+        color: black;
+        padding: 1rem 0;
+    }
+
+    .home-slider .slide {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .home .slide {
+        padding: 2rem 5%;
+    }
+
+    .home .slide .content {
+        width: 50rem;
+    }
+
+    .home .slide .content h3 {
+        font-size: 4rem;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    .home .slide {
+        width: 100%;
+        min-height: 90vh;
+        overflow: hidden;
+        background-size: cover !important;
+        background-position: center !important;
+        padding: 2rem 9%;
+        display: flex;
+        align-items: center;
+    }
+
+    .home {
+        background: black;
+    }
+}

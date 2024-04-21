@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/carrossel-produtos.css">
+    <link rel="stylesheet" href="styles/sobre-nos.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/beneficios.css">
     <link rel="stylesheet" href="styles/modal.css">
-    <link rel="stylesheet" href="styles/sobre-nos.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/seja-parceiro.css">
-    <link rel="stylesheet" href="styles/carrossel-produtos.css">
 
     <title>SsLares</title>
 </head>
@@ -45,17 +46,15 @@
 
         <!--Menu-->
 
-        <div class="desktop">
+        <div class="mobile">
             <section id="home" class="home">
                 <div class="swiper home-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide slide" style="background: url(img/home1-desktop.jpg) no-repeat;">
+                        <div class="swiper-slide slide" style="background: url(img/home/imagem4.jpg) no-repeat;">
                         </div>
-                        <div class="swiper-slide slide" style="background: url(img/home2-desltop.jpg) no-repeat;">
+                        <div class="swiper-slide slide" style="background: url(img/home/redimensionada3.jpg) no-repeat;">
                         </div>
-                        <div class="swiper-slide slide" style="background: url(img/home3-desktop.jpg) no-repeat;">
-                        </div>
-                        <div class="swiper-slide slide" style="background: url(img/home5-desktop.jpg) no-repeat;">
+                        <div class="swiper-slide slide" style="background: url(img/home/teste-responsividade.jpg) no-repeat;">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -63,31 +62,35 @@
             </section>
         </div>
 
-        <div class="responsivo">
+        <div class="tablet">
             <section id="home" class="home">
                 <div class="swiper home-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide slide" style="background: url(img/imagem4.jpg) no-repeat;">
-                            <div class="content">
-                                <span></span>
-                                <h3></h3>
-                                <a href="#" ></a>
-                            </div>
+                        <div class="swiper-slide slide" style="background: url(img/home/tablet1.jpg) no-repeat;">
                         </div>
-                        <div class="swiper-slide slide" style="background: url(img/redimensionada3.jpg) no-repeat;">
-                            <div class="content">
-                                <span></span>
-                                <h3></h3>
-                                <a href="#" ></a>
-                            </div>
+                        <div class="swiper-slide slide" style="background: url(img/home/tablet6.jpg) no-repeat;">
                         </div>
-                        <div class="swiper-slide slide" style="background: url(img/mobile.jpg) no-repeat;">
-                            <div class="content">
-                                <h3></h3>
-                               <span></span>
-                               <h3></h3>
-                                <a href="#"></a>
-                            </div>
+                        <div class="swiper-slide slide" style="background: url(img/home/tablet3.jpg) no-repeat;">
+                        </div>
+                        <div class="swiper-slide slide" style="background: url(img/home/tablet4.jpg) no-repeat;">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="desktop">
+            <section id="home" class="home">
+                <div class="swiper home-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide" style="background: url(img/home/home1-desktop.jpg) no-repeat;">
+                        </div>
+                        <div class="swiper-slide slide" style="background: url(img/home/home2-desltop.jpg) no-repeat;">
+                        </div>
+                        <div class="swiper-slide slide" style="background: url(img/home/home3-desktop.jpg) no-repeat;">
+                        </div>
+                        <div class="swiper-slide slide" style="background: url(img/home/home4-desktop.jpg) no-repeat;">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -102,7 +105,7 @@
 
                  <div class="swiper mySwiper">
                          <div class="carrossel-titulo">
-                            <h2>Produtos</h2>
+                            <h2>Nossos Produtos</h2>
                          </div>
                     
                         <div class="swiper-wrapper">
@@ -226,16 +229,9 @@
         </div>
         <div class="banner-produtos-descricao">
             <div class="banner-card">
-                <div class="icone-banner"><i class="icone-banner bi bi-coin"></i></div>
-                <div class="banner-condições">
-                    <span>PAGUE PELO PIX</span>
-                    <p>Ganhe 5% OFF em pagamentos via PIX</p>
-                </div>
-            </div>
-            <div class="banner-card">
                 <div><i class="icone-banner bi bi-truck"></i></div>
                 <div>
-                    <span>ENTREGA ÁGIL</span>
+                    <span>ENTREGA RÁPIDA</span>
                     <P>Entregamos em todo Brasil</P>
                 </div>
             </div>
@@ -250,7 +246,7 @@
        </section>
         
 
-            <section class="teste">
+            <section class="sobre-nos__cards">
 
                 <div class="card__titulo">
                     <h2>Sobre Nós</h2>
@@ -289,33 +285,36 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="magic__card card-two">
-                                        <div class="task">
-                                            <div class="abstract">
-                                                <h3>Visão</h3>
-                                                <p>Ser um dos melhores fabricantes em peças plásticas...</p>
-                                            </div>
-                                            <div class="details">
-                                                <div class="details__inner">
-                                                    <p>Para que possamos atender às expectativas dos nossos clientes, satisfazendo suas necessidades. Ser reconhecida como uma empresa sólida e confiável.</p>
-                                                </div>
+                                    <div class="task">
+                                        <div class="abstract">
+                                            <h3>Visão</h3>
+                                            <p>Ser um dos melhores fabricantes em peças plásticas...</p>
+                                        </div>
+                                        <div class="details">
+                                            <div class="details__inner">
+                                                <p>Para que possamos atender às expectativas dos nossos clientes, satisfazendo suas necessidades. Ser reconhecida como uma empresa sólida e confiável.</p>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
+
                                 <div class="magic__card card-three">
-                                        <div class="task">
-                                            <div class="abstract">
-                                                <h3>Valores</h3>
-                                                <p>Atuar de maneira ética com integridade:</p>
-                                            </div>
-                                            <div class="details">
-                                                <div class="details__inner">
-                                                    <p>Respeitar normas da empresa e regras e leis dos mercados; Aprimorar a qualidade dos produtos, para que tenhamos uma melhoria contínua, e possamos superar nossos resultados;
-                                                    </p>
-                                                </div>
+                                    <div class="task">
+                                        <div class="abstract">
+                                            <h3>Valores</h3>
+                                            <p>Atuar de maneira ética com integridade:</p>
+                                        </div>
+                                        <div class="details">
+                                            <div class="details__inner">
+                                                <p>Respeitar normas da empresa e regras e leis dos mercados; Aprimorar a qualidade dos produtos, para que tenhamos uma melhoria contínua, e possamos superar nossos resultados;
+                                                </p>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
+
                                 <div class="magic__card card-four">
                                     <div class="task">
                                         <div class="abstract">
@@ -331,6 +330,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
               

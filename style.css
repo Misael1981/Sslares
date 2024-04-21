@@ -154,31 +154,6 @@ a {
     color: black;
 }
 
-.responsivo {
-    display: none;
-}
-
-
-/*Home*/
-
-.home .slide .content {
-    width: 100%;
-}
-
-
-.home {
-    padding: 0;
-}
-.home .slide {
-    width: 100%;
-    min-height: 90vh;
-    overflow: hidden;
-    background-size: cover !important;
-    background-position: center !important;
-    padding: 2rem 9%;
-    display: flex;
-    align-items: center;
-}
 
 .swiper-pagination-bullet {
     height: 1rem;
@@ -256,58 +231,9 @@ a {
     section {
         padding: 3rem 2rem;
     }
-
-    .home .slide {
-        padding: 2rem 5%;
-    }
-
-    .home .slide .content {
-        width: 50rem;
-    }
-
-    .home .slide .content h3 {
-        font-size: 4rem;
-    }
 }
 
 @media (max-width: 768px) {
-
-    .home .slide {
-        min-height: 90vh;
-        background-size: contain !important;
-        background-position: center !important;
-        padding: 2rem 9%;
-        display: flex;
-        align-items: center;
-    }
-
-    .home {
-        background: #e90736;
-    }
-
-    .responsivo {
-        display: block;
-    }
-
-    .home .slide .content span {
-        font-size: 5rem;
-        color: red;
-        display: block;
-    }
-    .home .slide .content h3 {
-        font-size: 4rem;
-        color: black;
-        padding: 1rem 0;
-    }
-
-    .desktop {
-        display: none;
-    }
-
-    .home-slider .slide {
-        max-width: 100%;
-        height: auto;
-    }
 
     .links-menu {
         display: block;
@@ -458,18 +384,6 @@ a {
     section {
         padding: 3rem 2rem;
     }
-
-    .home .slide {
-        padding: 2rem 5%;
-    }
-
-    .home .slide .content {
-        width: 50rem;
-    }
-
-    .home .slide .content h3 {
-        font-size: 4rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -513,20 +427,5 @@ a {
     }
 }
 
-@media (min-width: 1300px) {
-    .home .slide {
-        width: 100%;
-        min-height: 90vh;
-        overflow: hidden;
-        background-size: cover !important;
-        background-position: center !important;
-        padding: 2rem 9%;
-        display: flex;
-        align-items: center;
-    }
 
-    .home {
-        background: black;
-    }
-}
 

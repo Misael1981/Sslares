@@ -114,3 +114,9 @@
     align-items: center;
   }
 }
+
+@media (max-width: 760px) {
+  .carrossel {
+    padding-top: 10rem;
+  }
+}

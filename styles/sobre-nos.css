@@ -55,21 +55,20 @@
     width: 50%;
 }
 
-.card-one, .card-there {
+.card-one, .card-three {
     align-self: flex-start;
 }
 
 .card-two, .card-four {
-    display: flex;
     align-self: flex-end;
 }
 
 .magic__card {
     border-radius: 2rem;
-    width: 10%; /* Altere a largura dos cards conforme necessário */
+    width: 10%; 
     min-width: 300px;
-    height: 16vw; /*altura do card*/
-    margin: 5vh 0 5vh 2%; /* Adicione margem entre os cards */
+    height: 16vw;
+    margin: 5vh 0 5vh 2%; 
 }
 
 .task {
@@ -90,7 +89,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-.task:hover .abstract, .task:hover, .details {
+.task:hover .abstract,
+.task:hover .details {
     background: #e90736;
     color: #000;
     border-radius: 1rem;
@@ -152,16 +152,28 @@
     .cards {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centraliza os itens horizontalmente */
-        justify-content: center; /* Centraliza os itens verticalmente */
+        align-items: center; 
+        justify-content: center; 
         width: 100%;
     }
     
-    .card-one, .card-two, .card-there, .card-four {
+    .card-one, .card-two, .card-three, .card-four {
         align-self: center;
     }
 
-    .card-two, .card-four {
+    .card-one {
+        height: 100%;
+    }
+
+    .card-two {
+        height: 100%;
+    }
+
+    .card-three {
+        height: 100%;
+    }
+
+    .card-four {
         height: 100%;
     }
 
@@ -174,4 +186,54 @@
     }
 
     
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .sobre-nos__cards {
+        padding-top: 8rem;
+    }
+
+    .cards {
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+}
+
+@media screen and (min-width: 991px) and (max-width: 1300px) {
+
+    .cards {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1700px) {
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .magic__card {
+        margin: 0 0 0 2rem;
+    }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 2200px) {
+
+    .magic__card {
+        margin: 0 0 0 2rem;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content__sobre-nos {
+        font-size: 2.9rem;
+    }
 }
