@@ -1,43 +1,38 @@
-.seja-parceiro {
+.seja-parceiro__titulo {
+    background: #1f1e1f;
+    color: red;
+    font-size: 3rem;
+    max-width: 150rem;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.seja-parcero__descircao {
+    padding-bottom: 2rem;
+}
+
+.seja-parcero__descircao p {
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+.seja-parceiro__banner__formulario {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
 }
 
 .seja-parceiro__banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 40vw;
-    height: 60vh;
-    background: black;
-    border-radius: 5px;
-}
-
-.balao-de-fala {
-    border: 1px solid black;
-    margin-top: 3rem;
-    background: white;
-    width: 80%;
+    width: 50vw;
     height: auto;
-    border-radius: 15px 15px 0 15px;
 }
 
-.balao-de-fala h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: right;
-    padding: 1.5rem 0.8rem 1.5rem 0;
-    color: #e90736;
-}
-
-.balao-de-fala p {
-    font-size: 1.5rem;
-    color: #e90736;
-    text-align: right;
-    padding: 0rem 1rem 1.5rem 1rem;
-    line-height: 1.5;
+.seja-parceiro__banner img {
+    width: 40vw;
 }
 
 .formulario {
@@ -123,21 +118,31 @@
     visibility: visible;
 }
 
-@media (max-width: 768px) {
-    .seja-parceiro {
+@media (max-width: 991px) {
+
+    .seja-parceiro__titulo {
+        text-align: center;
+    }
+
+    .seja-parceiro__banner__formulario {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
     }
 
     .seja-parceiro__banner {
-        width: 90vw;
-        height: auto;
+        width: 95vw;
+    }
+
+    .seja-parceiro__banner img{
+        width: 94vw;
+        padding-bottom: 5rem;
     }
 
     .formulario {
-        width: 90vw;
+        width: 94vw;
     }
+
+    
 }
   
 

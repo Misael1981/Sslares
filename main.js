@@ -150,4 +150,117 @@ openModalButtonHome.addEventListener("click", () => toggleModal()); // Adiciona 
 closeModalButton.addEventListener("click", () => {
     toggleModal();
   });
+
+// Formulário Seja Parceiro
+
+const form = document.getElementById('form');
+const nome = document.getElementById('username');
+const email = document.getElementById('email');
+const telefone = document.getElementById('telefone');
+const cidade = document.getElementById('cidade');
+const assunto = document.getElementById('assunto');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  checkForm();
+});
+
+email.addEventListener("blur", () => {
+  checkInputEmail();
+})
+
+
+nome.addEventListener("blur", () => {
+  checkInputNome();
+})
+
+
+function checkInputNome() {
+  const nomeValue = nome.value;
+
+  if (nomeValue === "") {
+    errorInput(nome, "Preenchimento obrigatório!");
+  }else {
+    const formItem = nome.parentElement;
+    formItem.className = "form-content";
+  }
+}
+
+function checkInputEmail(){
+  const emailValue = email.value;
+
+  if(emailValue === ""){
+    errorInput(email, "O email é obrigatório.");
+  }else{
+    const formItem = email.parentElement;
+    formItem.className = "form-content";
+  }
+}
+
+function checkInputTelefone() {
+  const telefoneValue = telefone.value;
+
+  if (telefone === "") {
+    errorInput(telefone, 'Preenchimento obrigatório!');
+  } else {
+    const formItem = telefone.parentElement;
+    formItem.className = 'form-content';
+  }
+}
+
+function checkInputCidade() {
+  const cidadeValue = cidade.value;
+
+  if (telefone === "") {
+    errorInput(cidade, 'Preenchimento obrigatório!');
+  } else {
+    const formItem = cidade.parentElement;
+    formItem.className = 'form-content';
+  }
+}
+
+function checkInputAssunto() {
+  const assuntoValue = assunto.value;
+
+  if (telefone === "") {
+    errorInput(assunto, 'Preenchimento obrigatório!');
+  } else {
+    const formItem = assunto.parentElement;
+    formItem.className = 'form-content';
+  }
+}
+
+function checkForm(){
+  checkInputNome();
+  checkInputEmail();
+  checkInputTelefone();
+  checkInputCidade();
+  checkInputAssunto();
+
+  const formItems = form.querySelectorAll(".form-content")
+
+  const isValid = [...formItems].every( (item) => {
+    return item.className === "form-content"
+  });
+
+  if(isValid){
+    alert("CADASTRADO COM SUCESSO!")
+  }
+
+}
+
+function errorInput (input, message) {
+  const formItem = input.parentElement;
+  const textMessage = formItem.querySelector("a");
+
+  textMessage.innerText = message;
+
+  form.className = "form-content error";
+}
+
+
+
+
+
   
