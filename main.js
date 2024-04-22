@@ -201,35 +201,33 @@ function checkInputEmail(){
 function checkInputTelefone() {
   const telefoneValue = telefone.value;
 
-  if (telefone === "") {
+  if (telefoneValue === "") {
     errorInput(telefone, 'Preenchimento obrigatório!');
   } else {
-    const formItem = telefone.parentElement;
-    formItem.className = 'form-content';
+    clearError(telefone);
   }
 }
 
 function checkInputCidade() {
   const cidadeValue = cidade.value;
 
-  if (telefone === "") {
+  if (cidadeValue === "") {
     errorInput(cidade, 'Preenchimento obrigatório!');
   } else {
-    const formItem = cidade.parentElement;
-    formItem.className = 'form-content';
+    clearError(cidade);
   }
 }
 
 function checkInputAssunto() {
   const assuntoValue = assunto.value;
 
-  if (telefone === "") {
+  if (assuntoValue === "") {
     errorInput(assunto, 'Preenchimento obrigatório!');
   } else {
-    const formItem = assunto.parentElement;
-    formItem.className = 'form-content';
+    clearError(assunto);
   }
 }
+
 
 function checkForm(){
   checkInputNome();
@@ -238,26 +236,37 @@ function checkForm(){
   checkInputCidade();
   checkInputAssunto();
 
-  const formItems = form.querySelectorAll(".form-content")
+  const formItems = form.querySelectorAll(".form-content");
 
-  const isValid = [...formItems].every( (item) => {
-    return item.className === "form-content"
-  });
+  const isValid = [...formItems].every(item => item.className === "form-content");
 
-  if(isValid){
+  if (isValid){
     alert("CADASTRADO COM SUCESSO!")
+    console.log(isValid)
   }
-
 }
 
-function errorInput (input, message) {
+function errorInput(input, message) {
   const formItem = input.parentElement;
   const textMessage = formItem.querySelector("a");
 
   textMessage.innerText = message;
 
-  form.className = "form-content error";
+  formItem.classList.add("error");
 }
+
+function clearError(input) {
+  const formItem = input.parentElement;
+  const textMessage = formItem.querySelector("a");
+
+  if (textMessage) {
+    textMessage.innerText = "";
+  }
+
+  formItem.classList.remove("error");
+}
+
+
 
 
 
