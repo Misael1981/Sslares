@@ -228,7 +228,7 @@ function checkInputAssunto() {
   }
 }
 
-
+// Modifique a função checkForm para enviar o e-mail após a validação
 function checkForm(){
   checkInputNome();
   checkInputEmail();
@@ -241,10 +241,19 @@ function checkForm(){
   const isValid = [...formItems].every(item => item.className === "form-content");
 
   if (isValid){
-    alert("CADASTRADO COM SUCESSO!")
-    console.log(isValid)
+    const formData = {
+      nome: nome.value,
+      email: email.value,
+      telefone: telefone.value,
+      cidade: cidade.value,
+      assunto: assunto.value
+    };
+
+    sendEmail(formData);
+    alert("CADASTRADO COM SUCESSO!");
   }
 }
+
 
 function errorInput(input, message) {
   const formItem = input.parentElement;
@@ -266,6 +275,37 @@ function clearError(input) {
   formItem.classList.remove("error");
 }
 
+emailjs.init('RWsCot8BerUSejBIY');
+
+function sendEmail(formData) {
+  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+    .then(function(response) {
+      console.log('E-mail enviado com sucesso!', response);
+    }, function(error) {
+      console.error('Erro ao enviar e-mail:', error);
+    });
+}
+
+
+
+/*
+function checkForm(){
+  checkInputNome();
+  checkInputEmail();
+  checkInputTelefone();
+  checkInputCidade();
+  checkInputAssunto();
+
+  const formItems = form.querySelectorAll(".form-content");
+
+  const isValid = [...formItems].every(item => item.className === "form-content");
+
+  if (isValid){
+    alert("CADASTRADO COM SUCESSO!")
+    console.log(isValid)
+  }
+}
+*/
 
 
 

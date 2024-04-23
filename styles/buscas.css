@@ -1,5 +1,6 @@
 .resultado__pesquisa {
-    padding: 0;
+    overflow: hidden;
+    padding: 0 2rem;
     margin: 0;
 }
 
@@ -16,11 +17,15 @@
 }
 
 .card-buscas {
-    width: 234px;
+    width: 18rem;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
     margin: 3rem 0;
+}
+
+.card-buscas:hover {
+    transform: scale(1.1);
 }
 
 .card-imagem {

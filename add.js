@@ -241,7 +241,7 @@ const produtos = {
     descricao6: 'Comprimento: 95mm',
   },
   produto14: {
-    imagem: "img/carrossel-loja/cunha-niveladora.jpg",
+    imagem: "img/carrossel-loja/cunha.jpg",
     titulo: "Cunha",
     descricao1: "A Cunha e o Espaçador para nivelamento de pisos e Revestimentos da Cortag foi desenvolvido para facilitar o nivelamento do revestimentos cerâmicos ajudando a eliminar a irregularidade no assentamento mantendo os pisos no mesmo nível.",
     descricao2: "Tem a função de travar os clips no revestimento e nivelar.Ideal para usar em revestimentos cerâmicos, especialmente porcelanato.Reduz o tempo de colocação do revestimento.",
@@ -458,74 +458,6 @@ botoesVerMaisSeletor.forEach(botao => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // carrossel
 
 var swiper = new Swiper(".mySwiper", {
@@ -548,7 +480,13 @@ var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
     },
     991: {
-        slidesPerView: 5,
+        slidesPerView: 4,
+    },
+    1500: {
+      slidesPerView: 5,
+    },
+    2000: {
+      slidesPerView: 6,
     },
 },
 });

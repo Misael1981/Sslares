@@ -14,7 +14,7 @@
     justify-content: space-around;
     align-items: center;
     font-size: 3rem;
-    max-width: 150rem;
+    max-width: 1500rem;
     height: 12rem;
     margin: 0rem 0 2rem 0;
 }
@@ -128,7 +128,7 @@
     justify-content: space-around;
     align-items: center;
     font-size: 4rem;
-    max-width: 150rem;
+    max-width: 1500rem;
     height: 12rem;
     margin: 0rem 0 2rem 0;
 }
@@ -302,5 +302,31 @@ button:hover {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    
+    .calculadora-story {
+        padding: 3rem;
+    }
+
+    .descricao__calculadora {
+        width: 100vw;
+    }
+
+    .calculadora__descricao__texto {
+        padding: 2rem 0;
+    }
+
+    .descricao__imagem {
+        padding-bottom: 5rem;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1300px) {
+    .descricao__texto__imagem {
+        width: 83vw;
+    }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 2900px) {
+    .descricao__texto__imagem {
+        padding: 5rem 0;
+    }
 }

@@ -121,11 +121,15 @@
 }
 
 .search, .label-falsa {
-    flex: 1; /* Isso fará com que os elementos ocupem todo o espaço disponível */
+    flex: 1; 
     margin: 0 3em;
 }
 
-@media (max-width: 768px) {
+.label-falsa:hover {
+    background: rgba(243, 87, 87, 0.726);
+}
+
+@media screen and (min-width: 268px) and (max-width: 768px) {
 
     .menu {
         display: flex;
@@ -148,10 +152,12 @@
     }
 
     .menu-toggle {
-        
-       
         width: 30px;
         height: 30px;
+    }
+
+    .menu-humburguer {
+        padding-top: 7px;
     }
 
     .menu.on {
@@ -193,11 +199,11 @@
     }
 
     .menu.on .menu-toggle .one {
-        transform: rotate(45deg) translate(8px, -1px);
+        transform: rotate(45deg) translate(6px, -1px);
     }
 
     .menu.on .menu-toggle .three {
-        transform: rotate(-45deg) translate(20px, -12px);
+        transform: rotate(-45deg) translate(18px, -12px);
     }
 
     .label-falsa {
@@ -205,7 +211,7 @@
     }
 
     .borda-delimitadora {
-        padding-top: 360px;
+        padding-top: 80px;
     }
 
     .campo-desktop {
@@ -216,6 +222,24 @@
         margin-top: 270px;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1091px) {
+    .campo-desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1091px) and (max-width: 2200px) {
+    .campo-desktop {
+        display: block;
+    }
+
+    .campo-tablet {
+        display: none;
+    }
+}
+
+/*
 
 @media (max-width: 1100px){
     .campo-desktop {
@@ -231,11 +255,10 @@
     .campo-tablet {
         display: none;
     }
-    .borda-delimitadora {
-        padding-top: 360px;
-    }
+    
 
 }
+*/
 
 
 

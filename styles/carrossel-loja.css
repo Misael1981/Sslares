@@ -161,7 +161,28 @@ body {
     top: 750px;
 }
 
-@media (max-width: 600px) {
+@media screen and (min-width: 268px) and (max-width: 450px) {
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        top: 540px;
+    }
+
+    .slides-story {
+        padding: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 450px) and (max-width: 500px) {
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        top: 660px;
+    }
+
+    .slides-story {
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
     .slides-story {
         padding: 2rem;
     }

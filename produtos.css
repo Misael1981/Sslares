@@ -17,20 +17,11 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
-    text-decoration: none; /* para remover o sublinhado padrão */
-    overflow-x: hidden;
+    text-decoration: none; 
 }
-
-/*
-body {
-    background: rgb(201, 196, 196);
-}
-*/
 
 body {
     background: #aaa;
-    width: 100%;
-    height: 150vh; 
 }
 
 .btn {
@@ -78,6 +69,18 @@ html::-webkit-scrollbar-thumb {
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: red;
 }
+
+
+section {
+    padding: 10rem 9%;
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
 
 
 

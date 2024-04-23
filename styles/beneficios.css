@@ -1,26 +1,22 @@
 /*Stand benefícios*/
 
-.beneficios-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.beneficios-menu h2{
-    color: #e90736;
+.beneficios-titulo{
+    background: #1f1e1f;
+    color: red;
     font-size: 3rem;
+    max-width: 150rem;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -10rem 0 2rem 0;
 }
 
 .beneficios-menu h3 {
     color: #000;
     font-size: 3rem;
     font-weight: 600;
-}
-
-.beneficios-menu p {
-    color: #000;
-    font-size: 1.5rem;
-    margin: 1rem 0 5rem 0;
+    text-align: center;
 }
 
 .beneficios-stands {
@@ -29,6 +25,7 @@
     justify-content: space-around;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .beneficios-containers {
@@ -120,5 +117,15 @@
     
     .beneficios-stands {
         gap: 5rem;
+    }
+
+    .beneficios-titulo {
+        margin: 0rem 0 2rem 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .beneficios-titulo {
+        margin: 0rem 0 2rem 0;
     }
 }

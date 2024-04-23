@@ -31,10 +31,12 @@
 .story-descricao h1 {
     text-align: center;
     padding-bottom: 2rem;
+    font-size: 2rem;
 }
 
 .story-descricao h2 {
     padding: 1rem 0 1rem 0;
+    font-size: 1.5rem;
 }
 
 .story {
