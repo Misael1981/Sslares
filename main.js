@@ -275,10 +275,10 @@ function clearError(input) {
   formItem.classList.remove("error");
 }
 
-emailjs.init('RWsCot8BerUSejBIY');
+emailjs.init('g3fLU5Ja4zUKtyuGvPF4u');
 
 function sendEmail(formData) {
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+  emailjs.send('service_ynv16u3', 'template_num12re', formData)
     .then(function(response) {
       console.log('E-mail enviado com sucesso!', response);
     }, function(error) {
@@ -287,25 +287,6 @@ function sendEmail(formData) {
 }
 
 
-
-/*
-function checkForm(){
-  checkInputNome();
-  checkInputEmail();
-  checkInputTelefone();
-  checkInputCidade();
-  checkInputAssunto();
-
-  const formItems = form.querySelectorAll(".form-content");
-
-  const isValid = [...formItems].every(item => item.className === "form-content");
-
-  if (isValid){
-    alert("CADASTRADO COM SUCESSO!")
-    console.log(isValid)
-  }
-}
-*/
 
 
 

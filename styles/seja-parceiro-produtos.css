@@ -1,0 +1,159 @@
+.seja-parceiro {
+    padding: 0 10rem 10rem 10rem;
+}
+
+.seja-parceiro__titulo {
+    background: #1f1e1f;
+    color: red;
+    font-size: 3rem;
+    max-width: 150rem;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.seja-parcero__descircao {
+    padding-bottom: 2rem;
+}
+
+.seja-parcero__descircao p {
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+.seja-parceiro__banner__formulario {
+    display: flex;
+    flex-direction: row;
+}
+
+.seja-parceiro__banner {
+    width: 50vw;
+    height: auto;
+}
+
+.seja-parceiro__banner img {
+    width: 40vw;
+}
+
+.formulario {
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #fafafa;
+    border-radius: 14px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: 0 3px 5px rgba(0,0,0, 0.5);
+    overflow: hidden;
+}
+
+.cabecalho-form{
+    background: linear-gradient(120deg, #e90736 0%, #ff9999 100%);
+    padding: 24px;
+    text-align: center;
+    color: #FFF;
+}
+
+.form{
+    padding: 18px;
+}
+
+.form-content{
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+.form-content label{
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.form-content input{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid #dfdfdf;
+}
+
+.form-content textarea {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid #dfdfdf;
+}
+
+.form-content a{
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    visibility: hidden;
+}
+
+.form button{
+    background-color: #e90736;
+    color: #FFF;
+    width: 100%;
+    border-radius: 14px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.form-content.error input{
+    border-color: #ff3b25;
+}
+
+.form-content.error a{
+    color: #ff3b25;
+    visibility: visible;
+}
+
+@media screen and (min-width: 268px) and (max-width: 991px) {
+
+    .seja-parceiro {
+        padding: 2rem;
+    }
+
+    .seja-parceiro__titulo {
+        text-align: center;
+    }
+
+    .seja-parceiro__banner__formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .seja-parceiro__banner {
+        width: 90vw;
+    }
+
+    .seja-parceiro__banner img{
+        width: 90vw;
+        padding-bottom: 5rem;
+    }
+
+    .formulario {
+        width: 90vw;
+    }
+
+    .seja-parceiro__titulo {
+        font-size: 2rem;
+    }
+
+    
+}

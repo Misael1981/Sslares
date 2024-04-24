@@ -336,3 +336,139 @@
   </div>
 
 </section>
+
+<script>
+  // Função para calcular o número de espaçadores em X
+function calcularEspacadoresx() {
+  // Obtendo o valor digitado pelo usuário no campo de entrada
+  var comprimento = parseFloat(document.getElementById("txtcomprx").value); // Alterado o seletor para txtcomprx
+  var select = document.querySelector("#modal .seletor__calculadora"); // Alterado o seletor para #modal .seletor__calculadora
+
+  // Verificando se o valor digitado é válido (não nulo e não negativo)
+  if (comprimento && comprimento > 0) {
+      var espacadores = 0;
+
+      // Convertendo para polegadas, se a unidade selecionada for "Polegadas (in)"
+      if (select.value === "opcao2") {
+          comprimento = converterParaPolegadas(comprimento);
+      }
+
+      // Verificando se o comprimento é menor ou igual a 16 polegadas
+      if (comprimento <= 16) {
+          // Para peças de até 16 polegadas, 1 espaçador a cada 16 polegadas
+          espacadores = 1;
+      } else {
+          // Para peças maiores que 16 polegadas, 1 espaçador a cada 11 polegadas
+          espacadores = Math.ceil(comprimento / 11); // Arredondando para cima para garantir que o número de espaçadores seja suficiente
+      }
+
+      // Atualizando o texto da label com o número de espaçadores
+      document.querySelector("#modal .caluladora__item[for='txtcalcx']").innerText = "Número de espaçadores necessários: " + espacadores;
+  } else {
+      // Se o valor digitado não for válido, exibir uma mensagem de erro
+      document.querySelector("#modal .caluladora__item[for='txtcalcx']").innerText = "Por favor, insira um comprimento válido.";
+  }
+}
+
+// Função para calcular o número de espaçadores em Y
+function calcularEspacadoresy() {
+  // Obtendo o valor digitado pelo usuário no campo de entrada
+  var largura = parseFloat(document.getElementById("txtlargy-modal").value); // Alterado o seletor para txtlargy-modal
+  var select = document.querySelector("#modal .seletor__calculadora"); // Alterado o seletor para #modal .seletor__calculadora
+
+  // Verificando se o valor digitado é válido (não nulo e não negativo)
+  if (largura && largura > 0) {
+      var espacadores = 0;
+
+      // Convertendo para polegadas, se a unidade selecionada for "Polegadas (in)"
+      if (select.value === "opcao2") {
+          largura = converterParaPolegadas(largura);
+      }
+
+      // Verificando se a largura é menor ou igual a 16 polegadas
+      if (largura <= 16) {
+          // Para peças de até 16 polegadas, 1 espaçador a cada 16 polegadas
+          espacadores = 1;
+      } else {
+          // Para peças maiores que 16 polegadas, 1 espaçador a cada 11 polegadas
+          espacadores = Math.ceil(largura / 11); // Arredondando para cima para garantir que o número de espaçadores seja suficiente
+      }
+
+      // Atualizando o texto da label com o número de espaçadores
+      document.querySelector("#modal .caluladora__item[for='txtcalcy']").innerText = "Número de espaçadores necessários: " + espacadores;
+  } else {
+      // Se o valor digitado não for válido, exibir uma mensagem de erro
+      document.querySelector("#modal .caluladora__item[for='txtcalcy']").innerText = "Por favor, insira uma largura válida.";
+  }
+}
+
+// Função para calcular a quantidade total de espaçadores
+function calcularTotalEspacadores() {
+  // Obtendo os valores digitados pelo usuário nos campos de entrada
+  var comprimento = parseFloat(document.getElementById("txtcomprx-modal").value); // Alterado o seletor para txtcomprx-modal
+  var largura = parseFloat(document.getElementById("txtlargy-modal").value); // Alterado o seletor para txtlargy-modal
+  var metrosQuadrados = parseFloat(document.getElementById("txtmq-modal").value); // Alterado o seletor para txtmq-modal
+  var select = document.querySelector("#modal .seletor__calculadora"); // Alterado o seletor para #modal .seletor__calculadora
+
+  // Verificando se os valores digitados são válidos (não nulos e não negativos)
+  if (comprimento && comprimento > 0 && largura && largura > 0) {
+      // Convertendo para polegadas, se a unidade selecionada for "Polegadas (in)"
+      if (select.value === "opcao2") {
+          comprimento = converterParaPolegadas(comprimento);
+          largura = converterParaPolegadas(largura);
+      }
+
+      // Calculando a quantidade total de espaçadores com base na fórmula fornecida
+      var totalEspacadores = Math.round((1 / ((largura / 100) * (comprimento / 100)) * 4) * metrosQuadrados);
+
+      // Atualizando o texto da label com o número total de espaçadores
+      document.querySelector("#modal .caluladora__item[for='txtvtotal']").innerText = "Quantidade total de espaçadores: " + totalEspacadores;
+  } else {
+      // Se os valores digitados não forem válidos, exibir uma mensagem de erro
+      document.querySelector("#modal .caluladora__item[for='txtvtotal']").innerText = "Por favor, insira comprimento, largura e metros quadrados válidos.";
+  }
+}
+
+// Modal
+
+const openModalButtonHome = document.querySelector("#open-modal-home"); // Abrir Modal na página principal
+const closeModalButton = document.querySelector("#close-modal"); // Fechar Modal 
+
+const modal = document.querySelector("#modal");
+const fade = document.querySelector("#fade");
+
+const toggleModal = () => {
+  modal.classList.toggle("hide");
+  fade.classList.toggle("hide");
+};
+
+openModalButtonHome.addEventListener("click", () => toggleModal()); // Adiciona evento de clique para abrir o modal na página principal
+
+closeModalButton.addEventListener("click", () => {
+  toggleModal();
+});
+
+// Associando as funções de cálculo aos eventos de mudança dos campos de entrada no modal
+document.querySelectorAll("#modal .calculadora__input").forEach(function(input) {
+  input.addEventListener("change", function() {
+      calcularEspacadoresx();
+      calcularEspacadoresy();
+      calcularTotalEspacadores();
+  });
+});
+
+// Adicionando evento de mudança ao seletor de unidades no modal
+document.querySelector("#modal .seletor__calculadora").addEventListener("change", function() {
+  // Recalcular os espaçadores quando a unidade for alterada
+  calcularEspacadoresx();
+  calcularEspacadoresy();
+  calcularTotalEspacadores();
+});
+
+// Inicializar cálculos ao abrir o modal
+document.querySelector("#open-modal-home").addEventListener("click", function() {
+  calcularEspacadoresx();
+  calcularEspacadoresy();
+  calcularTotalEspacadores();
+});
+</script>
