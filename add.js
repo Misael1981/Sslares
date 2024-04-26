@@ -14,15 +14,8 @@ menuToggle.addEventListener('click', () => {
 
 // Mostruário 
 
-const imagens = document.querySelectorAll('.imagem');
-const imagemSelecionada = document.querySelector('.imagem-selecionada');
 
-imagens.forEach(imagem => {
-  imagem.addEventListener('mouseover', () => {
-    // Define a imagem selecionada como a que o mouse está passando por cima
-    imagemSelecionada.style.backgroundImage = `url(${imagem.src})`;
-  });
-});
+
 
 //Seletor de Produtos 
 
@@ -707,6 +700,8 @@ function calcularTotalEspacadores() {
   }
 
 }
+
+
 
 
 
