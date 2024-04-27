@@ -5,7 +5,7 @@
 .descricao-produtos__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 90vw;
     margin: 2rem 0;
 }
@@ -23,7 +23,7 @@
 
 .descricao-produtos__imagem-principal {
     background: #C0C0C0;
-    width: 30vw;
+    width: 80%;
     height: 40rem;
     margin: 0 auto;
 }
@@ -46,7 +46,7 @@
 }
 
 .descricao-produtos__imagem-selecionavel {
-    width: 12vw;
+    width: 30%;
     height: 15rem;
 }
 
@@ -98,8 +98,26 @@
     justify-content: center;
 }
 
-#cunhaSlim {
+#cunhaSlim, #cunhaNiveladora, #espacadorSlimPadrao, #espadorSlimPremium, #espacadorSmartPadrao,
+#espacadorSmartPremium, #desempenadeiraLisa, #desempenadeiraCorrigada, #desempenadeiraEspuma,
+#raloOculto, #raloOcultoCores, #plafon {
     display: none;
+}
+
+@media screen and (min-width: 268px) and (max-width: 768px) {
+    .descricao-produtos__container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .descricao-produtos__imagens {
+        width: 80vw;
+    }
+
+    .descricao-dos-produtos {
+        width: 80vw;
+        margin-bottom: 2rem;
+    }
 }
 
 
