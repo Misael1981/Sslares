@@ -31,15 +31,52 @@ imagensSelecionaveis.forEach(imagem => {
 
 //Seletor de Produto
 
-    imagemCunhaSlim.addEventListener('click', function() {
-    var cunhaSlim = document.getElementById('cunhaSlim');
+function showElement(id) {
+  let element = document.getElementById(id);
+  element.style.display = 'block';
+}
+
+function hideAllElements() {
+  let elements = document.querySelectorAll('.your-element-class'); // substitua 'your-element-class' pela classe dos elementos que devem ser controlados
+  elements.forEach(function(element) {
+    element.style.display = 'none';
+  });
+}
+
+document.getElementById('linkCunhaSlim').addEventListener('click', function() {
+  hideAllElements();
+  showElement('cunhaSlim');
+});
+
+document.getElementById('linkCunhaNiveladora').addEventListener('click', function() {
+  hideAllElements();
+  showElement('cunhaNiveladora');
+});
+
+document.getElementById('linkDesempenadeiraEspuma').addEventListener('click', function() {
+  hideAllElements();
+  showElement('desempenadeiraEspuma');
+});
+
+
+
+/* 
+
+    document.getElementById('linkCunhaSlim').addEventListener('click', function() {
+    let cunhaSlim = document.getElementById('cunhaSlim');
     cunhaSlim.style.display = 'block';
   });
 
   document.getElementById('linkCunhaNiveladora').addEventListener('click', function() {
-    var cunhaNiveladora = document.getElementById('cunhaNiveladora');
+    let cunhaNiveladora = document.getElementById('cunhaNiveladora');
     cunhaNiveladora.style.display = 'block';
   });
+
+  document.getElementById('linkDesempenadeiraEspuma').addEventListener('click', function() {
+    let desempenadeiraEspuma = document.getElementById('desempenadeiraEspuma');
+    desempenadeiraEspuma.style.display = 'block';
+  });
+  */
 
 
 
