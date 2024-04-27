@@ -17,26 +17,28 @@ menuToggle.addEventListener('click', () => {
 // Seleionador de Imagem
 
 const imagensSelecionaveis = document.querySelectorAll('.descricao-produtos__imagem-selecionavel img');
-const imagemPrincipal = document.querySelector('.descricao-produtos__imagem-principal img');
+const imagemCunhaSlim = document.querySelector('.cunhaSlim');
+const imagemCunhaNiveladora = document.querySelector('.cunhaNiveladora');
 
 
 imagensSelecionaveis.forEach(imagem => {
   imagem.addEventListener('click', () => {
     
-    imagemPrincipal.src = imagem.src;
+    imagemCunhaSlim.src = imagem.src;
+    imagemCunhaNiveladora.src = imagem.src;
   });
 });
 
 //Seletor de Produto
 
-  document.getElementById('linkCunhaSlim').addEventListener('click', function() {
+    imagemCunhaSlim.addEventListener('click', function() {
     var cunhaSlim = document.getElementById('cunhaSlim');
     cunhaSlim.style.display = 'block';
   });
 
   document.getElementById('linkCunhaNiveladora').addEventListener('click', function() {
-    var cunhaSlim = document.getElementById('cunhaNiveladora');
-    cunhaSlim.style.display = 'block';
+    var cunhaNiveladora = document.getElementById('cunhaNiveladora');
+    cunhaNiveladora.style.display = 'block';
   });
 
 
