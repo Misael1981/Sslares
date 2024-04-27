@@ -284,43 +284,44 @@
         </div>
     </section>
 
+    <!--Descrição dos Produtos-->
+
     <section class="descricao-produtos">
 
-        <div class="descricao-produtos__container" id="cunhaSlim">
-
-            <div class="descricao-produtos__imagens">
-                <div class="descricao-produtos__imagem-principal">
-                    <img class="imagem" src="#" alt="">
+        <div id="cunhaSlim">
+            <div class="descricao-produtos__container">
+                <div class="descricao-produtos__imagens">
+                    <div class="descricao-produtos__imagem-principal">
+                        <img class="imagem" src="#" alt="">
+                    </div>
+                    <div class="descricao-produtos__imagens-selecionaveis">
+                        <div class="descricao-produtos__imagem-selecionavel">
+                            <img class="imagem-selecionada" src="img/descricao-produtos/slim-desenho-descricao.png" alt="">
+                        </div>
+                        <div class="descricao-produtos__imagem-selecionavel">
+                            <img class="imagem-selecionada" src="img/descricao-produtos/cunha-slim-descricao.png" alt="">
+                        </div>
+                        <div class="descricao-produtos__imagem-selecionavel">
+                            <img class="imagem-selecionada" src="img/descricao-produtos/slim-desenho-descricao.png" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="descricao-produtos__imagens-selecionaveis">
-                    <div class="descricao-produtos__imagem-selecionavel">
-                        <img class="imagem-selecionada" src="img/descricao-produtos/slim-desenho-descricao.png" alt="">
+                <div class="descricao-dos-produtos">
+                    <div>
+                        <h1>Cunha Niveladora Slim</h1>
                     </div>
-                    <div class="descricao-produtos__imagem-selecionavel">
-                        <img class="imagem-selecionada" src="img/descricao-produtos/cunha-slim-descricao.png" alt="">
+                    <div>
+                        <p>A Cunha Niveladora com o auxílio do Espaçador Nivelador SSLARES garante o nivelamento correto dos pisos e mantém o espaçamento conforme a medida do espaçador. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. A cunha Niveladora SSLARES é reutilizável.</p>
+                        <h3>Embalagem</h3>
+                        <p>50 peças</p>
+                        <h3>Dimensões</h3>
+                        <p>Altura: 10 mm</p>
+                        <p>Largura: 14 mm</p>
+                        <p>Comprimento: 70 mm</p>
                     </div>
-                    <div class="descricao-produtos__imagem-selecionavel">
-                        <img class="imagem-selecionada" src="img/descricao-produtos/slim-desenho-descricao.png" alt="">
-                    </div>
+                    <div class="descricao-btn"><a href="#" class="btn">Comprar</a></div>
                 </div>
             </div>
-
-            <div class="descricao-dos-produtos">
-                <div>
-                    <h1>Cunha Niveladora Slim</h1>
-                </div>
-                <div>
-                    <p>A Cunha Niveladora com o auxílio do Espaçador Nivelador SSLARES garante o nivelamento correto dos pisos e mantém o espaçamento conforme a medida do espaçador. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. A cunha Niveladora SSLARES é reutilizável.</p>
-                    <h3>Embalagem</h3>
-                    <p>50 peças</p>
-                    <h3>Dimensões</h3>
-                    <p>Altura: 10 mm</p>
-                    <p>Largura: 14 mm</p>
-                    <p>Comprimento: 70 mm</p>
-                </div>
-                <div class="descricao-btn"><a href="#" class="btn">Comprar</a></div>
-            </div>
-
         </div>
 
         <div class="descricao-produtos__container">
@@ -1188,6 +1189,12 @@ imagensSelecionaveis.forEach(imagem => {
     imagemPrincipal.src = imagem.src;
   });
 });
+
+  document.getElementById('linkCunhaSlim').addEventListener('click', function() {
+    var cunhaSlim = document.getElementById('cunhaSlim');
+    cunhaSlim.style.display = 'block';
+  });
+
 
 
 
