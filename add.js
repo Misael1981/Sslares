@@ -14,42 +14,36 @@ menuToggle.addEventListener('click', () => {
 
 // Descrição dos Produtos
 
-// Seleionador de Imagem
-
-const imagensSelecionaveis = document.querySelectorAll('.descricao-produtos__imagem-selecionavel img');
-const imagemCunhaSlim = document.querySelector('.cunhaSlim');
-const imagemCunhaNiveladora = document.querySelector('.cunhaNiveladora');
-
-
-imagensSelecionaveis.forEach(imagem => {
-  imagem.addEventListener('click', () => {
-    
-    imagemCunhaSlim.src = imagem.src;
-    imagemCunhaNiveladora.src = imagem.src;
-  });
-});
 
 const produtos = {
   cunhaNiveladora: {
-    imagem: "img/carrossel-loja/cunha-niveladora.jpg",
+    imagem1: "img/descricao-produtos/smart-desenho-descricao.png",
+    imagem2: "img/carrossel-loja/cunha-niveladora.jpg",
+    imagem3: "img/descricao-produtos/smart-desenho-descricao.png",
     titulo: "Cunha Niveladora",
     descricao: "A Cunha Niveladora com o auxílio do Espaçador Nivelador SSLARES garante o nivelamento correto dos pisos e mantém o espaçamento conforme a medida do espaçador. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. A cunha Niveladora SSLARES é reutilizável",
     quantidade: '50 peças',
-    altura: 'Altura: 20mm',
-    largura: 'Largura: 23mm',
-    comprimento: 'Comprimento: 84mm',
+    altura: 'Altura: 20 mm',
+    largura: 'Largura: 23 mm ',
+    comprimento: 'Comprimento: 84 mm',
   },
+  
   cunhaSlim: {
-    imagem: "img/carrossel-loja/cunhaslim-story.png",
+    imagem1: "img/descricao-produtos/slim-desenho-descricao.png",
+    imagem2: "img/descricao-produtos/cunha-slim-descricao.png",
+    imagem3: "img/descricao-produtos/slim-desenho-descricao.png",
     titulo: "Cunha Slim",
     descricao: "A Cunha Niveladora com o auxílio do Espaçador Nivelador SSLARES garante o nivelamento correto dos pisos e mantém o espaçamento conforme a medida do espaçador. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. A cunha Niveladora SSLARES é reutilizável",
     quantidade: '50 peças',
-    altura: 'Altura: 20mm',
-    largura: 'Largura: 23mm',
-    comprimento: 'Comprimento: 84mm',
+    altura: 'Altura: 10 mm',
+    largura: 'Largura: 14 mm',
+    comprimento: 'Comprimento: 70 mm',
   },
+  
   desempenadeiraEspuma: {
-    imagem: "img/carrossel-loja/desempenadeira-espuma-story.png",
+    imagem1: "img/descricao-produtos/desempenadeira-espuma-descricao.png",
+    imagem2: "img/descricao-produtos/desempenadeira-espuma-descricao.png",
+    imagem3: "img/descricao-produtos/desempenadeira-espuma-descricao.png",
     titulo: "Desempenadeira Espuma",
     descricao: "A Desempenadeira com Espuma é utilizada para o nivelamento de massas, argamassas e monocapas. Ideal para acabamento em massa fina e reboco.",
     quantidade: 'Caixa com 6 unidades',
@@ -57,8 +51,11 @@ const produtos = {
     largura: 'Largura: 18cm',
     comprimento: 'Comprimento: 30cm',
   },
+
   desempenadeiraLisa: {
-    imagem: "img/carrossel-loja/desempenadeira-lisa-story.png",
+    imagem1: "img/descricao-produtos/desempenadeira-lisa-descricao.png",
+    imagem2: "img/descricao-produtos/desempenadeira-lisa-descricao.png",
+    imagem3: "img/descricao-produtos/desempenadeira-lisa-descricao.png",
     titulo: "Desempenadeira Lisa",
     descricao: "Indicada para a preparação, nivelamento e acabamento de superfícies, podendo-se utilizar variados tipos de massas, aplicação e desempeno de massa fina.",
     quantidade: 'Caixa com 6 unidades',
@@ -66,8 +63,11 @@ const produtos = {
     largura: 'Largura: 18cm',
     comprimento: 'Comprimento: 30cm',
   },
+
   desempenadeiraCorrugada: {
-    imagem: "img/carrossel-loja/desempenadeira-corrugada-story.png",
+    imagem1: "img/descricao-produtos/desempenadeira-corrugada-descricao.png",
+    imagem2: "img/descricao-produtos/desempenadeira-corrugada-descricao.png",
+    imagem3: "img/descricao-produtos/desempenadeira-corrugada-descricao.png",
     titulo: "Desempenadeira Corrugada",
     descricao: "Indicada para preparar superfícies diversas, como planos acantonados, gesso de alvenaria e placas de forro. Por ter uma base corrugada, seu principal diferencial é a facilidade de remover partículas estranhas da massa.",
     quantidade: 'Caixa com 6 unidades',
@@ -75,26 +75,35 @@ const produtos = {
     largura: 'Largura: 18cm',
     comprimento: 'Comprimento: 30cm',
   },
+
   espacadorSlimPadrao: {
-    imagem: "img/carrossel-loja/espacador-slim-padrao-story.png",
+    imagem1: "img/descricao-produtos/slim-desenho-descricao.png",
+    imagem2: "img/descricao-produtos/espacador-slim-pd-descricao.png",
+    imagem3: "img/descricao-produtos/slim-desenho-descricao.png",
     titulo: "Espaçador Slim PADRÃO",
     descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
     quantidade: '50 peças',
-    altura: 'Altura: 45mm',
-    largura: 'Largura: 30mm',
-    comprimento: 'Comprimento: 38mm',
+    altura: 'Altura: 30mm',
+    largura: 'Largura: 25mm',
+    comprimento: 'Comprimento: 25mm',
   },
+ 
   espacadorSlimPremium: {
-    imagem: "img/carrossel-loja/espacador-slim-story.png",
+    imagem1: "img/descricao-produtos/slim-desenho-descricao.png",
+    imagem2: "img/descricao-produtos/espacador-slim-pm-descricao.png",
+    imagem3: "img/descricao-produtos/slim-desenho-descricao.png",
     titulo: "Espaçador Slim PREMIUM",
     descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora Slim a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
     quantidade: '50 peças',
-    altura: 'Altura: 45mm',
-    largura: 'Largura: 30mm',
-    comprimento: 'Comprimento: 38mm',
+    altura: 'Altura: 30mm',
+    largura: 'Largura: 25mm',
+    comprimento: 'Comprimento: 25mm',
   },
+ 
   espacadorSmartPadrao: {
-    imagem: "img/carrossel-loja/espacador-smart-padrao-story.png",
+    imagem1: "img/descricao-produtos/smart-desenho-descricao.png",
+    imagem2: "img/descricao-produtos/espacador-smart-pd-descricao.png",
+    imagem3: "img/descricao-produtos/smart-desenho-descricao.png",
     titulo: "Espaçador Smart PADRÃO",
     descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora Slim a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
     quantidade: '50 peças',
@@ -102,8 +111,11 @@ const produtos = {
     largura: 'Largura: 30mm',
     comprimento: 'Comprimento: 38mm',
   },
+  
   espacadorSmartPremium: {
-    imagem: "img/carrossel-loja/espacador-smart-premium-story.png",
+    imagem1: "img/descricao-produtos/smart-desenho-descricao.png",
+    imagem2: "img/descricao-produtos/espacador-smart-pm-descricao.png",
+    imagem3: "img/descricao-produtos/smart-desenho-descricao.png",
     titulo: "Espaçador Smart PREMIUM",
     descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora Slim a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
     quantidade: '50 peças',
@@ -111,8 +123,11 @@ const produtos = {
     largura: 'Largura: 30mm',
     comprimento: 'Comprimento: 38mm',
   },
+  
   blocoEspuma: {
-    imagem: "img/carrossel-loja/bloco-espuma-story.png",
+    imagem1: "img/descricao-produtos/blocoespuma-desenho-descricao.png",
+    imagem2: "img/descricao-produtos/bloco-espuma-descricao.png",
+    imagem3: "img/descricao-produtos/blocoespuma-desenho-descricao.png",
     titulo: "Bloco de Espuma",
     descricao: "Os versáteis blocos de espuma SsLares são ideais para uma variedade de aplicações, desde o acabamento de reboco e a limpeza de revestimentos cerâmicos e vidros até a lavagem de automóveis e a limpeza em geral. Sua composição especial permite uma eficaz remoção de sujeira e manchas, tornando-os indispensáveis para diversas tarefas domésticas e comerciais. Experimente a praticidade e eficiência dos blocos de espuma para facilitar suas atividades diárias!",
     quantidade: 'Fardo com 20 unidades',
@@ -120,8 +135,11 @@ const produtos = {
     largura: 'Largura: 12cm',
     comprimento: 'Comprimento: 20cm',
   },
+  
   raloOculto: {
-    imagem: "img/carrossel-loja/ralo-oculto-story.png",
+    imagem1: "img/descricao-produtos/ralo-oculto-15x15-descricao.png",
+    imagem2: "img/descricao-produtos/ralo-oculto-10x10-descricao.png",
+    imagem3: "img/descricao-produtos/ralo-oculto-descricao.png",
     titulo: "Ralo oculto",
     descricao: "O ralo oculto é a opção ideal para quem busca aliar funcionalidade e estética. Além de proporcionar mais segurança e favorecer a vazão da água, seu design discreto e moderno contribui para uma melhor estética do ambiente. Sua facilidade de instalação e as opções de tamanhos e cores disponíveis tornam o ralo oculto uma escolha versátil e prática. Com a capacidade de facilitar a limpeza doméstica, este produto se destaca como uma solução eficiente para banheiros, cozinhas e áreas de serviço.",
     quantidade: 'Caixas com 20 e 10 unidades',
@@ -129,8 +147,11 @@ const produtos = {
     largura: 'Largura: 10 e 15cm',
     comprimento: 'Comprimento: 10 e 15cm',
   },
+  
   raloOcultoCores: {
-    imagem: "img/carrossel-loja/ralo-oculto-cores-story.png",
+    imagem1: "img/descricao-produtos/ralo-oculto-15x15-descricao.png",
+    imagem2: "img/descricao-produtos/ralo-oculto-10x10-descricao.png",
+    imagem3: "img/descricao-produtos/ralo-oculto-cores-descricao.png",
     titulo: "Ralo oculto",
     descricao: "O ralo oculto é a opção ideal para quem busca aliar funcionalidade e estética. Além de proporcionar mais segurança e favorecer a vazão da água, seu design discreto e moderno contribui para uma melhor estética do ambiente. Sua facilidade de instalação e as opções de tamanhos e cores disponíveis tornam o ralo oculto uma escolha versátil e prática. Com a capacidade de facilitar a limpeza doméstica, este produto se destaca como uma solução eficiente para banheiros, cozinhas e áreas de serviço.",
     quantidade: 'Caixas com 20 e 10 unidades',
@@ -138,8 +159,11 @@ const produtos = {
     largura: 'Largura: 10 e 15cm',
     comprimento: 'Comprimento: 10 e 15cm',
   },
+  
   plafon: {
-    imagem: "img/carrossel-loja/paflon.png",
+    imagem1: "img/descricao-produtos/plafon-descricao.png",
+    imagem2: "img/descricao-produtos/plafon-descricao.png",
+    imagem3: "img/descricao-produtos/plafon-descricao.png",
     titulo: "Plafon",
     descricao: "O Plafon com soquete de Porcelana E27 Branco é um dispositivo de iluminação de teto projetado para oferecer uma solução simples e funcional para a iluminação de ambientes internos. Ele é feito de PVC de alta qualidade, um material durável e resistente, na cor branca, que se adapta facilmente a diferentes estilos de decoração.Uma das características principais desse plafon é o seu soquete de porcelana E27, que é uma opção segura e confiável para a instalação de lâmpadas incandescentes, fluorescentes compactas ou LED com essa base. A porcelana é um material resistente ao calor e oferece maior segurança em comparação com soquetes de plástico ou metal, pois é menos propenso a derreter ou superaquecer.",
     quantidade: '',
@@ -147,11 +171,13 @@ const produtos = {
     largura: '',
     comprimento: '',
   },
+  
 }
 
 function createDescriptionElement(id) {
 
-  const produto = produtos[id]
+  const produto = produtos[id];
+  // Cria o Template HTML
 
   const templateHTML = (`
     <div id="cunhaSlim">
@@ -162,13 +188,13 @@ function createDescriptionElement(id) {
                     </div>
                     <div class="descricao-produtos__imagens-selecionaveis">
                         <div class="descricao-produtos__imagem-selecionavel">
-                            <img class="imagem-selecionada" src="img/descricao-produtos/slim-desenho-descricao.png" alt="">
+                            <img class="imagem-selecionada" src="${produto.imagem1}" alt="">
                         </div>
                         <div class="descricao-produtos__imagem-selecionavel">
-                            <img class="imagem-selecionada" src="img/descricao-produtos/cunha-slim-descricao.png" alt="">
+                            <img class="imagem-selecionada" src="${produto.imagem2}" alt="">
                         </div>
                         <div class="descricao-produtos__imagem-selecionavel">
-                            <img class="imagem-selecionada" src="img/descricao-produtos/slim-desenho-descricao.png" alt="">
+                            <img class="imagem-selecionada" src="${produto.imagem3}" alt="">
                         </div>
                     </div>
                 </div>
@@ -177,7 +203,7 @@ function createDescriptionElement(id) {
                         <h1>${produto.titulo}</h1>
                     </div>
                     <div>
-                        <p>A Cunha Niveladora com o auxílio do Espaçador Nivelador SSLARES garante o nivelamento correto dos pisos e mantém o espaçamento conforme a medida do espaçador. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. A cunha Niveladora SSLARES é reutilizável.</p>
+                        <p>${produto.descricao}</p>
                         <h3>Embalagem</h3>
                         <p>${produto.quantidade}</p>
                         <h3>Dimensões</h3>
@@ -192,10 +218,11 @@ function createDescriptionElement(id) {
   `)
 
 
-  const produtosDescricaoContainer = document.querySelector('.descricao-produtos')
+  const produtosDescricaoContainer = document.querySelector('.descricao-produtos');
+  // O comando que imprime o template
   produtosDescricaoContainer.innerHTML = templateHTML
 }
-
+ // A função pra chamar o Template no click do botão no carrossel
 document.querySelectorAll('.buy-btn').forEach(button => {
 
   button.addEventListener('click', function () {
@@ -205,128 +232,25 @@ document.querySelectorAll('.buy-btn').forEach(button => {
   })
 })
 
-//Seletor de Produto
+// Seletor de Imagens
 
 
-/*
-function showElement(id) {
-  let element = document.getElementById(id);
-  element.classList.add('produtodescricaoShow');
-  element.style.display = 'block';
-}
-
-function hideAllElements() {
-  let element = document.querySelector('.produtodescricaoShow'); 
-  if (!element) return; // Se o elemento não existir
-    element.classList.remove('.produtodescricaoShow');
-    element.style.display = 'none';
-    console.log(element);
-  };
 
 
-document.querySelectorAll('.buy-btn').forEach(button => {
+const imagemPrincipal = document.querySelector('.imagem-principal');
+function selecionarImagem (){
+  const produto = produtos[id];
+  const imagensSelecionaveis = [produto.imagem1, produto.imagem2, produto.imagem3];
+imagensSelecionaveis.forEach(imagem => {
   
-  button.addEventListener('click', function (){
-    const id = button.dataset.produto;
-    hideAllElements();
-    showElement(id);
-  })
-})
-
-
-function descriptionElement () {
-  const tampleteHtml = `
-  <div id="cunhaSlim">
-            <div class="descricao-produtos__container">
-                <div class="descricao-produtos__imagens">
-                    <div class="descricao-produtos__imagem-principal">
-                        <img class="cunhaSlim" src="#" alt="">
-                    </div>
-                    <div class="descricao-produtos__imagens-selecionaveis">
-                        <div class="descricao-produtos__imagem-selecionavel">
-                            <img class="imagem-selecionada" src="img/descricao-produtos/slim-desenho-descricao.png" alt="">
-                        </div>
-                        <div class="descricao-produtos__imagem-selecionavel">
-                            <img class="imagem-selecionada" src="img/descricao-produtos/cunha-slim-descricao.png" alt="">
-                        </div>
-                        <div class="descricao-produtos__imagem-selecionavel">
-                            <img class="imagem-selecionada" src="img/descricao-produtos/slim-desenho-descricao.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="descricao-dos-produtos">
-                    <div>
-                        <h1>Cunha Niveladora Slim</h1>
-                    </div>
-                    <div>
-                        <p>A Cunha Niveladora com o auxílio do Espaçador Nivelador SSLARES garante o nivelamento correto dos pisos e mantém o espaçamento conforme a medida do espaçador. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. A cunha Niveladora SSLARES é reutilizável.</p>
-                        <h3>Embalagem</h3>
-                        <p>50 peças</p>
-                        <h3>Dimensões</h3>
-                        <p>Altura: 10 mm</p>
-                        <p>Largura: 14 mm</p>
-                        <p>Comprimento: 70 mm</p>
-                    </div>
-                    <div class="descricao-btn"><a href="#" class="btn">Comprar</a></div>
-                </div>
-            </div>
-        </div>
-  `
-}
- 
-
-
-
-function showElement(id) {
-  let element = document.getElementById(id);
-  element.classList.add('produtoDescricaoShow')
-  element.style.display = 'block';
-}
-
-function hideAllElements() {
-  let element = document.querySelector('.produtoDescricaoShow') // substitua 'your-element-class' pela classe dos elementos que devem ser controlados
-
-  if (!element) return 
-
-  element.classList.remove('produtoDescricaoShow')
-  element.style.display = 'none';
-}
-
-
-document.querySelectorAll('.buy-btn').forEach(button => {
-
-  button.addEventListener('click', function () {
-    const id = button.dataset.produto
-    hideAllElements()
-    showElement(id)
-  })
-
-})
-
-*/
-
-
-
-
-/* 
-
-    document.getElementById('linkCunhaSlim').addEventListener('click', function() {
-    let cunhaSlim = document.getElementById('cunhaSlim');
-    cunhaSlim.style.display = 'block';
+  imagem.addEventListener('click', function () {
+     
+    imagemPrincipal.src = imagem.src;
+    selecionarImagem();
   });
+});
 
-  document.getElementById('linkCunhaNiveladora').addEventListener('click', function() {
-    let cunhaNiveladora = document.getElementById('cunhaNiveladora');
-    cunhaNiveladora.style.display = 'block';
-  });
-
-  document.getElementById('linkDesempenadeiraEspuma').addEventListener('click', function() {
-    let desempenadeiraEspuma = document.getElementById('desempenadeiraEspuma');
-    desempenadeiraEspuma.style.display = 'block';
-  });
-  */
-
-
+}
 
 
 // carrossel
@@ -411,26 +335,19 @@ document.getElementById("txtcomprmodalx").addEventListener("change", calcularEsp
 
 // Função para calcular o número de espaçadores em Y
 function calcularEspacadoresy() {
-  // Obtendo o valor digitado pelo usuário no campo de entrada
+  
   var largura = parseFloat(document.getElementById("txtlargy").value);
-
-  // Verificando se o valor digitado é válido (não nulo e não negativo)
   if (largura && largura > 0) {
       var espacadores = 0;
-
-      // Verificando se a largura é menor ou igual a 40cm
       if (largura <= 40) {
-          // Para peças de até 40cm, 1 espaçador a cada 40cm
           espacadores = 1;
       } else {
-          // Para peças maiores que 40cm, 1 espaçador a cada 27cm
-          espacadores = Math.ceil(largura / 27); // Arredondando para cima para garantir que o número de espaçadores seja suficiente
+          espacadores = Math.ceil(largura / 27); 
       }
 
       // Atualizando o texto da label com o número de espaçadores
       document.querySelector(".caluladora__item[for='txtcalcy']").innerText = "Número de espaçadores necessários: " + espacadores;
   } else {
-      // Se o valor digitado não for válido, exibir uma mensagem de erro
       document.querySelector(".caluladora__item[for='txtcalcy']").innerText = "Por favor, insira uma largura válida.";
   }
 }
@@ -443,16 +360,10 @@ function calcularTotalEspacadores() {
   var comprimento = parseFloat(document.getElementById("txtcomprx").value);
   var largura = parseFloat(document.getElementById("txtlargy").value);
   var metrosQuadrados = parseFloat(document.getElementById("txtmq").value);
-
-  // Verificando se os valores digitados são válidos (não nulos e não negativos)
   if (comprimento && comprimento > 0 && largura && largura > 0 && metrosQuadrados && metrosQuadrados > 0) {
-    // Calculando a quantidade total de espaçadores com base na fórmula fornecida
     var totalEspacadores = Math.round((1 / ((largura / 100) * (comprimento / 100)) * 4) * metrosQuadrados);
-
-    // Atualizando o texto da label com o número total de espaçadores
     document.querySelector(".caluladora__item[for='txtvtotal']").innerText = "Quantidade total de espaçadores: " + totalEspacadores;
   } else {
-    // Se os valores digitados não forem válidos, exibir uma mensagem de erro
     document.querySelector(".caluladora__item[for='txtvtotal']").innerText = "Por favor, insira comprimento, largura e metros quadrados válidos.";
   }
 }
@@ -470,7 +381,6 @@ document.getElementById("txtmq").addEventListener("change", calcularTotalEspacad
 
 // Adicionando evento de mudança ao seletor de unidades
 document.querySelector(".seletor__calculadora").addEventListener("change", function() {
-  // Recalcular os espaçadores quando a unidade for alterada
   calcularEspacadoresx();
   calcularEspacadoresy();
   calcularTotalEspacadores();
@@ -480,49 +390,33 @@ document.querySelector(".seletor__calculadora").addEventListener("change", funct
 function converterParaPolegadas(valorEmCm) {
   return valorEmCm / 2.54; // 1 polegada = 2.54 cm
 }
-
 // Função para calcular o número de espaçadores em X
 function calcularEspacadoresx() {
-  // Obtendo o valor digitado pelo usuário no campo de entrada
   var comprimento = parseFloat(document.getElementById("txtcomprx").value);
   var select = document.querySelector(".seletor__calculadora");
-
-  // Verificando se o valor digitado é válido (não nulo e não negativo)
   if (comprimento && comprimento > 0) {
       var espacadores = 0;
-
-      // Convertendo para polegadas, se a unidade selecionada for "Polegadas (in)"
       if (select.value === "opcao2") {
           comprimento = converterParaPolegadas(comprimento);
       }
 
-      // Verificando se o comprimento é menor ou igual a 16 polegadas
       if (comprimento <= 16) {
-          // Para peças de até 16 polegadas, 1 espaçador a cada 16 polegadas
           espacadores = 1;
       } else {
-          // Para peças maiores que 16 polegadas, 1 espaçador a cada 11 polegadas
-          espacadores = Math.ceil(comprimento / 11); // Arredondando para cima para garantir que o número de espaçadores seja suficiente
+          espacadores = Math.ceil(comprimento / 11); 
       }
-
-      // Atualizando o texto da label com o número de espaçadores
       document.querySelector(".caluladora__item[for='txtcalcx']").innerText = "Número de espaçadores necessários: " + espacadores;
   } else {
-      // Se o valor digitado não for válido, exibir uma mensagem de erro
       document.querySelector(".caluladora__item[for='txtcalcx']").innerText = "Por favor, insira um comprimento válido.";
   }
 }
 
-// Associando a função de cálculo ao evento de alteração do campo de entrada txtcomprx
 document.getElementById("txtcomprx").addEventListener("change", calcularEspacadoresx);
 
-// Função para calcular o número de espaçadores em Y
 function calcularEspacadoresy() {
-  // Obtendo o valor digitado pelo usuário no campo de entrada
   var largura = parseFloat(document.getElementById("txtlargy").value);
   var select = document.querySelector(".seletor__calculadora");
 
-  // Verificando se o valor digitado é válido (não nulo e não negativo)
   if (largura && largura > 0) {
       var espacadores = 0;
 
@@ -530,20 +424,13 @@ function calcularEspacadoresy() {
       if (select.value === "opcao2") {
           largura = converterParaPolegadas(largura);
       }
-
-      // Verificando se a largura é menor ou igual a 16 polegadas
       if (largura <= 16) {
-          // Para peças de até 16 polegadas, 1 espaçador a cada 16 polegadas
           espacadores = 1;
       } else {
-          // Para peças maiores que 16 polegadas, 1 espaçador a cada 11 polegadas
-          espacadores = Math.ceil(largura / 11); // Arredondando para cima para garantir que o número de espaçadores seja suficiente
+          espacadores = Math.ceil(largura / 11); 
       }
-
-      // Atualizando o texto da label com o número de espaçadores
       document.querySelector(".caluladora__item[for='txtcalcy']").innerText = "Número de espaçadores necessários: " + espacadores;
   } else {
-      // Se o valor digitado não for válido, exibir uma mensagem de erro
       document.querySelector(".caluladora__item[for='txtcalcy']").innerText = "Por favor, insira uma largura válida.";
   }
 }
@@ -553,27 +440,21 @@ document.getElementById("txtlargy").addEventListener("change", calcularEspacador
 
 // Função para calcular a quantidade total de espaçadores
 function calcularTotalEspacadores() {
-  // Obtendo os valores digitados pelo usuário nos campos de entrada
   var comprimento = parseFloat(document.getElementById("txtcomprx").value);
   var largura = parseFloat(document.getElementById("txtlargy").value);
   var metrosQuadrados = parseFloat(document.getElementById("txtmq").value);
   var select = document.querySelector(".seletor__calculadora");
-
-  // Verificando se os valores digitados são válidos (não nulos e não negativos)
   if (comprimento && comprimento > 0 && largura && largura > 0) {
-      // Convertendo para polegadas, se a unidade selecionada for "Polegadas (in)"
       if (select.value === "opcao2") {
           comprimento = converterParaPolegadas(comprimento);
           largura = converterParaPolegadas(largura);
       }
 
-      // Calculando a quantidade total de espaçadores com base na fórmula fornecida
       var totalEspacadores = Math.round((1 / ((largura / 100) * (comprimento / 100)) * 4) * metrosQuadrados);
 
-      // Atualizando o texto da label com o número total de espaçadores
       document.querySelector(".caluladora__item[for='txtvtotal']").innerText = "Quantidade total de espaçadores: " + totalEspacadores;
   } else {
-      // Se os valores digitados não forem válidos, exibir uma mensagem de erro
+      
       document.querySelector(".caluladora__item[for='txtvtotal']").innerText = "Por favor, insira comprimento"
   }
 

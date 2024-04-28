@@ -101,7 +101,7 @@
 #cunhaSlim, #cunhaNiveladora, #espacadorSlimPadrao, #espadorSlimPremium, #espacadorSmartPadrao,
 #espacadorSmartPremium, #desempenadeiraLisa, #desempenadeiraCorrigada, #desempenadeiraEspuma,
 #raloOculto, #raloOcultoCores, #plafon {
-    display: none;
+    display: block;
 }
 
 @media screen and (min-width: 268px) and (max-width: 768px) {
