@@ -18,7 +18,7 @@ menuToggle.addEventListener('click', () => {
 const produtos = {
   cunhaNiveladora: {
     imagem1: "smart-desenho-descricao.png",
-    imagem2: "cunha-niveladora.jpg",
+    imagem2: "cunha-niveladora.png",
     imagem3: "smart-desenho-descricao.png",
     titulo: "Cunha Niveladora",
     descricao: "A Cunha Niveladora com o auxílio do Espaçador Nivelador SSLARES garante o nivelamento correto dos pisos e mantém o espaçamento conforme a medida do espaçador. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. A cunha Niveladora SSLARES é reutilizável",
@@ -192,10 +192,10 @@ function createDescriptionElement(id) {
                             onclick = "changeImage('${produto.imagem1}')">
                         </div>
                         <div class="descricao-produtos__imagem-selecionavel">
-                            <img class="imagem-selecionada" src="img/descricao-produtos/${produto.imagem2}" alt="" onclick = "changeImage(${produto.imagem2})">
+                            <img class="imagem-selecionada" src="img/descricao-produtos/${produto.imagem2}" alt="" onclick = "changeImage('${produto.imagem2}')">
                         </div>
                         <div class="descricao-produtos__imagem-selecionavel">
-                            <img class="imagem-selecionada" src="img/descricao-produtos/${produto.imagem3}" alt="" onclick = "changeImage(${produto.imagem3})">
+                            <img class="imagem-selecionada" src="img/descricao-produtos/${produto.imagem3}" alt="" onclick = "changeImage('${produto.imagem3}')">
                         </div>
                     </div>
                 </div>
