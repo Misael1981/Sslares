@@ -17,9 +17,9 @@ menuToggle.addEventListener('click', () => {
 
 const produtos = {
   cunhaNiveladora: {
-    imagem1: "img/descricao-produtos/smart-desenho-descricao.png",
-    imagem2: "img/carrossel-loja/cunha-niveladora.jpg",
-    imagem3: "img/descricao-produtos/smart-desenho-descricao.png",
+    imagem1: "smart-desenho-descricao.png",
+    imagem2: "cunha-niveladora.jpg",
+    imagem3: "smart-desenho-descricao.png",
     titulo: "Cunha Niveladora",
     descricao: "A Cunha Niveladora com o auxílio do Espaçador Nivelador SSLARES garante o nivelamento correto dos pisos e mantém o espaçamento conforme a medida do espaçador. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. A cunha Niveladora SSLARES é reutilizável",
     quantidade: '50 peças',
@@ -29,9 +29,9 @@ const produtos = {
   },
   
   cunhaSlim: {
-    imagem1: "img/descricao-produtos/slim-desenho-descricao.png",
-    imagem2: "img/descricao-produtos/cunha-slim-descricao.png",
-    imagem3: "img/descricao-produtos/slim-desenho-descricao.png",
+    imagem1: "slim-desenho-descricao.png",
+    imagem2: "cunha-slim-descricao.png",
+    imagem3: "slim-desenho-descricao.png",
     titulo: "Cunha Slim",
     descricao: "A Cunha Niveladora com o auxílio do Espaçador Nivelador SSLARES garante o nivelamento correto dos pisos e mantém o espaçamento conforme a medida do espaçador. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. A cunha Niveladora SSLARES é reutilizável",
     quantidade: '50 peças',
@@ -41,9 +41,9 @@ const produtos = {
   },
   
   desempenadeiraEspuma: {
-    imagem1: "img/descricao-produtos/desempenadeira-espuma-descricao.png",
-    imagem2: "img/descricao-produtos/desempenadeira-espuma-descricao.png",
-    imagem3: "img/descricao-produtos/desempenadeira-espuma-descricao.png",
+    imagem1: "desempenadeira-espuma-descricao.png",
+    imagem2: "desempenadeira-espuma-descricao.png",
+    imagem3: "desempenadeira-espuma-descricao.png",
     titulo: "Desempenadeira Espuma",
     descricao: "A Desempenadeira com Espuma é utilizada para o nivelamento de massas, argamassas e monocapas. Ideal para acabamento em massa fina e reboco.",
     quantidade: 'Caixa com 6 unidades',
@@ -53,9 +53,9 @@ const produtos = {
   },
 
   desempenadeiraLisa: {
-    imagem1: "img/descricao-produtos/desempenadeira-lisa-descricao.png",
-    imagem2: "img/descricao-produtos/desempenadeira-lisa-descricao.png",
-    imagem3: "img/descricao-produtos/desempenadeira-lisa-descricao.png",
+    imagem1: "desempenadeira-lisa-descricao.png",
+    imagem2: "desempenadeira-lisa-descricao.png",
+    imagem3: "desempenadeira-lisa-descricao.png",
     titulo: "Desempenadeira Lisa",
     descricao: "Indicada para a preparação, nivelamento e acabamento de superfícies, podendo-se utilizar variados tipos de massas, aplicação e desempeno de massa fina.",
     quantidade: 'Caixa com 6 unidades',
@@ -65,9 +65,9 @@ const produtos = {
   },
 
   desempenadeiraCorrugada: {
-    imagem1: "img/descricao-produtos/desempenadeira-corrugada-descricao.png",
-    imagem2: "img/descricao-produtos/desempenadeira-corrugada-descricao.png",
-    imagem3: "img/descricao-produtos/desempenadeira-corrugada-descricao.png",
+    imagem1: "desempenadeira-corrugada-descricao.png",
+    imagem2: "desempenadeira-corrugada-descricao.png",
+    imagem3: "desempenadeira-corrugada-descricao.png",
     titulo: "Desempenadeira Corrugada",
     descricao: "Indicada para preparar superfícies diversas, como planos acantonados, gesso de alvenaria e placas de forro. Por ter uma base corrugada, seu principal diferencial é a facilidade de remover partículas estranhas da massa.",
     quantidade: 'Caixa com 6 unidades',
@@ -77,9 +77,9 @@ const produtos = {
   },
 
   espacadorSlimPadrao: {
-    imagem1: "img/descricao-produtos/slim-desenho-descricao.png",
-    imagem2: "img/descricao-produtos/espacador-slim-pd-descricao.png",
-    imagem3: "img/descricao-produtos/slim-desenho-descricao.png",
+    imagem1: "slim-desenho-descricao.png",
+    imagem2: "espacador-slim-pd-descricao.png",
+    imagem3: "slim-desenho-descricao.png",
     titulo: "Espaçador Slim PADRÃO",
     descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
     quantidade: '50 peças',
@@ -89,9 +89,9 @@ const produtos = {
   },
  
   espacadorSlimPremium: {
-    imagem1: "img/descricao-produtos/slim-desenho-descricao.png",
-    imagem2: "img/descricao-produtos/espacador-slim-pm-descricao.png",
-    imagem3: "img/descricao-produtos/slim-desenho-descricao.png",
+    imagem1: "slim-desenho-descricao.png",
+    imagem2: "espacador-slim-pm-descricao.png",
+    imagem3: "slim-desenho-descricao.png",
     titulo: "Espaçador Slim PREMIUM",
     descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora Slim a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
     quantidade: '50 peças',
@@ -101,9 +101,9 @@ const produtos = {
   },
  
   espacadorSmartPadrao: {
-    imagem1: "img/descricao-produtos/smart-desenho-descricao.png",
-    imagem2: "img/descricao-produtos/espacador-smart-pd-descricao.png",
-    imagem3: "img/descricao-produtos/smart-desenho-descricao.png",
+    imagem1: "smart-desenho-descricao.png",
+    imagem2: "espacador-smart-pd-descricao.png",
+    imagem3: "smart-desenho-descricao.png",
     titulo: "Espaçador Smart PADRÃO",
     descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora Slim a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
     quantidade: '50 peças',
@@ -113,9 +113,9 @@ const produtos = {
   },
   
   espacadorSmartPremium: {
-    imagem1: "img/descricao-produtos/smart-desenho-descricao.png",
-    imagem2: "img/descricao-produtos/espacador-smart-pm-descricao.png",
-    imagem3: "img/descricao-produtos/smart-desenho-descricao.png",
+    imagem1: "smart-desenho-descricao.png",
+    imagem2: "espacador-smart-pm-descricao.png",
+    imagem3: "smart-desenho-descricao.png",
     titulo: "Espaçador Smart PREMIUM",
     descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora Slim a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
     quantidade: '50 peças',
@@ -125,9 +125,9 @@ const produtos = {
   },
   
   blocoEspuma: {
-    imagem1: "img/descricao-produtos/blocoespuma-desenho-descricao.png",
-    imagem2: "img/descricao-produtos/bloco-espuma-descricao.png",
-    imagem3: "img/descricao-produtos/blocoespuma-desenho-descricao.png",
+    imagem1: "blocoespuma-desenho-descricao.png",
+    imagem2: "bloco-espuma-descricao.png",
+    imagem3: "blocoespuma-desenho-descricao.png",
     titulo: "Bloco de Espuma",
     descricao: "Os versáteis blocos de espuma SsLares são ideais para uma variedade de aplicações, desde o acabamento de reboco e a limpeza de revestimentos cerâmicos e vidros até a lavagem de automóveis e a limpeza em geral. Sua composição especial permite uma eficaz remoção de sujeira e manchas, tornando-os indispensáveis para diversas tarefas domésticas e comerciais. Experimente a praticidade e eficiência dos blocos de espuma para facilitar suas atividades diárias!",
     quantidade: 'Fardo com 20 unidades',
@@ -137,9 +137,9 @@ const produtos = {
   },
   
   raloOculto: {
-    imagem1: "img/descricao-produtos/ralo-oculto-15x15-descricao.png",
-    imagem2: "img/descricao-produtos/ralo-oculto-10x10-descricao.png",
-    imagem3: "img/descricao-produtos/ralo-oculto-descricao.png",
+    imagem1: "ralo-oculto-15x15-descricao.png",
+    imagem2: "ralo-oculto-10x10-descricao.png",
+    imagem3: "ralo-oculto-descricao.png",
     titulo: "Ralo oculto",
     descricao: "O ralo oculto é a opção ideal para quem busca aliar funcionalidade e estética. Além de proporcionar mais segurança e favorecer a vazão da água, seu design discreto e moderno contribui para uma melhor estética do ambiente. Sua facilidade de instalação e as opções de tamanhos e cores disponíveis tornam o ralo oculto uma escolha versátil e prática. Com a capacidade de facilitar a limpeza doméstica, este produto se destaca como uma solução eficiente para banheiros, cozinhas e áreas de serviço.",
     quantidade: 'Caixas com 20 e 10 unidades',
@@ -149,9 +149,9 @@ const produtos = {
   },
   
   raloOcultoCores: {
-    imagem1: "img/descricao-produtos/ralo-oculto-15x15-descricao.png",
-    imagem2: "img/descricao-produtos/ralo-oculto-10x10-descricao.png",
-    imagem3: "img/descricao-produtos/ralo-oculto-cores-descricao.png",
+    imagem1: "ralo-oculto-15x15-descricao.png",
+    imagem2: "ralo-oculto-10x10-descricao.png",
+    imagem3: "ralo-oculto-cores-descricao.png",
     titulo: "Ralo oculto",
     descricao: "O ralo oculto é a opção ideal para quem busca aliar funcionalidade e estética. Além de proporcionar mais segurança e favorecer a vazão da água, seu design discreto e moderno contribui para uma melhor estética do ambiente. Sua facilidade de instalação e as opções de tamanhos e cores disponíveis tornam o ralo oculto uma escolha versátil e prática. Com a capacidade de facilitar a limpeza doméstica, este produto se destaca como uma solução eficiente para banheiros, cozinhas e áreas de serviço.",
     quantidade: 'Caixas com 20 e 10 unidades',
@@ -161,9 +161,9 @@ const produtos = {
   },
   
   plafon: {
-    imagem1: "img/descricao-produtos/plafon-descricao.png",
-    imagem2: "img/descricao-produtos/plafon-descricao.png",
-    imagem3: "img/descricao-produtos/plafon-descricao.png",
+    imagem1: "plafon-descricao.png",
+    imagem2: "plafon-descricao.png",
+    imagem3: "plafon-descricao.png",
     titulo: "Plafon",
     descricao: "O Plafon com soquete de Porcelana E27 Branco é um dispositivo de iluminação de teto projetado para oferecer uma solução simples e funcional para a iluminação de ambientes internos. Ele é feito de PVC de alta qualidade, um material durável e resistente, na cor branca, que se adapta facilmente a diferentes estilos de decoração.Uma das características principais desse plafon é o seu soquete de porcelana E27, que é uma opção segura e confiável para a instalação de lâmpadas incandescentes, fluorescentes compactas ou LED com essa base. A porcelana é um material resistente ao calor e oferece maior segurança em comparação com soquetes de plástico ou metal, pois é menos propenso a derreter ou superaquecer.",
     quantidade: '',
@@ -184,17 +184,18 @@ function createDescriptionElement(id) {
             <div class="descricao-produtos__container">
                 <div class="descricao-produtos__imagens">
                     <div class="descricao-produtos__imagem-principal">
-                        <img class="cunhaSlim" src="#" alt="">
+                        <img class="imagem-principal" src="img/descricao-produtos/${produto.imagem2}" alt="">
                     </div>
                     <div class="descricao-produtos__imagens-selecionaveis">
                         <div class="descricao-produtos__imagem-selecionavel">
-                            <img class="imagem-selecionada" src="${produto.imagem1}" alt="">
+                            <img class="imagem-selecionada" src="img/descricao-produtos/${produto.imagem1}" alt=""
+                            onclick = "changeImage('${produto.imagem1}')">
                         </div>
                         <div class="descricao-produtos__imagem-selecionavel">
-                            <img class="imagem-selecionada" src="${produto.imagem2}" alt="">
+                            <img class="imagem-selecionada" src="img/descricao-produtos/${produto.imagem2}" alt="" onclick = "changeImage(${produto.imagem2})">
                         </div>
                         <div class="descricao-produtos__imagem-selecionavel">
-                            <img class="imagem-selecionada" src="${produto.imagem3}" alt="">
+                            <img class="imagem-selecionada" src="img/descricao-produtos/${produto.imagem3}" alt="" onclick = "changeImage(${produto.imagem3})">
                         </div>
                     </div>
                 </div>
@@ -234,23 +235,11 @@ document.querySelectorAll('.buy-btn').forEach(button => {
 
 // Seletor de Imagens
 
-
-
-
-const imagemPrincipal = document.querySelector('.imagem-principal');
-function selecionarImagem (){
-  const produto = produtos[id];
-  const imagensSelecionaveis = [produto.imagem1, produto.imagem2, produto.imagem3];
-imagensSelecionaveis.forEach(imagem => {
-  
-  imagem.addEventListener('click', function () {
-     
-    imagemPrincipal.src = imagem.src;
-    selecionarImagem();
-  });
-});
-
+function changeImage (imgName) {
+  const img = document.querySelector('.imagem-principal');
+  img.src = `img/descricao-produtos/${imgName}`
 }
+
 
 
 // carrossel
