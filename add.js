@@ -212,7 +212,7 @@ function createDescriptionElement(id) {
                         <p>${produto.largura}</p>
                         <p>${produto.comprimento}</p>
                     </div>
-                    <div class="descricao-btn"><a href="#" class="btn">Comprar</a></div>
+                    <div class="descricao-btn"><a href="https://wa.me/5535991972424" target="_blank" class="btn">Comprar</a></div>
                 </div>
             </div>
         </div>
