@@ -64,10 +64,10 @@
 }
 
 .seletor__calculadora {
-    width: 200px; /* Define a largura desejada para o seletor */
-    text-align: center; /* Alinha o texto dentro do seletor ao centro */
-    padding: 8px; /* Adiciona um espaçamento interno ao seletor */
-    font-size: 16px; /* Define o tamanho da fonte dentro do seletor */
+    width: 200px; 
+    text-align: center; 
+    padding: 8px; 
+    font-size: 16px; 
     border: 2px solid black;
     border-radius: 2rem;
     margin: 2rem 0 3rem 3rem;
@@ -267,8 +267,8 @@ button:hover {
     }
 
     .calculadora__dados {
-        width: auto;
-        height: 25rem;
+        width: 60%;
+        height: 30rem;
     }
 
     .calculadora {
