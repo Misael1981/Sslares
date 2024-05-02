@@ -113,7 +113,14 @@ iframe {
     font-size: 5rem;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (min-width: 268px) and (max-width: 399px) {
+    .card-footer {
+        width: 80vw;
+    }
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px) {
     .card-footer {
         width: 23rem;
     }
