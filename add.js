@@ -17,7 +17,7 @@ menuToggle.addEventListener('click', () => {
 
 const produtos = {
   cunhaNiveladora: {
-    imagem1: "smart-desenho-descricao.png",
+    imagem1: "cunha-smart-desenho-descricao.png",
     imagem2: "cunha-niveladora.png",
     imagem3: "smart-desenho-descricao.png",
     titulo: "Cunha Niveladora",
@@ -29,7 +29,7 @@ const produtos = {
   },
   
   cunhaSlim: {
-    imagem1: "slim-desenho-descricao.png",
+    imagem1: "cunha-slim-desenho-descricao.png",
     imagem2: "cunha-slim-descricao.png",
     imagem3: "slim-desenho-descricao.png",
     titulo: "Cunha Slim",
@@ -77,7 +77,7 @@ const produtos = {
   },
 
   espacadorSlimPadrao: {
-    imagem1: "slim-desenho-descricao.png",
+    imagem1: "espacador-slim-desenho-descricao.png",
     imagem2: "espacador-slim-pd-descricao.png",
     imagem3: "slim-desenho-descricao.png",
     titulo: "Espaçador Slim PADRÃO",
@@ -89,7 +89,7 @@ const produtos = {
   },
  
   espacadorSlimPremium: {
-    imagem1: "slim-desenho-descricao.png",
+    imagem1: "espacador-slim-desenho-descricao.png",
     imagem2: "espacador-slim-pm-descricao.png",
     imagem3: "slim-desenho-descricao.png",
     titulo: "Espaçador Slim PREMIUM",
@@ -101,7 +101,7 @@ const produtos = {
   },
  
   espacadorSmartPadrao: {
-    imagem1: "smart-desenho-descricao.png",
+    imagem1: "espacador-smart-desenho-descricao.png",
     imagem2: "espacador-smart-pd-descricao.png",
     imagem3: "smart-desenho-descricao.png",
     titulo: "Espaçador Smart PADRÃO",
@@ -113,7 +113,7 @@ const produtos = {
   },
   
   espacadorSmartPremium: {
-    imagem1: "smart-desenho-descricao.png",
+    imagem1: "espacador-smart-desenho-descricao.png",
     imagem2: "espacador-smart-pm-descricao.png",
     imagem3: "smart-desenho-descricao.png",
     titulo: "Espaçador Smart PREMIUM",
