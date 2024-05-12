@@ -29,6 +29,30 @@ var swiper = new Swiper(".home-slider", {
     },
 });
 
+// Carrossel
+
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  autoplay: {
+        delay: 7500,
+        disableOnInteraction: false,
+    },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
 
 
 // Calculadora 
@@ -161,130 +185,115 @@ const cidade = document.getElementById('cidade');
 const assunto = document.getElementById('assunto');
 
 form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  checkForm();
+    event.preventDefault();
+    checkForm();
 });
 
-email.addEventListener("blur", () => {
-  checkInputEmail();
-})
+// Validações com blur (ao sair do campo)
+email.addEventListener("blur", checkInputEmail); 
+nome.addEventListener("blur", checkInputNome);
 
-
-nome.addEventListener("blur", () => {
-  checkInputNome();
-})
-
-
+// Funções de validação
 function checkInputNome() {
-  const nomeValue = nome.value;
-
-  if (nomeValue === "") {
-    errorInput(nome, "Preenchimento obrigatório!");
-  }else {
-    const formItem = nome.parentElement;
-    formItem.className = "form-content";
-  }
+    const nomeValue = nome.value.trim(); // Remove espaços em branco
+    if (nomeValue === "") {
+        errorInput(nome, "Preenchimento obrigatório!");
+    } else {
+        clearError(nome); 
+    }
 }
 
-function checkInputEmail(){
-  const emailValue = email.value;
-
-  if(emailValue === ""){
-    errorInput(email, "O email é obrigatório.");
-  }else{
-    const formItem = email.parentElement;
-    formItem.className = "form-content";
-  }
+function checkInputEmail() {
+    const emailValue = email.value.trim();
+    if (emailValue === "") {
+        errorInput(email, "O email é obrigatório.");
+    } else {
+        clearError(email); 
+    }
 }
 
 function checkInputTelefone() {
-  const telefoneValue = telefone.value;
-
-  if (telefoneValue === "") {
-    errorInput(telefone, 'Preenchimento obrigatório!');
-  } else {
-    clearError(telefone);
-  }
+    const telefoneValue = telefone.value.trim();
+    if (telefoneValue === "") {
+        errorInput(telefone, 'Preenchimento obrigatório!');
+    } else {
+        clearError(telefone);
+    }
 }
 
 function checkInputCidade() {
-  const cidadeValue = cidade.value;
-
-  if (cidadeValue === "") {
-    errorInput(cidade, 'Preenchimento obrigatório!');
-  } else {
-    clearError(cidade);
-  }
+    const cidadeValue = cidade.value.trim();
+    if (cidadeValue === "") {
+        errorInput(cidade, 'Preenchimento obrigatório!');
+    } else {
+        clearError(cidade);
+    }
 }
 
 function checkInputAssunto() {
-  const assuntoValue = assunto.value;
-
-  if (assuntoValue === "") {
-    errorInput(assunto, 'Preenchimento obrigatório!');
-  } else {
-    clearError(assunto);
-  }
+    const assuntoValue = assunto.value.trim();
+    if (assuntoValue === "") {
+        errorInput(assunto, 'Preenchimento obrigatório!');
+    } else {
+        clearError(assunto);
+    }
 }
 
-// Modifique a função checkForm para enviar o e-mail após a validação
-function checkForm(){
-  checkInputNome();
-  checkInputEmail();
-  checkInputTelefone();
-  checkInputCidade();
-  checkInputAssunto();
+// Função principal de validação e envio
+function checkForm() {
+    // Chama todas as funções de validação
+    checkInputNome();
+    checkInputEmail();
+    checkInputTelefone();
+    checkInputCidade();
+    checkInputAssunto();
 
-  const formItems = form.querySelectorAll(".form-content");
+    // Verifica se todos os campos são válidos
+    const formItems = form.querySelectorAll(".form-content");
+    const isValid = [...formItems].every(item => item.className === "form-content");
 
-  const isValid = [...formItems].every(item => item.className === "form-content");
-
-  if (isValid){
-    const formData = {
-      nome: nome.value,
-      email: email.value,
-      telefone: telefone.value,
-      cidade: cidade.value,
-      assunto: assunto.value
-    };
-
-    sendEmail(formData);
-    alert("CADASTRADO COM SUCESSO!");
-  }
+    // Se o formulário for válido, envia o email
+    if (isValid) {
+        const formData = {
+            nome: nome.value,
+            email: email.value,
+            telefone: telefone.value,
+            cidade: cidade.value,
+            assunto: assunto.value
+        };
+        sendEmail(formData);
+        alert("CADASTRADO COM SUCESSO!");
+    }
 }
 
-
+// Funções auxiliares para exibir/limpar erros
 function errorInput(input, message) {
-  const formItem = input.parentElement;
-  const textMessage = formItem.querySelector("a");
-
-  textMessage.innerText = message;
-
-  formItem.classList.add("error");
+    const formItem = input.parentElement;
+    const textMessage = formItem.querySelector("span"); 
+    textMessage.innerText = message;
+    formItem.classList.add("error");
 }
 
 function clearError(input) {
-  const formItem = input.parentElement;
-  const textMessage = formItem.querySelector("a");
-
-  if (textMessage) {
-    textMessage.innerText = "";
-  }
-
-  formItem.classList.remove("error");
+    const formItem = input.parentElement;
+    const textMessage = formItem.querySelector("span"); 
+    if (textMessage) {
+        textMessage.innerText = "";
+    }
+    formItem.classList.remove("error");
 }
 
-emailjs.init('g3fLU5Ja4zUKtyuGvPF4u');
-
+// Inicializa o EmailJS (substitua com suas credenciais)
+emailjs.init('RWsCot8BerUSejBIY'); 
 function sendEmail(formData) {
-  emailjs.send('service_ynv16u3', 'template_num12re', formData)
-    .then(function(response) {
-      console.log('E-mail enviado com sucesso!', response);
-    }, function(error) {
-      console.error('Erro ao enviar e-mail:', error);
-    });
+    emailjs.send('service_ynv16u3', 'template_num12re', formData)
+        .then(function(response) {
+            console.log('E-mail enviado com sucesso!', response);
+        }, function(error) {
+            console.error('Erro ao enviar e-mail:', error);
+        });
 }
+
 
 
 

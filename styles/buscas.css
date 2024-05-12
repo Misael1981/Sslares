@@ -1,122 +1,27 @@
 .resultado__pesquisa {
-    overflow: hidden;
-    padding: 0 2rem;
-    margin: 0;
-}
-
-#listaProdutos {
+    padding: 1rem 9%;
     display: none;
+}
+
+.produtos-pesquisar {
     list-style-type: none;
-}
-
-.lista-produtos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.card-buscas {
-    width: 18rem;
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 3rem 0;
-}
-
-.card-buscas:hover {
-    transform: scale(1.1);
-}
-
-.card-imagem {
-    height: 30rem;
-    position: relative;
-}
-
-.card-imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-sizing: border-box;
-}
-
-.card-imagem:hover {
-    background: rgba(243, 87, 87, 0.726);
-}
-
-.card-descricao {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 20px;
-    box-sizing: border-box;
-}
-
-.card-descricao span {
-    font-size: 2rem;
-    color: #222222;
-    margin: 5px 0;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    padding-right: 8px;
-    text-align: center;
-}
-
-.card-descricao p {
-    font-size: 1.5rem;
     color: black;
-    text-align: center;
 }
 
-.card-btn {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-color: rgba(243, 87, 87, 0.726);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.produtos-pesquisar li a {
+    color: black;
+    font-size: 2.5rem;
 }
 
-.card-btn {
-    width: 160px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    color: #252525;
-    font-weight: 600;
-    letter-spacing: 1px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+.produtos-pesquisar li a:hover {
+    color: brown;
 }
 
-.card-btn:hover {
-    color: #ffffff;
-    background-color: #e90736;
-    transition: all ease 0.3s;
-}
-
-.card-botao {
-    visibility: hidden;
-}  
-
-.card-imagem:hover .card-botao {
-    visibility: visible;
-    animation: 0.5s;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
+@media screen and (min-width: 268px) and (max-width: 768px) {
+    .busca {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

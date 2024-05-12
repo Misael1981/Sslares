@@ -12,6 +12,38 @@ menuToggle.addEventListener('click', () => {
     show = !show;
 })
 
+// Perquiza de produtos
+
+
+function filtrar() {
+  // Obter o valor digitado no campo de busca
+  let input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  ul = document.querySelector(".produtos-pesquisar");
+  li = ul.getElementsByTagName("li");
+  // Seção de resultados
+  const resultadoPesquisa = document.querySelector(".resultado__pesquisa"); 
+
+  // Itera sobre todos os itens da lista
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    // Exibe o item da lista se o texto corresponder à busca
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = ""; 
+      resultadoPesquisa.style.display = "block"; // Exibe a seção
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+
+  // Para ocultar a section
+  if (input.value === "") {
+    resultadoPesquisa.style.display = "none"; 
+  }
+}
+
 // Descrição dos Produtos
 
 
@@ -41,9 +73,9 @@ const produtos = {
   },
   
   desempenadeiraEspuma: {
-    imagem1: "desempenadeira-espuma-descricao.png",
+    imagem1: "",
     imagem2: "desempenadeira-espuma-descricao.png",
-    imagem3: "desempenadeira-espuma-descricao.png",
+    imagem3: "",
     titulo: "Desempenadeira Espuma",
     descricao: "A Desempenadeira com Espuma é utilizada para o nivelamento de massas, argamassas e monocapas. Ideal para acabamento em massa fina e reboco.",
     quantidade: 'Caixa com 6 unidades',
@@ -53,9 +85,9 @@ const produtos = {
   },
 
   desempenadeiraLisa: {
-    imagem1: "desempenadeira-lisa-descricao.png",
+    imagem1: "",
     imagem2: "desempenadeira-lisa-descricao.png",
-    imagem3: "desempenadeira-lisa-descricao.png",
+    imagem3: "",
     titulo: "Desempenadeira Lisa",
     descricao: "Indicada para a preparação, nivelamento e acabamento de superfícies, podendo-se utilizar variados tipos de massas, aplicação e desempeno de massa fina.",
     quantidade: 'Caixa com 6 unidades',
@@ -65,9 +97,9 @@ const produtos = {
   },
 
   desempenadeiraCorrugada: {
-    imagem1: "desempenadeira-corrugada-descricao.png",
+    imagem1: "",
     imagem2: "desempenadeira-corrugada-descricao.png",
-    imagem3: "desempenadeira-corrugada-descricao.png",
+    imagem3: "",
     titulo: "Desempenadeira Corrugada",
     descricao: "Indicada para preparar superfícies diversas, como planos acantonados, gesso de alvenaria e placas de forro. Por ter uma base corrugada, seu principal diferencial é a facilidade de remover partículas estranhas da massa.",
     quantidade: 'Caixa com 6 unidades',
@@ -233,6 +265,15 @@ document.querySelectorAll('.buy-btn').forEach(button => {
   })
 })
 
+document.querySelectorAll('.btn-pesquisa').forEach(button => {
+
+  button.addEventListener('click', function () {
+    const id = button.dataset.produto
+
+    createDescriptionElement(id)
+  })
+})
+
 // Seletor de Imagens
 
 function changeImage (imgName) {
@@ -247,6 +288,8 @@ function changeImage (imgName) {
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 5,
   spaceBetween: 30,
+  grabCursor: true,
+  loop: true,
   freeMode: true,
   autoplay: {
     delay: 7500,
@@ -318,7 +361,6 @@ function calcularEspacadoresx() {
 
 // Associando a função de cálculo ao evento de alteração do campo de entrada txtcomprx
 document.getElementById("txtcomprx").addEventListener("change", calcularEspacadoresx);
-document.getElementById("txtcomprmodalx").addEventListener("change", calcularEspacadoresx);
 
 
 
@@ -447,6 +489,126 @@ function calcularTotalEspacadores() {
       document.querySelector(".caluladora__item[for='txtvtotal']").innerText = "Por favor, insira comprimento"
   }
 
+}
+
+// Formulário Seja Parceiro
+
+const form = document.getElementById('form');
+const nome = document.getElementById('username');
+const email = document.getElementById('email');
+const telefone = document.getElementById('telefone');
+const cidade = document.getElementById('cidade');
+const assunto = document.getElementById('assunto');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    checkForm();
+});
+
+// Validações com blur (ao sair do campo)
+email.addEventListener("blur", checkInputEmail); 
+nome.addEventListener("blur", checkInputNome);
+
+// Funções de validação
+function checkInputNome() {
+    const nomeValue = nome.value.trim(); // Remove espaços em branco
+    if (nomeValue === "") {
+        errorInput(nome, "Preenchimento obrigatório!");
+    } else {
+        clearError(nome); 
+    }
+}
+
+function checkInputEmail() {
+    const emailValue = email.value.trim();
+    if (emailValue === "") {
+        errorInput(email, "O email é obrigatório.");
+    } else {
+        clearError(email); 
+    }
+}
+
+function checkInputTelefone() {
+    const telefoneValue = telefone.value.trim();
+    if (telefoneValue === "") {
+        errorInput(telefone, 'Preenchimento obrigatório!');
+    } else {
+        clearError(telefone);
+    }
+}
+
+function checkInputCidade() {
+    const cidadeValue = cidade.value.trim();
+    if (cidadeValue === "") {
+        errorInput(cidade, 'Preenchimento obrigatório!');
+    } else {
+        clearError(cidade);
+    }
+}
+
+function checkInputAssunto() {
+    const assuntoValue = assunto.value.trim();
+    if (assuntoValue === "") {
+        errorInput(assunto, 'Preenchimento obrigatório!');
+    } else {
+        clearError(assunto);
+    }
+}
+
+// Função principal de validação e envio
+function checkForm() {
+    // Chama todas as funções de validação
+    checkInputNome();
+    checkInputEmail();
+    checkInputTelefone();
+    checkInputCidade();
+    checkInputAssunto();
+
+    // Verifica se todos os campos são válidos
+    const formItems = form.querySelectorAll(".form-content");
+    const isValid = [...formItems].every(item => item.className === "form-content");
+
+    // Se o formulário for válido, envia o email
+    if (isValid) {
+        const formData = {
+            nome: nome.value,
+            email: email.value,
+            telefone: telefone.value,
+            cidade: cidade.value,
+            assunto: assunto.value
+        };
+        sendEmail(formData);
+        alert("CADASTRADO COM SUCESSO!");
+        console.log(sendEmail(formData))
+    }
+}
+
+// Funções auxiliares para exibir/limpar erros
+function errorInput(input, message) {
+    const formItem = input.parentElement;
+    const textMessage = formItem.querySelector("span"); 
+    textMessage.innerText = message;
+    formItem.classList.add("error");
+}
+
+function clearError(input) {
+    const formItem = input.parentElement;
+    const textMessage = formItem.querySelector("span"); 
+    if (textMessage) {
+        textMessage.innerText = "";
+    }
+    formItem.classList.remove("error");
+}
+
+// Inicializa o EmailJS (substitua com suas credenciais)
+emailjs.init('RWsCot8BerUSejBIY'); 
+function sendEmail(formData) {
+    emailjs.send('service_ynv16u3', 'template_num12re', formData)
+        .then(function(response) {
+            console.log('E-mail enviado com sucesso!', response);
+        }, function(error) {
+            console.error('Erro ao enviar e-mail:', error);
+        });
 }
 
 

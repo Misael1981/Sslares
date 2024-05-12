@@ -90,7 +90,7 @@
     border: 2px solid #dfdfdf;
 }
 
-.form-content a{
+.form-content span{
     position: absolute;
     bottom: -8px;
     left: 0;
@@ -113,7 +113,7 @@
     border-color: #ff3b25;
 }
 
-.form-content.error a{
+.form-content.error span{
     color: #ff3b25;
     visibility: visible;
 }
