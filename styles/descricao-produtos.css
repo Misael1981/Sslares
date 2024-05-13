@@ -112,6 +112,7 @@
 
     .descricao-produtos__imagens {
         width: 80vw;
+        margin-bottom: 5rem;
     }
 
     .descricao-dos-produtos {
