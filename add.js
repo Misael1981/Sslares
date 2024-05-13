@@ -134,10 +134,10 @@ const produtos = {
  
   espacadorSmartPadrao: {
     imagem1: "espacador-smart-desenho-descricao.png",
-    imagem2: "espacador-smart-pd-descricao.png",
+    imagem2: "espacador-smart-padrao1.png",
     imagem3: "smart-desenho-descricao.png",
     titulo: "Espaçador Smart PADRÃO",
-    descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora Slim a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
+    descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
     quantidade: '50 peças',
     altura: 'Altura: 45mm',
     largura: 'Largura: 30mm',
@@ -149,7 +149,7 @@ const produtos = {
     imagem2: "espacador-smart-pm-descricao.png",
     imagem3: "smart-desenho-descricao.png",
     titulo: "Espaçador Smart PREMIUM",
-    descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora Slim a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
+    descricao: "O Espaçador Nivelador SSLARES garante espaçamento e auxilia a Cunha Niveladora a nivelar os pisos corretamente. Com as duas funções simultâneas agiliza o processo de assentamento dos pisos, reduzindo em até 50% o tempo de colocação. Medidas disponíveis 3 mm, 2 mm, 1,5 mm e 1 mm. Trabalhamos na versão PADRÃO (material reciclado cor cinza) e PREMIUM (material virgem cristal).",
     quantidade: '50 peças',
     altura: 'Altura: 45mm',
     largura: 'Largura: 30mm',

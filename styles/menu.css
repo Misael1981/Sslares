@@ -304,27 +304,6 @@ input[type="checkbox"]:checked ~ .lista-contato {
     }
 }
 
-/*
-
-@media (max-width: 1100px){
-    .campo-desktop {
-        display: none;
-    }
-
-    .borda-delimitadora {
-        padding-top: 360px;
-    }
-}
-
-@media (max-width: 1800px) {
-    .campo-tablet {
-        display: none;
-    }
-    
-
-}
-*/
-
 
 
 
