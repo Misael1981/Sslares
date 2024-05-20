@@ -36,7 +36,9 @@
                             <a href="https://www.instagram.com/sslaresmg1/" target="_blank">
                                 <i class="bi bi-instagram"></i>
                             </a>
-                            <a href="sslaresmg@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+                            <a   target="_blank">
+                                <i class="bi bi-envelope"></i>
+                              </a>
                             <a href="#contato">
                                 <i class="bi bi-geo-alt"></i>
                             </a>
@@ -51,7 +53,7 @@
                                     <a href="https://wa.me/5535991972424" target="_blank" class="lista-contato__link"><i class="bi bi-whatsapp"></i> 035 9 9197-2424</a>
                                 </li>
                                 <li class="lista-contato__item">
-                                    <a href="sslaresmg@gmail.com" target="_blank" class="lista-contato__link"><i class="bi bi-envelope"></i> E-mail</a>
+                                    <a id="contatoBtn" target="_blank" class="lista-contato__link"><i class="bi bi-envelope"></i> E-mail</a>
                                 </li>
                                 <li class="lista-contato__item">
                                     <a href="https://www.instagram.com/sslaresmg1/" target="_blank" class="lista-contato__link"><i class="bi bi-instagram"></i> Instagram</a>
@@ -84,7 +86,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slide" style="background: url(img/home/imagem4.jpg) no-repeat;">
                         </div>
-                        <div class="swiper-slide slide" style="background: url(img/home/redimensionada3.jpg) no-repeat;">
+                        <div class="swiper-slide slide" style="background: url(img/home/home2-mobile.jpg) no-repeat;">
                         </div>
                         <div class="swiper-slide slide" style="background: url(img/home/teste-responsividade.jpg) no-repeat;">
                         </div>
@@ -120,9 +122,9 @@
                         </div>
                         <div class="swiper-slide slide" style="background: url(img/home/home2-desltop.jpg) no-repeat;">
                         </div>
-                        <div class="swiper-slide slide" style="background: url(img/home/home3-desktop.jpg) no-repeat;">
+                        <div class="swiper-slide slide" style="background: url(img/home/home6-desktop.jpg) no-repeat;">
                         </div>
-                        <div class="swiper-slide slide" style="background: url(img/home/home4-desktop.jpg) no-repeat;">
+                        <div class="swiper-slide slide" style="background: url(img/home/home7-desktop.jpg) no-repeat;">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -773,6 +775,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('contatoBtn').addEventListener('click', function() {
+          window.location.href = "mailto:sslaresmg@gmail.com?subject=Contato pelo site";
+        });
+      </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
