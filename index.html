@@ -36,8 +36,8 @@
                             <a href="https://www.instagram.com/sslaresmg1/" target="_blank">
                                 <i class="bi bi-instagram"></i>
                             </a>
-                            <a   target="_blank">
-                                <i class="bi bi-envelope"></i>
+                            <a href="#"  target="_blank">
+                                <i class="bi bi-envelope contatoBtnEmail"></i>
                               </a>
                             <a href="#contato">
                                 <i class="bi bi-geo-alt"></i>
@@ -53,7 +53,7 @@
                                     <a href="https://wa.me/5535991972424" target="_blank" class="lista-contato__link"><i class="bi bi-whatsapp"></i> 035 9 9197-2424</a>
                                 </li>
                                 <li class="lista-contato__item">
-                                    <a id="contatoBtn" target="_blank" class="lista-contato__link"><i class="bi bi-envelope"></i> E-mail</a>
+                                    <a href="#" target="_blank" class="lista-contato__link contatoBtnEmail"><i class="bi bi-envelope"></i> E-mail</a>
                                 </li>
                                 <li class="lista-contato__item">
                                     <a href="https://www.instagram.com/sslaresmg1/" target="_blank" class="lista-contato__link"><i class="bi bi-instagram"></i> Instagram</a>
@@ -122,9 +122,9 @@
                         </div>
                         <div class="swiper-slide slide" style="background: url(img/home/home2-desltop.jpg) no-repeat;">
                         </div>
-                        <div class="swiper-slide slide" style="background: url(img/home/home6-desktop.jpg) no-repeat;">
+                        <div class="swiper-slide slide" style="background: url(img/home/home3-desktop.jpg) no-repeat;">
                         </div>
-                        <div class="swiper-slide slide" style="background: url(img/home/home7-desktop.jpg) no-repeat;">
+                        <div class="swiper-slide slide" style="background: url(img/home/home4-desktop.jpg) no-repeat;">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -494,7 +494,7 @@
 
                     <div class="beneficios-botoes">
                         <a class="beneficios-btn" href="https://api.whatsapp.com/send?phone=5535991972424&text=Olá! Sou um lojista interessado em mais informações." target="_blank">Whats App</a>
-                        <a class="beneficios-btn" href="mailto:sslaresmg@gmail.com?subject=Contato&body=Olá! Gostaria de mais informações sobre os produtos oferecidos pela sua empresa.">E-mail</a>
+                        <a class="beneficios-btn contatoBtnEmail" href="#">E-mail</a>
 
                     </div>
                     
@@ -568,7 +568,7 @@
 
                     <div class="beneficios-botoes">
                         <a class="beneficios-btn" href="https://api.whatsapp.com/send?phone=5535991972424&text=Olá! Sou um construtor interessado em mais informações." target="_blank">Whats App</a>
-                        <a class="beneficios-btn" href="mailto:sslaresmg@gmail.com?subject=Contato&body=Olá! Gostaria de mais informações sobre os produtos oferecidos pela sua empresa.">E-mail</a>
+                        <a class="beneficios-btn contatoBtnEmail" href="#">E-mail</a>
                     </div>
 
                     <div class="beneficios-radape">
@@ -649,7 +649,7 @@
 
                     <div class="beneficios-botoes">
                         <a class="beneficios-btn" href="https://api.whatsapp.com/send?phone=5535991972424&text=Olá! Sou uma pessoa física interessada em mais informações." target="_blank">Whats App</a>
-                        <a class="beneficios-btn" href="mailto:sslaresmg@gmail.com?subject=Contato&body=Olá! Gostaria de mais informações sobre os produtos oferecidos pela sua empresa.">E-mail</a>
+                        <a class="beneficios-btn contatoBtnEmail" href="#">E-mail</a>
                     </div>
 
                     <div class="beneficios-radape">
@@ -708,8 +708,8 @@
                     <h3>Novidades</h3>
                     <p>Se inscreva para receber as novidades</p>
                     <form action="">
-                        <input type="email" name="" class="email" href="sslaresmg@gmail.com" target="_blank" placeholder="digite seu e-mail" id="">
-                        <input type="submit" value="subscribe" class="btn">
+                        <input type="email" name="" class="email" href="#" target="_blank" placeholder="digite seu e-mail" id="">
+                        <input type="submit" value="subscribe" class="btn contatoBtnEmail">
                     </form>
                 </div>
     
@@ -777,9 +777,15 @@
     </div>
 
     <script>
-        document.getElementById('contatoBtn').addEventListener('click', function() {
-          window.location.href = "mailto:sslaresmg@gmail.com?subject=Contato pelo site";
-        });
+        
+        const contatoBtns = document.querySelectorAll('.contatoBtnEmail');
+
+            for (const btn of contatoBtns) {
+            btn.addEventListener('click', function() {
+                window.location.href = "mailto:sslaresmg@gmail.com?subject=Contato pelo site";
+            });
+            }
+
       </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

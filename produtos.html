@@ -39,8 +39,8 @@
                         <a href="https://www.instagram.com/sslaresmg1/" target="_blank">
                             <i class="bi bi-instagram"></i>
                         </a>
-                        <a href="sslaresmg@gmail.com" target="_blank">
-                            <i class="bi bi-envelope"></i>
+                        <a href="#" target="_blank">
+                            <i class="bi bi-envelope contatoBtnEmail"></i>
                         </a>
                         <a href="#contato">
                             <i class="bi bi-geo-alt"></i>
@@ -57,7 +57,7 @@
                             <a href="https://wa.me/5535991972424" target="_blank" class="lista-contato__link"><i class="bi bi-whatsapp"></i> 035 9 9197-2424</a>
                         </li>
                         <li class="lista-contato__item">
-                            <a href="sslaresmg@gmail.com" target="_blank" class="lista-contato__link"><i class="bi bi-envelope"></i> E-mail</a>
+                            <a href="#" target="_blank" class="lista-contato__link contatoBtnEmail"><i class="bi bi-envelope"></i>E-mail</a>
                         </li>
                         <li class="lista-contato__item">
                             <a href="https://www.instagram.com/sslaresmg1/" target="_blank" class="lista-contato__link"><i class="bi bi-instagram"></i> Instagram</a>
@@ -576,6 +576,18 @@
         </div>
 
     </section>
+
+    <script>
+        
+        const contatoBtns = document.querySelectorAll('.contatoBtnEmail');
+
+            for (const btn of contatoBtns) {
+            btn.addEventListener('click', function() {
+                window.location.href = "mailto:sslaresmg@gmail.com?subject=Contato pelo site";
+            });
+            }
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="add.js"></script>
