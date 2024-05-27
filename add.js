@@ -73,9 +73,9 @@ const produtos = {
   },
   
   desempenadeiraEspuma: {
-    imagem1: "",
+    imagem1: "espuma-a-descricao.png",
     imagem2: "desempenadeira-espuma-descricao.png",
-    imagem3: "",
+    imagem3: "espuma-a-descricao.png",
     titulo: "Desempenadeira Espuma",
     descricao: "A Desempenadeira com Espuma é utilizada para o nivelamento de massas, argamassas e monocapas. Ideal para acabamento em massa fina e reboco.",
     quantidade: 'Caixa com 6 unidades',
@@ -85,9 +85,9 @@ const produtos = {
   },
 
   desempenadeiraLisa: {
-    imagem1: "",
-    imagem2: "desempenadeira-lisa-descricao.png",
-    imagem3: "",
+    imagem1: "lisa-a-descricao.png",
+    imagem2: "lisa-a-descricao.png",
+    imagem3: "desempenadeira-a-descricao.png",
     titulo: "Desempenadeira Lisa",
     descricao: "Indicada para a preparação, nivelamento e acabamento de superfícies, podendo-se utilizar variados tipos de massas, aplicação e desempeno de massa fina.",
     quantidade: 'Caixa com 6 unidades',
@@ -97,9 +97,9 @@ const produtos = {
   },
 
   desempenadeiraCorrugada: {
-    imagem1: "",
+    imagem1: "corrugada-a-descricao.png",
     imagem2: "desempenadeira-corrugada-descricao.png",
-    imagem3: "",
+    imagem3: "corrugada-par-a-descricao.png",
     titulo: "Desempenadeira Corrugada",
     descricao: "Indicada para preparar superfícies diversas, como planos acantonados, gesso de alvenaria e placas de forro. Por ter uma base corrugada, seu principal diferencial é a facilidade de remover partículas estranhas da massa.",
     quantidade: 'Caixa com 6 unidades',
